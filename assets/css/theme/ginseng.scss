@@ -1,0 +1,305 @@
+.gsSection {
+    margin: -1px auto 0;
+    position: relative;
+    .gs-img {
+        background: url("../images/gs-pc-cut2.jpg") no-repeat top center;
+        background-size: 100%;
+        .img-pc {
+            opacity: 1;
+            animation-duration: 2s;
+            animation-name: gsbgani;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            img {
+                width: 100%;
+            }
+        }
+        .img-mb {
+            display: none;
+        }
+    }
+    .gs-video {
+        position: absolute;
+        left: 0; right: 0; top: 0;
+        z-index: 1;
+        width: 52%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .gs-title {
+        position: absolute;
+        left: 11.3%; top: 39.5%;
+        z-index: 1;
+        color: #fff;
+        letter-spacing: .1em;
+        h1 {
+            font-size: 55px;
+            font-size: $px55;
+            font-family: "Noto Serif TC";
+            line-height: 1.3;
+            margin: 0 0 30px;
+        }
+        p {
+            font-size: 26px;
+            font-size: $px26;
+            font-family: "Noto Sans TC";
+            font-weight: 300;
+            line-height: 1.7;
+        }
+    }
+    .gs-effect {
+        .effect {
+            position: absolute;
+            left: 0; top: 0;
+            z-index: 1;
+            .fx-pc {
+                display: block;
+            }
+            .fx-mb {
+                display: none;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0; top: 0; right: 0; bottom: 0;
+                animation-duration: .3s;
+                animation-name: gsbgani;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        }
+        .fx01 {
+            left: 54.3%; top: 33.5%;
+            width: 28.8%;
+            &:before {
+                background: url("../images/gs-effect01lt-pc.png") no-repeat center;
+                background-size: 100%;
+                animation-delay: .5s;
+            }
+        }
+        .fx02 {
+            left: 50.2%; top: 39%;
+            width: 27.6%;
+            &:before {
+                background: url("../images/gs-effect02lt-pc.png") no-repeat center;
+                background-size: 100%;
+            }
+        }
+        .fx03 {
+            left: 45.5%; top: 47%;
+            width: 25.4%;
+            &:before {
+                background: url("../images/gs-effect03lt-pc.png") no-repeat center;
+                background-size: 100%;
+                animation-delay: .5s;
+            }
+        }
+        .fx04 {
+            left: 39.1%; top: 60%;
+            width: 24.3%;
+            &:before {
+                background: url("../images/gs-effect04lt-pc.png") no-repeat center;
+                background-size: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1600px) {
+    .gsSection {
+        .gs-video {
+            width: 55%;
+        }
+        .gs-title {
+            left: 11.3%; top: 39.5%;
+            h1 {
+                font-size: 46px;
+                font-size: $px46;
+                margin: 0 0 25px;
+            }
+            p {
+                font-size: 22px;
+                font-size: $px22;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .gsSection {
+        .gs-video {
+            width: 55%;
+        }
+        .gs-title {
+            left: 9.3%; top: 37.5%;
+            h1 {
+                font-size: 46px;
+                font-size: $px46;
+                margin: 0 0 25px;
+            }
+            p {
+                font-size: 22px;
+                font-size: $px22;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1366px) {
+    .gsSection {
+        .gs-video {
+            width: 55%;
+        }
+        .gs-title {
+            left: 6.3%; top: 37.5%;
+            h1 {
+                font-size: 44px;
+                font-size: $px44;
+                margin: 0 0 25px;
+            }
+            p {
+                font-size: 20px;
+                font-size: $px20;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1280px) {
+    .gsSection {
+        .gs-video {
+            width: 55%;
+        }
+        .gs-title {
+            left: 6.3%; top: 37.5%;
+            h1 {
+                font-size: 40px;
+                font-size: $px40;
+                margin: 0 0 25px;
+            }
+            p {
+                font-size: 18px;
+                font-size: $px18;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .gsSection {
+        .gs-video {
+            width: 55%;
+        }
+        .gs-title {
+            left: 5.3%; top: 37.5%;
+            h1 {
+                font-size: 36px;
+                font-size: $px36;
+                margin: 0 0 25px;
+            }
+            p {
+                font-size: 16px;
+                font-size: $px16;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+// mobile layout
+@media screen and (max-width: 767px) {
+    .gsSection {
+        .gs-img {
+            background: url("../images/gs-mb-cut2.jpg") no-repeat top center;
+            background-size: 100%;
+            .img-pc {
+                display: none;
+                animation: none;
+            }
+            .img-mb {
+                display: block;
+                opacity: 1;
+                animation-duration: 2s;
+                animation-name: gsbgani;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        }
+        .gs-video {
+            width: 90%;
+        }
+        .gs-title {
+            position: absolute;
+            left: 1.5rem; top: 32.3%;
+            letter-spacing: .05em;
+            h1 {
+                font-size: 30px;
+                font-size: $px30;
+                margin: 0 0 15px;
+            }
+            p {
+                font-size: 16px;
+                font-size: $px16;
+            }
+        }
+        .gs-effect {
+            .effect {
+                .fx-pc {
+                    display: none;
+                }
+                .fx-mb {
+                    display: block;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0; top: 0; right: 0; bottom: 0;
+                    animation-duration: .3s;
+                    animation-name: gsbgani;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+            }
+            .fx01 {
+                left: 0; right: 0; top: 60%;
+                width: 100%;
+                &:before {
+                    background: url("../images/gs-effect01lt-mb.png") no-repeat center;
+                    background-size: 100%;
+                    animation-delay: .5s;
+                }
+            }
+            .fx02 {
+                left: 0; right: 0; top: 68.2%;
+                width: 100%;
+                &:before {
+                    background: url("../images/gs-effect02lt-mb.png") no-repeat center;
+                    background-size: 100%;
+                }
+            }
+            .fx03 {
+                left: 0; right: 0; top: 76.3%;
+                width: 100%;
+                &:before {
+                    background: url("../images/gs-effect03lt-mb.png") no-repeat center;
+                    background-size: 100%;
+                    animation-delay: .5s;
+                }
+            }
+            .fx04 {
+                left: 0; right: 0; top: 85%;
+                width: 100%;
+                &:before {
+                    background: url("../images/gs-effect04lt-mb.png") no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}
+// iphone XS Max, Plus
+@media screen and (max-width: 414px) {
+    
+}
+// iphone XS, iphone X
+@media screen and (max-width: 375px) {
+    
+}

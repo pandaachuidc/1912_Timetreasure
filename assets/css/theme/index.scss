@@ -1,0 +1,150 @@
+.kvSection {
+    .kv {
+        width: 100%;
+        position: relative;
+        .kv-img {
+            background: url('../images/kv-cut1.jpg') no-repeat top center;
+            background-size: 100%;
+            animation-duration: 1.3s;
+            animation-name: kvbg-pc;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            .kv-pc {
+                display: block;
+            }
+            .kv-mb {
+                display: none;
+            }
+        }
+        .kv-product-mb {
+            display: none;
+        }
+        .gs-icon {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin: 0 auto;
+            width: 113px;
+            height: 186px;
+            background: url('../images/loading.png') no-repeat center;
+            background-size: 100%;
+            animation-duration: 2.5s;
+            animation-name: loading;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .kv-slogan {
+            opacity: 0;
+            transition: all 0.8s;
+            position: absolute;
+            left: 11.6%;
+            top: 12.8%;
+            z-index: 1;
+            width: 29%;
+            max-width: 560px;
+            .slogan-pc {
+                display: block;
+            }
+            .slogan-mb {
+                display: none;
+            }
+            &.on {
+                opacity: 1;
+                transition: all 0.8s;
+            }
+        }
+        .kv-en {
+            opacity: 0;
+            transition: all 0.8s;
+            position: absolute;
+            right: 10.7%;
+            top: 75.8%;
+            width: 30.8%;
+            max-width: 593px;
+            &.on {
+                opacity: 1;
+                transition: all 0.8s;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1600px) {
+    .kvSection {
+        .kv {
+            .gs-icon {
+                width: 84px;
+                height: 148px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+}
+@media screen and (max-width: 1366px) {
+}
+// mobile layout
+@media screen and (max-width: 767px) {
+    .kvSection {
+        .kv {
+            background: url('../images/kv-mb02.jpg') no-repeat top center;
+            background-size: 100%;
+            .kv-img {
+                opacity: 1;
+                animation-duration: 2s;
+                animation-name: gsbgani;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                .kv-pc {
+                    display: none;
+                }
+                .kv-mb {
+                    display: block;
+                }
+            }
+            .kv-product-mb {
+                display: block;
+                position: absolute;
+                bottom: 22.4%;
+                right: 2%;
+                width: 24%;
+                .swiper-slide {
+                    opacity: 0 !important;
+                }
+                .swiper-slide-active {
+                    opacity: 1 !important;
+                }
+            }
+            .gs-icon {
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 60px;
+                height: 105px;
+            }
+            .kv-slogan {
+                position: absolute;
+                left: 3%;
+                top: 61%;
+                width: 72%;
+                max-width: 561px;
+                .slogan-pc {
+                    display: none;
+                }
+                .slogan-mb {
+                    display: block;
+                }
+            }
+            .kv-en {
+                display: none;
+            }
+        }
+    }
+}
+// iphone XS Max, Plus
+@media screen and (max-width: 414px) {
+}
+// iphone XS, iphone X
+@media screen and (max-width: 375px) {
+}
