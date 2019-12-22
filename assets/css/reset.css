@@ -23,8 +23,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, main {
 	display: block;
 }
+
+/* 設定字體大小 */
+html{
+	font-size: 62.5%;
+}
 body {
 	line-height: 1;
+	font-size: 1.2rem; /* 設定字體大小 */
 }
 ol, ul {
 	list-style: none;

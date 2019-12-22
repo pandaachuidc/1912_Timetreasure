@@ -1,0 +1,96 @@
+.time-pt2-igdt {
+    text-align: center;
+    .intro {
+        background: url(../images/pt2_bg_pc.jpg) no-repeat top center;
+        background-size: 100%;
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 70px;
+        .content {
+            p {
+                @include sub-titStyle;
+            }
+            h1 {
+                @include titleStyle;
+                padding: 30px 0;
+            }
+            padding-bottom: 50px;
+        }
+        .des-sec {
+            p {
+                padding-top: 70px;
+                font-size: 2.4rem;
+                line-height: 4rem;
+            }
+        }
+    }
+    .ingredient {
+        position: relative;
+
+        .content {
+            position: absolute;
+            z-index: 1;
+            // text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            h1 {
+                @include titleStyle;
+            }
+            p {
+            }
+        }
+        .ingredients {
+            display: flex;
+            flex-direction: row;
+            .igdtWrap {
+                position: relative;
+                font-family: 'Microsoft JhengHei', '微軟正黑體';
+                
+                .igdtText {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    // z-index: 1;
+                    width: 80%;
+                    .flare {
+                        width: 305px;
+                        height: 118px;
+                        background: url(../images/flare.png) center;
+                        background-size: 100%;
+                        text-indent: -9999px;
+                        position: absolute;
+                        // top: 392px;
+                        // left: 205px;
+                        -webkit-animation: flare_shine 0.12s infinite;
+                        animation: flare_shine 0.12s infinite;
+                        z-index: 1;
+                        pointer-events: none;
+                    }
+                    p {
+                        span {
+                            font-size: 2.4rem;
+                            display: block;
+                        }
+                        cursor: pointer;
+                        display: block;
+                        line-height: 4rem;
+                        text-align: center;
+                        border: $borderColor 2px solid;
+                        font-size: 4rem;
+                        letter-spacing: 0.2rem;
+                        color: #fff;
+                        margin-top: 350px;
+                    }
+                    img {
+                        padding-top: 30px;
+                        width: 41px;
+                    }
+                }
+            }
+            
+           
+        }
+    }
+}

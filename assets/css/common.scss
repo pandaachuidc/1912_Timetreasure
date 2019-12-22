@@ -27,7 +27,7 @@ html {
     position: relative;
 }
 body {
-    font-family: "Noto Sans TC", "Source Sans Pro", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    font-family: "Noto Sans TC", "Source Sans Pro","Microsoft JhengHei", "微軟正黑體", sans-serif;
     font-family: "微軟正黑體"\0; //for ie
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -90,6 +90,19 @@ button {
     transition: color .25s linear, background-color .25s linear, border-color .25s linear, padding .15s linear, filter .15s linear,opacity  .15s linear, transform .25s linear;
 }
 
+
+.shine-font {
+    background: -webkit-linear-gradient(left, #6e2118 0%, $deep-red 24%, #6e2118 36%, $deep-red 46%, #6e2118 52%, $deep-red 58%, $deep-red 67%, #6e2118 100%);
+    background-size: 100%;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    background-size: 300%;
+    -webkit-animation: font-shine 10s infinite;
+    animation: font-shine 10s infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
 // pad layout
 @media screen and (max-width: 768px) {}
 // mobile
@@ -104,7 +117,7 @@ button {
 
 /* Theme */
 // @import "theme/loading.scss";
-// @import "theme/nav.scss";
+@import "theme/nav.scss";
 @import "theme/pt1Kv.scss";
 @import "theme/pt2Ingredient.scss";
 @import "theme/pt3Product.scss";

@@ -1,3 +1,58 @@
-.wrapper{
-  
+.time-wrapper {
+    .time-kv {
+        width: 100%;
+        position: relative;
+        .bg-img {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            width: 100%;
+            // height: 100%;
+            background: url(../images/pt1_kv_pc.jpg) no-repeat top center;
+            background-size: 100%;
+            &:before {
+                content: '';
+                display: block;
+                background: url(../images/pt1_kv_pc_light.jpg) no-repeat top center;
+                background-size: 100%;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                -webkit-animation: img_shine 1.5s linear infinite alternate;
+                animation: img_shine 1.5s linear infinite alternate;
+            }
+        }
+        .time-header {
+            // position: absolute;
+            // z-index: 2;
+        }
+        .time-kv-txt {
+            position: absolute;
+            z-index: 2;
+            padding-left: 23.6%;
+            padding-top: 365px;
+            p {
+                font-size: $sup-title;
+                padding-bottom: 30px;
+                letter-spacing: 0.1rem;
+                font-family: "Microsoft JhengHei", "微軟正黑體";
+            }
+            h2 {
+                font-size: 4.5rem;
+                font-family: 'Noto Serif TC';
+                font-weight: 800;
+                letter-spacing: 0.1rem;
+                padding-bottom: 15px;
+            }
+            h1 {
+                font-size: $title;
+                font-family: 'Noto Serif TC';
+                font-weight: 800;
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
 }

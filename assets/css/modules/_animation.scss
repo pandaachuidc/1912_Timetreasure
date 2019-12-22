@@ -1,3 +1,51 @@
+@-webkit-keyframes img_shine {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes img_shine {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes font-shine {
+    0% {
+        background-position: 0% 0
+    }
+    to {
+        background-position: -300% 0
+    }
+}
+
+@-webkit-keyframes flare_shine {
+    0% {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes flare_shine {
+    0% {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
 @keyframes loading {
     0% {
         background: url("../images/loading.png") no-repeat center;
@@ -33,14 +81,7 @@
     }
 }
 
-@keyframes font-shine {
-    0% {
-        background-position: 0% 0
-    }
-    to {
-        background-position: -300% 0
-    }
-}
+
 
 @keyframes eyebg-pc {
     0% {
