@@ -1,0 +1,146 @@
+.time-wrapper {
+  .time-pt3-product {
+    background: url(../images/pt3_bg_pc.jpg) no-repeat top center;
+    background-size: 100%;
+    position: relative;
+    .productWrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      .time-product-txt {
+        text-align: center;
+        padding-top: 185px;
+        p {
+          @include sub-titStyle;
+        }
+        h1 {
+          @include titleStyle;
+          padding: 30px 0;
+        }
+      }
+      .productSlider {
+        width: 66%;
+        margin: 0 auto;
+        .btns {
+            max-width: 946px;
+            height: 464px;
+            margin: 0 auto;
+            text-align: center;
+            // padding: 10px 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+            a {
+              // color: #333;
+              text-decoration: none;
+              // padding: 5px;
+            }
+            a.on {
+              // background: #333;
+              // color: #fff;
+            }
+            &.bg00 {
+              background: url(../images/product_all_1.png) no-repeat top center;
+              background-size: 100%;
+            }
+            &.bg01 {
+              background: url(../images/product_all_2.png) no-repeat top center;
+              background-size: 100%;
+            }
+            &.bg02 {
+              background: url(../images/product_all_3.png) no-repeat top center;
+              background-size: 100%;
+            }
+            &.bg03 {
+              background: url(../images/product_all_4.png) no-repeat top center;
+              background-size: 100%;
+            }
+            &.bg04 {
+              background: url(../images/product_all_5.png) no-repeat top center;
+              background-size: 100%;
+            }
+            &.bg05 {
+              background: url(../images/product_all_6.png) no-repeat top center;
+              background-size: 100%;
+            }
+            &.bg06 {
+              background: url(../images/product_all_7.png) no-repeat top center;
+              background-size: 100%;
+            }
+          }
+        .btnWrap {
+          position: relative;
+          .btnsBlank {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+          }
+          
+        }
+      }
+      .owl-carousel {
+        width: 100%;
+        margin: 0 auto;
+        .item {
+          // text-align: center;
+          // font-size: 20px;
+          // padding: 100px 0 0;
+
+          // background: #eee;
+          // border: 1px solid #333;
+
+          .product-detail-wrap {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            width: 100%;
+            .product-photo {
+              // flex: 2;
+              width: 45%;
+              img {
+                width: 85%;
+                margin: 0 auto;
+                margin-right: 0;
+              }
+            }
+            .product-content {
+              // flex: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: left;
+              padding-top: 50px;
+              margin-right: 50px;
+              width: 55%;
+              // padding: 0 10%;
+              h2 {
+                font-size: 4rem;
+                font-family: "Noto Serif TC";
+                font-weight: 800;
+                letter-spacing: 0.3rem;
+              }
+              .price {
+                font-size: 2.8rem;
+                font-family: "Noto Serif TC";
+                font-weight: 800;
+                letter-spacing: 0.3rem;
+                padding: 25px 0;
+              }
+              .desc {
+                font-size: 2.4rem;
+                line-height: 1.5;
+                padding-right: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.owl-carousel .prev-slide,.owl-carousel .next-slide{
+  z-index: 3;
+}

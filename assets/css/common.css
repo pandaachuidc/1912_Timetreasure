@@ -168,7 +168,75 @@
     width: 100%;
     height: 100%; }
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -180,7 +248,8 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-html, body {
+html,
+body {
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -190,8 +259,8 @@ html {
   position: relative; }
 
 body {
-  font-family: "Noto Sans TC", "Source Sans Pro","Microsoft JhengHei", "微軟正黑體", sans-serif;
-  font-family: "微軟正黑體"\0;
+  font-family: "Noto Sans TC", "Source Sans Pro", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+  font-family: "微軟正黑體" \0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
@@ -202,7 +271,18 @@ body.fixed {
   height: 100%;
   overflow: hidden; }
 
-main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 nav ul {
@@ -219,7 +299,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-input, select, button, textarea {
+input,
+select,
+button,
+textarea {
   vertical-align: middle;
   outline: 0; }
 
@@ -248,15 +331,31 @@ button {
   cursor: pointer; }
 
 /*通用全站都有的寫法*/
-*:link, *:visited, *:hover, *:active, *:focus {
-  -webkit-transition: color .25s linear, background-color .25s linear, border-color .25s linear, padding .15s linear, opacity  .15s linear, -webkit-filter .15s linear,-webkit-transform .25s linear;
-  transition: color .25s linear, background-color .25s linear, border-color .25s linear, padding .15s linear, opacity  .15s linear, -webkit-filter .15s linear,-webkit-transform .25s linear;
-  -o-transition: color .25s linear, background-color .25s linear, border-color .25s linear, padding .15s linear, filter .15s linear,opacity  .15s linear, transform .25s linear;
-  transition: color .25s linear, background-color .25s linear, border-color .25s linear, padding .15s linear, filter .15s linear,opacity  .15s linear, transform .25s linear;
-  transition: color .25s linear, background-color .25s linear, border-color .25s linear, padding .15s linear, filter .15s linear,opacity  .15s linear, transform .25s linear, -webkit-filter .15s linear,-webkit-transform .25s linear; }
+*:link,
+*:visited,
+*:hover,
+*:active,
+*:focus {
+  -webkit-transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, opacity 0.15s linear, -webkit-filter 0.15s linear, -webkit-transform 0.25s linear;
+  transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, opacity 0.15s linear, -webkit-filter 0.15s linear, -webkit-transform 0.25s linear;
+  -o-transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, filter 0.15s linear, opacity 0.15s linear, transform 0.25s linear;
+  transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, filter 0.15s linear, opacity 0.15s linear, transform 0.25s linear;
+  transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, filter 0.15s linear, opacity 0.15s linear, transform 0.25s linear, -webkit-filter 0.15s linear, -webkit-transform 0.25s linear; }
 
 .shine-font {
   background: -webkit-linear-gradient(left, #6e2118 0%, #341210 24%, #6e2118 36%, #341210 46%, #6e2118 52%, #341210 58%, #341210 67%, #6e2118 100%);
+  background-size: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  background-size: 300%;
+  -webkit-animation: font-shine 10s infinite;
+  animation: font-shine 10s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.shine-font2 {
+  background: -webkit-linear-gradient(left, #fff5f3 0%, #fee4dc 24%, #fff5f3 36%, #fee4dc 46%, #fff5f3 52%, #fee4dc 58%, #fee4dc 67%, #fff5f3 100%);
   background-size: 100%;
   -webkit-transition: 1s;
   -o-transition: 1s;
@@ -733,37 +832,48 @@ button {
     background: url(../images/pt2_bg_pc.jpg) no-repeat top center;
     background-size: 100%;
     width: 100%;
-    padding-top: 100px;
-    padding-bottom: 70px; }
-    .time-pt2-igdt .intro .content {
-      padding-bottom: 50px; }
-      .time-pt2-igdt .intro .content p {
-        font-size: 3.5rem;
-        font-family: 'Noto Serif TC';
-        font-weight: 800;
-        letter-spacing: 0.3rem; }
-      .time-pt2-igdt .intro .content h1 {
-        font-size: 6rem;
-        font-family: 'Noto Serif TC';
-        font-weight: 800;
-        letter-spacing: 0.3rem;
-        padding: 30px 0; }
-    .time-pt2-igdt .intro .des-sec p {
-      padding-top: 70px;
-      font-size: 2.4rem;
-      line-height: 4rem; }
+    position: relative; }
+    .time-pt2-igdt .intro .contentWrap {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0; }
+      .time-pt2-igdt .intro .contentWrap .content {
+        padding-bottom: 50px; }
+        .time-pt2-igdt .intro .contentWrap .content p {
+          font-size: 3.5rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.3rem; }
+        .time-pt2-igdt .intro .contentWrap .content h1 {
+          font-size: 6rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.3rem;
+          padding: 30px 0; }
+      .time-pt2-igdt .intro .contentWrap .des-sec p {
+        padding-top: 70px;
+        font-size: 2.4rem;
+        line-height: 4rem; }
   .time-pt2-igdt .ingredient {
     position: relative; }
     .time-pt2-igdt .ingredient .content {
       position: absolute;
       z-index: 1;
       width: 100%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding-top: 50px; }
       .time-pt2-igdt .ingredient .content h1 {
         font-size: 6rem;
         font-family: 'Noto Serif TC';
         font-weight: 800;
         letter-spacing: 0.3rem; }
+      .time-pt2-igdt .ingredient .content p {
+        font-size: 3.5rem;
+        font-family: "Noto Serif TC";
+        font-weight: 800;
+        letter-spacing: 0.3rem;
+        padding-top: 30px; }
     .time-pt2-igdt .ingredient .ingredients {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -771,26 +881,21 @@ button {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+      width: 100%; }
       .time-pt2-igdt .ingredient .ingredients .igdtWrap {
         position: relative;
-        font-family: 'Microsoft JhengHei', '微軟正黑體'; }
+        font-family: "Microsoft JhengHei", "微軟正黑體";
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
         .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText {
           position: absolute;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          width: 80%; }
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 80%;
+          padding-top: 55%; }
           .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText .flare {
             width: 305px;
             height: 118px;
@@ -798,6 +903,10 @@ button {
             background-size: 100%;
             text-indent: -9999px;
             position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -7px;
             -webkit-animation: flare_shine 0.12s infinite;
             animation: flare_shine 0.12s infinite;
             z-index: 1;
@@ -805,16 +914,1024 @@ button {
           .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText p {
             cursor: pointer;
             display: block;
-            line-height: 4rem;
+            line-height: 4.5rem;
             text-align: center;
             border: #e3c8c8 2px solid;
             font-size: 4rem;
             letter-spacing: 0.2rem;
             color: #fff;
-            margin-top: 350px; }
+            padding-top: 25px;
+            padding-bottom: 25px; }
             .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText p span {
               font-size: 2.4rem;
               display: block; }
           .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText img {
             padding-top: 30px;
             width: 41px; }
+      .time-pt2-igdt .ingredient .ingredients .igdtTextAfter {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 80%;
+        padding-top: 55%; }
+        .time-pt2-igdt .ingredient .ingredients .igdtTextAfter p {
+          color: #fff;
+          font-size: 2.4rem;
+          line-height: 1.5;
+          letter-spacing: 0.2rem;
+          text-shadow: 0.2em 0.2em 0.3em #170808; }
+      .time-pt2-igdt .ingredient .ingredients img {
+        width: 100%; }
+
+.time-wrapper .time-pt3-product {
+  background: url(../images/pt3_bg_pc.jpg) no-repeat top center;
+  background-size: 100%;
+  position: relative; }
+  .time-wrapper .time-pt3-product .productWrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+    .time-wrapper .time-pt3-product .productWrap .time-product-txt {
+      text-align: center;
+      padding-top: 185px; }
+      .time-wrapper .time-pt3-product .productWrap .time-product-txt p {
+        font-size: 3.5rem;
+        font-family: 'Noto Serif TC';
+        font-weight: 800;
+        letter-spacing: 0.3rem; }
+      .time-wrapper .time-pt3-product .productWrap .time-product-txt h1 {
+        font-size: 6rem;
+        font-family: 'Noto Serif TC';
+        font-weight: 800;
+        letter-spacing: 0.3rem;
+        padding: 30px 0; }
+    .time-wrapper .time-pt3-product .productWrap .productSlider {
+      width: 66%;
+      margin: 0 auto; }
+      .time-wrapper .time-pt3-product .productWrap .productSlider .btns {
+        max-width: 946px;
+        height: 464px;
+        margin: 0 auto;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns a {
+          text-decoration: none; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg00 {
+          background: url(../images/product_all_1.png) no-repeat top center;
+          background-size: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg01 {
+          background: url(../images/product_all_2.png) no-repeat top center;
+          background-size: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg02 {
+          background: url(../images/product_all_3.png) no-repeat top center;
+          background-size: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg03 {
+          background: url(../images/product_all_4.png) no-repeat top center;
+          background-size: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg04 {
+          background: url(../images/product_all_5.png) no-repeat top center;
+          background-size: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg05 {
+          background: url(../images/product_all_6.png) no-repeat top center;
+          background-size: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg06 {
+          background: url(../images/product_all_7.png) no-repeat top center;
+          background-size: 100%; }
+      .time-wrapper .time-pt3-product .productWrap .productSlider .btnWrap {
+        position: relative; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btnWrap .btnsBlank {
+          position: absolute;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row; }
+    .time-wrapper .time-pt3-product .productWrap .owl-carousel {
+      width: 100%;
+      margin: 0 auto; }
+      .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        width: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-photo {
+          width: 45%; }
+          .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-photo img {
+            width: 85%;
+            margin: 0 auto;
+            margin-right: 0; }
+        .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: left;
+          -ms-flex-align: left;
+          align-items: left;
+          padding-top: 50px;
+          margin-right: 50px;
+          width: 55%; }
+          .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
+            font-size: 4rem;
+            font-family: "Noto Serif TC";
+            font-weight: 800;
+            letter-spacing: 0.3rem; }
+          .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
+            font-size: 2.8rem;
+            font-family: "Noto Serif TC";
+            font-weight: 800;
+            letter-spacing: 0.3rem;
+            padding: 25px 0; }
+          .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
+            font-size: 2.4rem;
+            line-height: 1.5;
+            padding-right: 50px; }
+
+.owl-carousel .prev-slide, .owl-carousel .next-slide {
+  z-index: 3; }
+
+.time-wrapper .time-pt4-event .event1 {
+  background: url(../images/pt4_bg_pc.jpg) no-repeat top center;
+  background-size: 100%;
+  position: relative; }
+  .time-wrapper .time-pt4-event .event1 .event1Wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 28.3%; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
+      text-align: center;
+      padding-top: 185px; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
+        font-size: 3.5rem;
+        font-family: 'Noto Serif TC';
+        font-weight: 800;
+        letter-spacing: 0.3rem; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
+        font-size: 6rem;
+        font-family: 'Noto Serif TC';
+        font-weight: 800;
+        letter-spacing: 0.3rem;
+        padding: 30px 0; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
+      margin: 60px 0; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
+        max-width: 830px; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 {
+      text-align: center; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
+        padding: 30px 0 55px 0; }
+
+.time-wrapper .time-pt4-event .event2 {
+  background: url(../images/pt5_bg_pc.jpg) no-repeat top center;
+  background-size: 100%; }
+
+.time-wrapper .time-pt4-event .eventP {
+  padding: 40px 0; }
+
+.eventH2 {
+  font-size: 4.5rem;
+  font-family: "Noto Serif TC";
+  font-weight: 800;
+  letter-spacing: 0.4rem; }
+
+.eventH3::before, .eventH3::after {
+  content: "";
+  width: 160px;
+  height: 1px;
+  background-color: #73241a;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 30px;
+  position: relative;
+  top: -8px; }
+
+.eventH3 span {
+  font-size: 3rem;
+  font-family: "Noto Serif TC";
+  font-weight: 800;
+  letter-spacing: 0.4rem; }
+
+.eventH4 {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  line-height: 1.5; }
+
+.eventP {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  text-align: left; }
+
+/* light box */
+.lightbox {
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+  position: fixed;
+  display: none;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0; }
+
+.lightbox-container {
+  position: relative;
+  max-width: 960px;
+  margin: 10% auto;
+  display: block;
+  padding: 0 3%;
+  height: auto;
+  z-index: 0;
+  margin-top: 18%; }
+
+.lightbox-content {
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7); }
+
+.lightbox-close {
+  text-transform: uppercase;
+  background: transparent;
+  position: absolute;
+  font-weight: 300;
+  font-size: 12px;
+  display: block;
+  border: none;
+  color: white;
+  top: -22px;
+  right: 3%;
+  z-index: 3; }
+
+.video-container {
+  padding-bottom: 56.25%;
+  position: relative;
+  padding-top: 30px;
+  overflow: hidden;
+  height: 0; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.lightbox-content {
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7); }
+
+.lightbox-close {
+  text-transform: uppercase;
+  background: transparent;
+  position: absolute;
+  font-weight: 300;
+  font-size: 12px;
+  display: block;
+  border: none;
+  color: white;
+  top: -22px;
+  right: 3%;
+  z-index: 3; }
+
+.video-container {
+  padding-bottom: 56.25%;
+  position: relative;
+  padding-top: 30px;
+  overflow: hidden;
+  height: 0; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+/* light box */
+.ytvideo {
+  margin: 0 auto;
+  width: 100%;
+  width: 100%;
+  text-align: center; }
+
+.ytvideo .video picture .video {
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
+
+.ytvideo .video picture .play_btn {
+  display: block;
+  margin: -32% auto; }
+
+.eventSection {
+  background: url("../images/eventbg-pc.png") no-repeat top center;
+  background-size: 100%;
+  padding: 100px 0; }
+  .eventSection .locationbox {
+    max-width: 650px;
+    margin: 25px auto 0; }
+    .eventSection .locationbox .selectBox {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .eventSection .locationbox .selectBox .locationLabel {
+        font-size: 22px;
+        font-size: 2.2rem;
+        color: #dbc089;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 150px;
+        flex: 0 0 150px; }
+      .eventSection .locationbox .selectBox .locationSelect {
+        width: 100%;
+        padding: 0 0 0 10px; }
+        .eventSection .locationbox .selectBox .locationSelect select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 100%;
+          border: 1px solid #dbc089;
+          background: url("../images/selectArrow.png") no-repeat right 15px center #000;
+          background-size: 30px;
+          padding: 10px;
+          color: #fff;
+          font-size: 20px;
+          font-size: 2rem; }
+    .eventSection .locationbox .locationResult .note {
+      font-size: 17px;
+      font-size: 1.7rem;
+      color: #c4c4c4;
+      margin: 10px 0 0; }
+    .eventSection .locationbox .locationResult .result {
+      display: none;
+      color: #fff;
+      font-size: 20px;
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-top: 1px dotted #dbc089;
+      border-bottom: 1px dotted #dbc089;
+      margin: 20px auto 0; }
+      .eventSection .locationbox .locationResult .result.on {
+        display: block; }
+      .eventSection .locationbox .locationResult .result .name,
+      .eventSection .locationbox .locationResult .result .tel,
+      .eventSection .locationbox .locationResult .result .time {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        line-height: 1.5;
+        padding: 10px; }
+        .eventSection .locationbox .locationResult .result .name .tit,
+        .eventSection .locationbox .locationResult .result .tel .tit,
+        .eventSection .locationbox .locationResult .result .time .tit {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+          color: #dbc089; }
+      .eventSection .locationbox .locationResult .result a {
+        text-decoration: none;
+        color: #fff; }
+  .eventSection .eventbottom .eventdetail {
+    margin: 50px auto 0;
+    max-width: 725px; }
+    .eventSection .eventbottom .eventdetail .detail-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .eventSection .eventbottom .eventdetail .detail-title .pic {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 140px;
+        flex: 0 0 140px; }
+      .eventSection .eventbottom .eventdetail .detail-title .text {
+        width: 100%;
+        letter-spacing: 0.1em;
+        padding: 0 0 25px 30px; }
+        .eventSection .eventbottom .eventdetail .detail-title .text h1 {
+          font-size: 40px;
+          font-size: 4rem;
+          font-family: "Noto Serif TC"; }
+        .eventSection .eventbottom .eventdetail .detail-title .text h2 {
+          font-size: 26px;
+          font-size: 2.6rem;
+          font-weight: 300;
+          color: #dbc089;
+          margin: 10px 0 0; }
+    .eventSection .eventbottom .eventdetail .detail-note {
+      margin: -15px auto 0;
+      padding: 0 0 0 170px; }
+      .eventSection .eventbottom .eventdetail .detail-note .txt {
+        font-size: 22px;
+        font-size: 2.2rem;
+        line-height: 1.5;
+        color: #fff; }
+      .eventSection .eventbottom .eventdetail .detail-note .note {
+        font-size: 17px;
+        font-size: 1.7rem;
+        color: #c4c4c4;
+        line-height: 1.5; }
+  .eventSection .btnwrap {
+    max-width: 325px;
+    margin: 40px auto 0;
+    position: relative; }
+  .eventSection .linkBtn {
+    display: block;
+    padding: 20px 15px;
+    font-size: 26px;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    position: relative;
+    background: url("../images/btn-bg.jpg") no-repeat top center;
+    background-size: 100% 100%;
+    text-align: center; }
+    .eventSection .linkBtn:before {
+      content: "";
+      background: url("../images/shine_light.png");
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      margin-top: -15%;
+      display: block;
+      pointer-events: none;
+      -webkit-animation: btn-shine 4s ease 1s infinite;
+      animation: btn-shine 4s ease 1s infinite; }
+    .eventSection .linkBtn:hover {
+      color: #dbc089; }
+
+@media screen and (max-width: 1600px) {
+  .eventSection .title {
+    font-size: 46px;
+    font-size: 4.6rem;
+    margin: 0 auto 20px; }
+    .eventSection .title span {
+      padding: 0 0 0 20px; }
+  .eventSection .title-text {
+    font-size: 22px;
+    font-size: 2.2rem;
+    margin: 0 auto 50px; }
+  .eventSection .eventtop .featurebox .feature-title {
+    font-size: 30px;
+    font-size: 3rem;
+    margin: 0 auto 15px; }
+  .eventSection .eventtop .featurebox .feature-subtitle {
+    font-size: 22px;
+    font-size: 2.2rem;
+    margin: 0 auto 10px; }
+  .eventSection .eventtop .featurebox p {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .eventSection .eventtop .eventdetail .detail-title .pic {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 120px;
+    flex: 0 0 120px; }
+  .eventSection .eventtop .eventdetail .detail-title .text {
+    padding: 0 0 25px 30px; }
+    .eventSection .eventtop .eventdetail .detail-title .text h1 {
+      font-size: 34px;
+      font-size: 3.4rem; }
+    .eventSection .eventtop .eventdetail .detail-title .text h2 {
+      font-size: 22px;
+      font-size: 2.2rem;
+      margin: 10px 0 0; }
+  .eventSection .eventtop .eventdetail .detail-content {
+    padding: 0 0 0 150px;
+    margin: 0 auto 30px; }
+    .eventSection .eventtop .eventdetail .detail-content .step {
+      font-size: 18px;
+      font-size: 1.8rem; }
+  .eventSection .eventtop .eventdetail .detail-note .note-pic {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 250px;
+    flex: 0 0 250px; }
+  .eventSection .eventtop .eventdetail .detail-note .note-list {
+    font-size: 16px;
+    font-size: 1.6rem; }
+  .eventSection .eventtop .eventdetail .locationbox {
+    margin: 20px auto 0; }
+    .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
+      font-size: 20px;
+      font-size: 2rem;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 130px;
+      flex: 0 0 130px; }
+    .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
+      font-size: 20px;
+      font-size: 2rem; }
+    .eventSection .eventtop .eventdetail .locationbox .locationResult .note {
+      font-size: 16px;
+      font-size: 1.6rem;
+      margin: 10px 0 0; }
+    .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
+      font-size: 18px;
+      font-size: 1.8rem;
+      margin: 15px auto 0; }
+  .eventSection .eventbottom .eventdetail .detail-title .pic {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 120px;
+    flex: 0 0 120px; }
+  .eventSection .eventbottom .eventdetail .detail-title .text {
+    padding: 0 0 25px 30px; }
+    .eventSection .eventbottom .eventdetail .detail-title .text h1 {
+      font-size: 34px;
+      font-size: 3.4rem; }
+    .eventSection .eventbottom .eventdetail .detail-title .text h2 {
+      font-size: 22px;
+      font-size: 2.2rem; }
+  .eventSection .eventbottom .eventdetail .detail-note {
+    margin: -15px auto 0;
+    padding: 0 0 0 150px; }
+    .eventSection .eventbottom .eventdetail .detail-note .txt {
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .eventSection .eventbottom .eventdetail .detail-note .note {
+      font-size: 16px;
+      font-size: 1.6rem; }
+  .eventSection .linkBtn {
+    padding: 15px 15px;
+    font-size: 22px;
+    font-size: 2.2rem;
+    background: url("../images/btn-bg.jpg") no-repeat top center;
+    background-size: 100% 100%;
+    text-align: center; } }
+
+@media screen and (max-width: 1000px) {
+  .eventSection {
+    padding: 100px 0; }
+    .eventSection .title {
+      font-size: 34px;
+      font-size: 3.4rem;
+      margin: 0 auto 10px; }
+      .eventSection .title span {
+        padding: 0 0 0 10px; }
+    .eventSection .title-text {
+      font-size: 18px;
+      font-size: 1.8rem;
+      margin: 0 auto 30px; }
+    .eventSection .eventtop {
+      max-width: 850px;
+      width: 90%;
+      margin: 0 auto; }
+      .eventSection .eventtop .featurebox .feature-title {
+        font-size: 30px;
+        font-size: 3rem;
+        margin: 0 auto 15px; }
+      .eventSection .eventtop .featurebox .feature-subtitle {
+        font-size: 22px;
+        font-size: 2.2rem;
+        margin: 0 auto 10px; }
+      .eventSection .eventtop .featurebox p {
+        font-size: 16px;
+        font-size: 1.6rem; }
+      .eventSection .eventtop .eventdetail .detail-title .pic {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 120px;
+        flex: 0 0 120px; }
+      .eventSection .eventtop .eventdetail .detail-title .text {
+        padding: 0 0 25px 30px; }
+        .eventSection .eventtop .eventdetail .detail-title .text h1 {
+          font-size: 32px;
+          font-size: 3.2rem; }
+        .eventSection .eventtop .eventdetail .detail-title .text h2 {
+          font-size: 18px;
+          font-size: 1.8rem;
+          margin: 10px 0 0; }
+      .eventSection .eventtop .eventdetail .detail-content {
+        padding: 0 0 0 150px;
+        margin: 0 auto 30px; }
+        .eventSection .eventtop .eventdetail .detail-content .step {
+          font-size: 18px;
+          font-size: 1.8rem; }
+      .eventSection .eventtop .eventdetail .detail-note .note-pic {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 250px;
+        flex: 0 0 250px; }
+      .eventSection .eventtop .eventdetail .detail-note .note-list {
+        font-size: 16px;
+        font-size: 1.6rem; }
+      .eventSection .eventtop .eventdetail .locationbox {
+        margin: 20px auto 0; }
+        .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
+          font-size: 18px;
+          font-size: 1.8rem;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 130px;
+          flex: 0 0 130px; }
+        .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
+          font-size: 18px;
+          font-size: 1.8rem;
+          background-size: 22px; }
+        .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
+          font-size: 18px;
+          font-size: 1.8rem;
+          margin: 15px auto 0; }
+          .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name,
+          .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel,
+          .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time {
+            padding: 8px 10px; }
+    .eventSection .eventbottom .eventdetail .detail-title .pic {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 120px;
+      flex: 0 0 120px; }
+    .eventSection .eventbottom .eventdetail .detail-title .text {
+      padding: 0 0 25px 30px; }
+      .eventSection .eventbottom .eventdetail .detail-title .text h1 {
+        font-size: 32px;
+        font-size: 3.2rem; }
+      .eventSection .eventbottom .eventdetail .detail-title .text h2 {
+        font-size: 18px;
+        font-size: 1.8rem; }
+    .eventSection .eventbottom .eventdetail .detail-note {
+      margin: -15px auto 0;
+      padding: 0 0 0 150px; }
+      .eventSection .eventbottom .eventdetail .detail-note .txt {
+        font-size: 18px;
+        font-size: 1.8rem; }
+      .eventSection .eventbottom .eventdetail .detail-note .note {
+        font-size: 16px;
+        font-size: 1.6rem; }
+    .eventSection .linkBtn {
+      padding: 15px 15px 18px;
+      font-size: 22px;
+      font-size: 2.2rem;
+      background: url("../images/btn-bg.jpg") no-repeat top center;
+      background-size: 100% 100%; } }
+
+@media screen and (max-width: 767px) {
+  .eventSection {
+    background: url("../images/eventbg-mb.png") no-repeat top center;
+    background-size: 100%;
+    padding: 65px 0; }
+    .eventSection .title {
+      font-size: 30px;
+      font-size: 3rem;
+      margin: 0 auto 10px; }
+      .eventSection .title span {
+        display: block;
+        padding: 0; }
+    .eventSection .title-text {
+      font-size: 16px;
+      font-size: 1.6rem;
+      margin: 0 auto 30px; }
+      .eventSection .title-text span {
+        display: block; }
+      .eventSection .title-text br {
+        display: none; }
+    .eventSection .eventtop {
+      padding: 0 0 30px;
+      background: url("../images/evbg02-mb.jpg") no-repeat bottom center;
+      background-size: 100%; }
+      .eventSection .eventtop .pic .pic-pc {
+        display: none; }
+      .eventSection .eventtop .pic .pic-mb {
+        display: block; }
+      .eventSection .eventtop .featurebox .feature-title {
+        font-size: 23px;
+        font-size: 2.3rem;
+        margin: 0 auto 10px; }
+      .eventSection .eventtop .featurebox .feature-subtitle {
+        font-size: 16px;
+        font-size: 1.6rem;
+        margin: 0 auto 10px; }
+      .eventSection .eventtop .featurebox p {
+        font-size: 14px;
+        font-size: 1.4rem; }
+      .eventSection .eventtop .eventdetail {
+        padding: 0 1rem 0 0; }
+        .eventSection .eventtop .eventdetail .detail-title {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start; }
+          .eventSection .eventtop .eventdetail .detail-title .pic {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 90px;
+            flex: 0 0 90px; }
+          .eventSection .eventtop .eventdetail .detail-title .text {
+            padding: 0 0 15px 10px; }
+            .eventSection .eventtop .eventdetail .detail-title .text h1 {
+              font-size: 24px;
+              font-size: 2.4rem;
+              line-height: 1.2; }
+              .eventSection .eventtop .eventdetail .detail-title .text h1 span {
+                display: block; }
+            .eventSection .eventtop .eventdetail .detail-title .text h2 {
+              font-size: 16px;
+              font-size: 1.6rem;
+              line-height: 1.2;
+              margin: 5px 0 0; }
+              .eventSection .eventtop .eventdetail .detail-title .text h2 span {
+                display: block; }
+        .eventSection .eventtop .eventdetail .detail-content {
+          padding: 0 0 0 20px;
+          margin: 0 auto 20px; }
+          .eventSection .eventtop .eventdetail .detail-content .arrow {
+            max-width: 10px; }
+          .eventSection .eventtop .eventdetail .detail-content .step {
+            font-size: 14px;
+            font-size: 1.4rem; }
+        .eventSection .eventtop .eventdetail .detail-note {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .eventSection .eventtop .eventdetail .detail-note .note-pic {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+            width: 70%;
+            margin: 0 auto; }
+          .eventSection .eventtop .eventdetail .detail-note .note-list {
+            font-size: 13px;
+            font-size: 1.3rem;
+            padding: 0 0 0 26px; }
+        .eventSection .eventtop .eventdetail .locationbox {
+          padding: 0 0 0 1.5rem; }
+          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
+            font-size: 16px;
+            font-size: 1.6rem;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100px;
+            flex: 0 0 100px; }
+          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
+            background: url("../images/selectArrow.png") no-repeat right 10px center #000;
+            background-size: 20px;
+            padding: 8px;
+            font-size: 16px;
+            font-size: 1.6rem; }
+          .eventSection .eventtop .eventdetail .locationbox .locationResult .note {
+            font-size: 12px;
+            font-size: 1.2rem;
+            margin: 10px 0 0; }
+          .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
+            font-size: 16px;
+            font-size: 1.6rem;
+            margin: 15px auto 0; }
+            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name,
+            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel,
+            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              line-height: 1.5;
+              padding: 5px; }
+              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name .tit,
+              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel .tit,
+              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time .tit {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 110px;
+                flex: 0 0 110px;
+                color: #dbc089; }
+    .eventSection .eventbottom .eventdetail {
+      margin: 30px auto 0;
+      padding: 0 1rem 0 1.5rem; }
+      .eventSection .eventbottom .eventdetail .detail-title {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+        .eventSection .eventbottom .eventdetail .detail-title .pic {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 90px;
+          flex: 0 0 90px; }
+        .eventSection .eventbottom .eventdetail .detail-title .text {
+          padding: 0 0 15px 10px; }
+          .eventSection .eventbottom .eventdetail .detail-title .text h1 {
+            font-size: 24px;
+            font-size: 2.4rem;
+            line-height: 1.2; }
+            .eventSection .eventbottom .eventdetail .detail-title .text h1 span {
+              display: block; }
+          .eventSection .eventbottom .eventdetail .detail-title .text h2 {
+            font-size: 16px;
+            font-size: 1.6rem;
+            margin: 5px 0 0;
+            line-height: 1.2; }
+            .eventSection .eventbottom .eventdetail .detail-title .text h2 span {
+              display: block; }
+      .eventSection .eventbottom .eventdetail .detail-note {
+        margin: 0 auto 0;
+        padding: 0 1.5rem; }
+        .eventSection .eventbottom .eventdetail .detail-note .txt {
+          font-size: 16px;
+          font-size: 1.6rem; }
+        .eventSection .eventbottom .eventdetail .detail-note .note {
+          font-size: 12px;
+          font-size: 1.2rem; }
+    .eventSection .btnwrap {
+      max-width: 264px;
+      margin: 25px auto 0; }
+    .eventSection .linkBtn {
+      background: url("../images/btn-bg.jpg") no-repeat top center;
+      background-size: 100% 100%;
+      padding: 15px;
+      font-size: 19px;
+      font-size: 1.9rem; } }
+
+@media screen and (max-width: 375px) {
+  .eventSection {
+    background: url("../images/eventbg-mb.png") no-repeat top center;
+    background-size: 100%;
+    padding: 65px 0; }
+    .eventSection .title {
+      font-size: 30px;
+      font-size: 3rem;
+      margin: 0 auto 10px; }
+      .eventSection .title span {
+        display: block;
+        padding: 0; }
+    .eventSection .title-text {
+      font-size: 14px;
+      font-size: 1.4rem;
+      margin: 0 auto 30px; }
+      .eventSection .title-text span {
+        display: block; }
+      .eventSection .title-text br {
+        display: none; }
+    .eventSection .eventtop {
+      padding: 0 0 30px;
+      background: url("../images/evbg02-mb.jpg") no-repeat bottom center;
+      background-size: 100%; }
+      .eventSection .eventtop .pic .pic-pc {
+        display: none; }
+      .eventSection .eventtop .pic .pic-mb {
+        display: block; }
+      .eventSection .eventtop .featurebox .feature-title {
+        font-size: 23px;
+        font-size: 2.3rem;
+        margin: 0 auto 10px; }
+      .eventSection .eventtop .featurebox .feature-subtitle {
+        font-size: 16px;
+        font-size: 1.6rem;
+        margin: 0 auto 10px; }
+      .eventSection .eventtop .featurebox p {
+        font-size: 14px;
+        font-size: 1.4rem; }
+      .eventSection .eventtop .eventdetail {
+        padding: 0 1rem 0 0; }
+        .eventSection .eventtop .eventdetail .detail-title {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start; }
+          .eventSection .eventtop .eventdetail .detail-title .pic {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 90px;
+            flex: 0 0 90px; }
+          .eventSection .eventtop .eventdetail .detail-title .text {
+            padding: 0 0 15px 10px; }
+            .eventSection .eventtop .eventdetail .detail-title .text h1 {
+              font-size: 24px;
+              font-size: 2.4rem;
+              line-height: 1.2; }
+              .eventSection .eventtop .eventdetail .detail-title .text h1 span {
+                display: block; }
+            .eventSection .eventtop .eventdetail .detail-title .text h2 {
+              font-size: 16px;
+              font-size: 1.6rem;
+              line-height: 1.2;
+              margin: 5px 0 0; }
+              .eventSection .eventtop .eventdetail .detail-title .text h2 span {
+                display: block; }
+        .eventSection .eventtop .eventdetail .detail-content {
+          padding: 0 0 0 15px;
+          margin: 0 auto 20px; }
+          .eventSection .eventtop .eventdetail .detail-content .arrow {
+            max-width: 7px; }
+          .eventSection .eventtop .eventdetail .detail-content .step {
+            font-size: 13px;
+            font-size: 1.3rem; }
+        .eventSection .eventtop .eventdetail .detail-note {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .eventSection .eventtop .eventdetail .detail-note .note-pic {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+            width: 70%;
+            margin: 0 auto; }
+          .eventSection .eventtop .eventdetail .detail-note .note-list {
+            font-size: 13px;
+            font-size: 1.3rem;
+            padding: 0 0 0 26px; }
+        .eventSection .eventtop .eventdetail .locationbox {
+          padding: 0 0 0 1.5rem; }
+          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
+            font-size: 16px;
+            font-size: 1.6rem;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100px;
+            flex: 0 0 100px; }
+          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
+            background: url("../images/selectArrow.png") no-repeat right 10px center #000;
+            background-size: 20px;
+            padding: 8px;
+            font-size: 16px;
+            font-size: 1.6rem; }
+          .eventSection .eventtop .eventdetail .locationbox .locationResult .note {
+            font-size: 12px;
+            font-size: 1.2rem;
+            margin: 10px 0 0; }
+          .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
+            font-size: 16px;
+            font-size: 1.6rem;
+            margin: 15px auto 0; }
+            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name,
+            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel,
+            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              line-height: 1.5;
+              padding: 5px; }
+              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name .tit,
+              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel .tit,
+              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time .tit {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 110px;
+                flex: 0 0 110px;
+                color: #dbc089; }
+    .eventSection .eventbottom .eventdetail {
+      margin: 30px auto 0;
+      padding: 0 1rem 0 1.5rem; }
+      .eventSection .eventbottom .eventdetail .detail-title {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+        .eventSection .eventbottom .eventdetail .detail-title .pic {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 90px;
+          flex: 0 0 90px; }
+        .eventSection .eventbottom .eventdetail .detail-title .text {
+          padding: 0 0 15px 10px; }
+          .eventSection .eventbottom .eventdetail .detail-title .text h1 {
+            font-size: 24px;
+            font-size: 2.4rem;
+            line-height: 1.2; }
+            .eventSection .eventbottom .eventdetail .detail-title .text h1 span {
+              display: block; }
+          .eventSection .eventbottom .eventdetail .detail-title .text h2 {
+            font-size: 16px;
+            font-size: 1.6rem;
+            margin: 5px 0 0;
+            line-height: 1.2; }
+            .eventSection .eventbottom .eventdetail .detail-title .text h2 span {
+              display: block; }
+      .eventSection .eventbottom .eventdetail .detail-note {
+        margin: 0 auto 0;
+        padding: 0 1.5rem; }
+        .eventSection .eventbottom .eventdetail .detail-note .txt {
+          font-size: 16px;
+          font-size: 1.6rem; }
+        .eventSection .eventbottom .eventdetail .detail-note .note {
+          font-size: 12px;
+          font-size: 1.2rem; } }
