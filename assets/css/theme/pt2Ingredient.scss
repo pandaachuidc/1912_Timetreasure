@@ -1,150 +1,171 @@
 .time-pt2-igdt {
-    text-align: center;
-    .intro {
-        background: url(../images/pt2_bg_pc.jpg) no-repeat top center;
-        background-size: 100%;
-        width: 100%;
-        // padding-top: 100px;
-        // padding-bottom: 70px;
+  text-align: center;
+  .intro {
+    background: url(../images/pt2_bg_pc.jpg) no-repeat top center;
+    background-size: 100%;
+    width: 100%;
+    // padding-top: 100px;
+    // padding-bottom: 70px;
+    position: relative;
+    .contentWrap {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      .content {
+        p {
+          @include sub-titStyle;
+        }
+        h1 {
+          @include titleStyle;
+          padding: 30px 0;
+        }
+        padding-bottom: 50px;
+      }
+      .des-sec {
+        p {
+          padding-top: 70px;
+          font-size: 2.4rem;
+          line-height: 4rem;
+        }
+        .parallax-window {
+          max-width: 1260px;
+          margin: 0 auto;
+          min-height: 353px;
+          background: transparent;
+        }
+      }
+    }
+  }
+  .ingredient {
+    position: relative;
+
+    .content {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 50px;
+      color: #fff5f3;
+      h1 {
+        @include titleStyle;
+      }
+      p {
+        font-size: $sup-title;
+        font-family: "Noto Serif TC";
+        font-weight: 800;
+        letter-spacing: 0.3rem;
+        padding-top: 30px;
+      }
+    }
+    .ingredients {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      .igdtWrap {
         position: relative;
-        .contentWrap {
+        font-family: "Microsoft JhengHei", "微軟正黑體";
+        flex: 1;
+        .igdtText {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 80%;
+          padding-top: 55%;
+          opacity: 1;
+          .flare {
+            width: 305px;
+            height: 118px;
+            background: url(../images/flare.png) center;
+            background-size: 100%;
+            text-indent: -9999px;
             position: absolute;
             left: 0;
-            top: 0;
             right: 0;
-            .content {
-                p {
-                    @include sub-titStyle;
-                }
-                h1 {
-                    @include titleStyle;
-                    padding: 30px 0;
-                }
-                padding-bottom: 50px;
-            }
-            .des-sec {
-                p {
-                    padding-top: 70px;
-                    font-size: 2.4rem;
-                    line-height: 4rem;
-                }
-            }
-        }
-    }
-    .ingredient {
-        position: relative;
-
-        .content {
-            position: absolute;
-            z-index: 1;
-            width: 100%;
             margin: 0 auto;
-            padding-top: 50px;
-            h1 {
-                @include titleStyle;
+            // top: 392px;
+            // left: 205px;
+            bottom: -7px;
+            -webkit-animation: flare_shine 0.12s infinite;
+            animation: flare_shine 0.12s infinite;
+            z-index: 1;
+            pointer-events: none;
+          }
+          p {
+            span {
+              font-size: 2.4rem;
+              display: block;
             }
-            p {
-                font-size: $sup-title;
-                font-family: 'Noto Serif TC';
-                font-weight: 800;
-                letter-spacing: 0.3rem;
-                padding-top: 30px;
+            cursor: pointer;
+            display: block;
+            position: relative;
+            line-height: 4.5rem;
+            text-align: center;
+            border: $borderColor 2px solid;
+            font-size: 4rem;
+            letter-spacing: 0.2rem;
+            color: #fff;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            overflow: hidden;
+            &::before {
+              content: "";
+              background: url(../images/shine_light.png);
+              background-position: center;
+              background-size: cover;
+              position: absolute;
+              width: 200%;
+              height: 200%;
+              margin-top: -30%;
+              display: block;
+              pointer-events: none;
+              -webkit-animation: btn-shine 4s ease 1s infinite;
+              animation: btn-shine 4s ease 1s infinite;
+              // box-sizing: border-box;
             }
+          }
+          img {
+            padding-top: 30px;
+            width: 41px;
+          }
         }
-        .ingredients {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            .igdtWrap {
-                position: relative;
-                font-family: 'Microsoft JhengHei', '微軟正黑體';
-                flex: 1;
-                .igdtText {
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    margin: 0 auto;
-                    width: 80%;
-                    padding-top: 55%;
-                    .flare {
-                        width: 305px;
-                        height: 118px;
-                        background: url(../images/flare.png) center;
-                        background-size: 100%;
-                        text-indent: -9999px;
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        margin: 0 auto;
-                        // top: 392px;
-                        // left: 205px;
-                        bottom: -7px;
-                        -webkit-animation: flare_shine 0.12s infinite;
-                        animation: flare_shine 0.12s infinite;
-                        z-index: 1;
-                        pointer-events: none;
-                    }
-                    p {
-                        span {
-                            font-size: 2.4rem;
-                            display: block;
-                        }
-                        cursor: pointer;
-                        display: block;
-                        position: relative;
-                        line-height: 4.5rem;
-                        text-align: center;
-                        border: $borderColor 2px solid;
-                        font-size: 4rem;
-                        letter-spacing: 0.2rem;
-                        color: #fff;
-                        padding-top: 25px;
-                        padding-bottom: 25px;
-                        overflow: hidden;
-                        &::before {
-                            content: '';
-                            background: url(../images/shine_light.png);
-                            background-position: center;
-                            background-size: cover;
-                            position: absolute;
-                            width: 200%;
-                            height: 200%;
-                            margin-top: -30%;
-                            display: block;
-                            pointer-events: none;
-                            -webkit-animation: btn-shine 4s ease 1s infinite;
-                            animation: btn-shine 4s ease 1s infinite;
-                            // box-sizing: border-box;
-                        }
-                    }
-                    img {
-                        padding-top: 30px;
-                        width: 41px;
-                    }
-                }
-            }
-            .igdtTextAfter {
-                display: none;
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                width: 80%;
-                padding-top: 55%;
-                p {
-                    color: #fff;
-                    font-size: 2.4rem;
-                    line-height: 1.5;
-                    letter-spacing: 0.2rem;
-                    text-shadow: 0.2em 0.2em 0.3em #170808;
-                }
-            }
-            .igdtTextAfter.on {
-                display: block;
-            }
-            img {
-                width: 100%;
-            }
+        .igdtTextAfter {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 80%;
+          padding-top: 55%;
+          opacity: 0;
+          transform: translateY(50px);
+          p {
+            color: #fff;
+            font-size: 2.4rem;
+            line-height: 1.5;
+            letter-spacing: 0.2rem;
+            text-shadow: 0.2em 0.2em 0.3em #170808;
+          }
         }
+        &:hover {
+          .igdtText {
+            opacity: 0;
+            transition: all 0.3s;
+          }
+          .igdtTextAfter {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.3s;
+          }
+        }
+      }
+
+      .igdtTextAfter.on {
+        display: block;
+      }
+      img {
+        width: 100%;
+      }
     }
+  }
 }

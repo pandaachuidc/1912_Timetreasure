@@ -343,7 +343,7 @@ button {
   transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, filter 0.15s linear, opacity 0.15s linear, transform 0.25s linear, -webkit-filter 0.15s linear, -webkit-transform 0.25s linear; }
 
 .shine-font {
-  background: -webkit-linear-gradient(left, #6e2118 0%, #341210 24%, #6e2118 36%, #341210 46%, #6e2118 52%, #341210 58%, #341210 67%, #6e2118 100%);
+  background: -webkit-linear-gradient(left, #8c2b1f 0%, #341210 24%, #8c2b1f 36%, #341210 46%, #8c2b1f 52%, #341210 58%, #341210 67%, #8c2b1f 100%);
   background-size: 100%;
   -webkit-transition: 1s;
   -o-transition: 1s;
@@ -792,7 +792,7 @@ button {
     background: url(../images/pt1_kv_pc.jpg) no-repeat top center;
     background-size: 100%; }
     .time-wrapper .time-kv .bg-img:before {
-      content: '';
+      content: "";
       display: block;
       background: url(../images/pt1_kv_pc_light.jpg) no-repeat top center;
       background-size: 100%;
@@ -816,15 +816,42 @@ button {
       font-family: "Microsoft JhengHei", "微軟正黑體"; }
     .time-wrapper .time-kv .time-kv-txt h2 {
       font-size: 4.5rem;
-      font-family: 'Noto Serif TC';
+      font-family: "Noto Serif TC";
       font-weight: 800;
       letter-spacing: 0.1rem;
       padding-bottom: 15px; }
     .time-wrapper .time-kv .time-kv-txt h1 {
       font-size: 6rem;
-      font-family: 'Noto Serif TC';
+      font-family: "Noto Serif TC";
       font-weight: 800;
       letter-spacing: 0.1rem; }
+
+.time-wrapper .gotopBtn {
+  max-width: 70px;
+  margin: 0 auto 50px;
+  text-align: center; }
+  .time-wrapper .gotopBtn a {
+    display: block;
+    position: relative;
+    text-decoration: none; }
+    .time-wrapper .gotopBtn a:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      -webkit-animation-duration: 0.2s;
+      animation-duration: 0.2s;
+      -webkit-animation-name: gsbgani;
+      animation-name: gsbgani;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+      background: url("../images/gotop02.png") no-repeat center;
+      background-size: 100%; }
 
 .time-pt2-igdt {
   text-align: center; }
@@ -855,6 +882,11 @@ button {
         padding-top: 70px;
         font-size: 2.4rem;
         line-height: 4rem; }
+      .time-pt2-igdt .intro .contentWrap .des-sec .parallax-window {
+        max-width: 1260px;
+        margin: 0 auto;
+        min-height: 353px;
+        background: transparent; }
   .time-pt2-igdt .ingredient {
     position: relative; }
     .time-pt2-igdt .ingredient .content {
@@ -862,7 +894,8 @@ button {
       z-index: 1;
       width: 100%;
       margin: 0 auto;
-      padding-top: 50px; }
+      padding-top: 50px;
+      color: #fff5f3; }
       .time-pt2-igdt .ingredient .content h1 {
         font-size: 6rem;
         font-family: 'Noto Serif TC';
@@ -870,7 +903,7 @@ button {
         letter-spacing: 0.3rem; }
       .time-pt2-igdt .ingredient .content p {
         font-size: 3.5rem;
-        font-family: 'Noto Serif TC';
+        font-family: "Noto Serif TC";
         font-weight: 800;
         letter-spacing: 0.3rem;
         padding-top: 30px; }
@@ -885,7 +918,7 @@ button {
       width: 100%; }
       .time-pt2-igdt .ingredient .ingredients .igdtWrap {
         position: relative;
-        font-family: 'Microsoft JhengHei', '微軟正黑體';
+        font-family: "Microsoft JhengHei", "微軟正黑體";
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1; }
@@ -895,7 +928,8 @@ button {
           right: 0;
           margin: 0 auto;
           width: 80%;
-          padding-top: 55%; }
+          padding-top: 55%;
+          opacity: 1; }
           .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText .flare {
             width: 305px;
             height: 118px;
@@ -928,7 +962,7 @@ button {
               font-size: 2.4rem;
               display: block; }
             .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText p::before {
-              content: '';
+              content: "";
               background: url(../images/shine_light.png);
               background-position: center;
               background-size: cover;
@@ -943,20 +977,36 @@ button {
           .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText img {
             padding-top: 30px;
             width: 41px; }
-      .time-pt2-igdt .ingredient .ingredients .igdtTextAfter {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 80%;
-        padding-top: 55%; }
-        .time-pt2-igdt .ingredient .ingredients .igdtTextAfter p {
-          color: #fff;
-          font-size: 2.4rem;
-          line-height: 1.5;
-          letter-spacing: 0.2rem;
-          text-shadow: 0.2em 0.2em 0.3em #170808; }
+        .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtTextAfter {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 80%;
+          padding-top: 55%;
+          opacity: 0;
+          -webkit-transform: translateY(50px);
+          -ms-transform: translateY(50px);
+          transform: translateY(50px); }
+          .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtTextAfter p {
+            color: #fff;
+            font-size: 2.4rem;
+            line-height: 1.5;
+            letter-spacing: 0.2rem;
+            text-shadow: 0.2em 0.2em 0.3em #170808; }
+        .time-pt2-igdt .ingredient .ingredients .igdtWrap:hover .igdtText {
+          opacity: 0;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+        .time-pt2-igdt .ingredient .ingredients .igdtWrap:hover .igdtTextAfter {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
       .time-pt2-igdt .ingredient .ingredients .igdtTextAfter.on {
         display: block; }
       .time-pt2-igdt .ingredient .ingredients img {
@@ -1129,7 +1179,59 @@ button {
 
 .time-wrapper .time-pt4-event .event2 {
   background: url(../images/pt5_bg_pc.jpg) no-repeat top center;
-  background-size: 100%; }
+  background-size: 100%;
+  position: relative;
+  text-align: center; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .note {
+      font-size: 1.4rem;
+      color: #a2826e;
+      line-height: 1.5;
+      padding: 20px 28.3% 0; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .note:nth-of-type(1) {
+        text-align: left; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
+      text-align: center;
+      padding-top: 100px; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
+        padding: 30px 0 55px 0; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
+        font-size: 4rem;
+        font-weight: bold; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
+        text-align: center; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap {
+      position: relative; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 80%;
+        margin: 0 auto; }
+        .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item {
+          position: relative;
+          width: 100%;
+          margin-top: -100px; }
+          .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
+            position: absolute;
+            top: -80px;
+            right: 450px;
+            width: 70%; }
+          .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
+            position: absolute;
+            top: -50px;
+            right: 50px;
+            width: 50%; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .shopBtn {
+      display: block;
+      padding: 40px 0; }
 
 .time-wrapper .time-pt4-event .eventP {
   padding: 40px 0; }
@@ -1273,55 +1375,55 @@ button {
   margin: -32% auto; }
 
 .eventSection {
-  background: url("../images/eventbg-pc.png") no-repeat top center;
-  background-size: 100%;
-  padding: 100px 0; }
+  width: 100%;
+  background: -webkit-linear-gradient(to right, #c4a18b, #e5bda4, #c4a18b);
+  background: -webkit-gradient(linear, left top, right top, from(#c4a18b), color-stop(#e5bda4), to(#c4a18b));
+  background: -webkit-linear-gradient(left, #c4a18b, #e5bda4, #c4a18b);
+  background: -o-linear-gradient(left, #c4a18b, #e5bda4, #c4a18b);
+  background: linear-gradient(to right, #c4a18b, #e5bda4, #c4a18b);
+  text-align: left; }
   .eventSection .locationbox {
-    max-width: 650px;
-    margin: 25px auto 0; }
+    max-width: 100%; }
     .eventSection .locationbox .selectBox {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      border: 1px solid #fff; }
       .eventSection .locationbox .selectBox .locationLabel {
-        font-size: 22px;
-        font-size: 2.2rem;
-        color: #dbc089;
+        font-size: 24px;
+        font-size: 2.4rem;
+        line-height: 1.5;
+        color: #fff;
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 150px;
-        flex: 0 0 150px; }
+        -ms-flex: 0 0 237px;
+        flex: 0 0 237px;
+        padding: 10px; }
       .eventSection .locationbox .selectBox .locationSelect {
         width: 100%;
-        padding: 0 0 0 10px; }
+        padding-left: 20px; }
         .eventSection .locationbox .selectBox .locationSelect select {
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
           width: 100%;
-          border: 1px solid #dbc089;
-          background: url("../images/selectArrow.png") no-repeat right 15px center #000;
+          background: url("../images/tableArrow.png") no-repeat right 45px center;
           background-size: 30px;
           padding: 10px;
+          font-size: 24px;
+          font-size: 2.4rem;
+          line-height: 1.5;
           color: #fff;
-          font-size: 20px;
-          font-size: 2rem; }
-    .eventSection .locationbox .locationResult .note {
-      font-size: 17px;
-      font-size: 1.7rem;
-      color: #c4c4c4;
-      margin: 10px 0 0; }
+          border: none; }
+          .eventSection .locationbox .selectBox .locationSelect select option {
+            background-color: #e5bda4; }
     .eventSection .locationbox .locationResult .result {
       display: none;
       color: #fff;
-      font-size: 20px;
-      font-size: 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      border-top: 1px dotted #dbc089;
-      border-bottom: 1px dotted #dbc089;
-      margin: 20px auto 0; }
+      font-size: 24px;
+      font-size: 2.4rem; }
       .eventSection .locationbox .locationResult .result.on {
         display: block; }
       .eventSection .locationbox .locationResult .result .name,
@@ -1331,625 +1433,19 @@ button {
         display: -ms-flexbox;
         display: flex;
         line-height: 1.5;
-        padding: 10px; }
+        padding: 10px;
+        border: 1px solid #fff; }
         .eventSection .locationbox .locationResult .result .name .tit,
         .eventSection .locationbox .locationResult .result .tel .tit,
         .eventSection .locationbox .locationResult .result .time .tit {
           -webkit-box-flex: 0;
-          -ms-flex: 0 0 100px;
-          flex: 0 0 100px;
-          color: #dbc089; }
+          -ms-flex: 0 0 237px;
+          flex: 0 0 237px;
+          color: #fff; }
+        .eventSection .locationbox .locationResult .result .name .txt,
+        .eventSection .locationbox .locationResult .result .tel .txt,
+        .eventSection .locationbox .locationResult .result .time .txt {
+          padding-left: 20px; }
       .eventSection .locationbox .locationResult .result a {
         text-decoration: none;
         color: #fff; }
-  .eventSection .eventbottom .eventdetail {
-    margin: 50px auto 0;
-    max-width: 725px; }
-    .eventSection .eventbottom .eventdetail .detail-title {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-      .eventSection .eventbottom .eventdetail .detail-title .pic {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 140px;
-        flex: 0 0 140px; }
-      .eventSection .eventbottom .eventdetail .detail-title .text {
-        width: 100%;
-        letter-spacing: 0.1em;
-        padding: 0 0 25px 30px; }
-        .eventSection .eventbottom .eventdetail .detail-title .text h1 {
-          font-size: 40px;
-          font-size: 4rem;
-          font-family: "Noto Serif TC"; }
-        .eventSection .eventbottom .eventdetail .detail-title .text h2 {
-          font-size: 26px;
-          font-size: 2.6rem;
-          font-weight: 300;
-          color: #dbc089;
-          margin: 10px 0 0; }
-    .eventSection .eventbottom .eventdetail .detail-note {
-      margin: -15px auto 0;
-      padding: 0 0 0 170px; }
-      .eventSection .eventbottom .eventdetail .detail-note .txt {
-        font-size: 22px;
-        font-size: 2.2rem;
-        line-height: 1.5;
-        color: #fff; }
-      .eventSection .eventbottom .eventdetail .detail-note .note {
-        font-size: 17px;
-        font-size: 1.7rem;
-        color: #c4c4c4;
-        line-height: 1.5; }
-  .eventSection .btnwrap {
-    max-width: 325px;
-    margin: 40px auto 0;
-    position: relative; }
-  .eventSection .linkBtn {
-    display: block;
-    padding: 20px 15px;
-    font-size: 26px;
-    font-size: 2.6rem;
-    line-height: 1.2;
-    color: #fff;
-    text-decoration: none;
-    overflow: hidden;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    position: relative;
-    background: url("../images/btn-bg.jpg") no-repeat top center;
-    background-size: 100% 100%;
-    text-align: center; }
-    .eventSection .linkBtn:before {
-      content: "";
-      background: url("../images/shine_light.png");
-      background-position: center;
-      background-size: cover;
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      margin-top: -15%;
-      display: block;
-      pointer-events: none;
-      -webkit-animation: btn-shine 4s ease 1s infinite;
-      animation: btn-shine 4s ease 1s infinite; }
-    .eventSection .linkBtn:hover {
-      color: #dbc089; }
-
-@media screen and (max-width: 1600px) {
-  .eventSection .title {
-    font-size: 46px;
-    font-size: 4.6rem;
-    margin: 0 auto 20px; }
-    .eventSection .title span {
-      padding: 0 0 0 20px; }
-  .eventSection .title-text {
-    font-size: 22px;
-    font-size: 2.2rem;
-    margin: 0 auto 50px; }
-  .eventSection .eventtop .featurebox .feature-title {
-    font-size: 30px;
-    font-size: 3rem;
-    margin: 0 auto 15px; }
-  .eventSection .eventtop .featurebox .feature-subtitle {
-    font-size: 22px;
-    font-size: 2.2rem;
-    margin: 0 auto 10px; }
-  .eventSection .eventtop .featurebox p {
-    font-size: 16px;
-    font-size: 1.6rem; }
-  .eventSection .eventtop .eventdetail .detail-title .pic {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 120px;
-    flex: 0 0 120px; }
-  .eventSection .eventtop .eventdetail .detail-title .text {
-    padding: 0 0 25px 30px; }
-    .eventSection .eventtop .eventdetail .detail-title .text h1 {
-      font-size: 34px;
-      font-size: 3.4rem; }
-    .eventSection .eventtop .eventdetail .detail-title .text h2 {
-      font-size: 22px;
-      font-size: 2.2rem;
-      margin: 10px 0 0; }
-  .eventSection .eventtop .eventdetail .detail-content {
-    padding: 0 0 0 150px;
-    margin: 0 auto 30px; }
-    .eventSection .eventtop .eventdetail .detail-content .step {
-      font-size: 18px;
-      font-size: 1.8rem; }
-  .eventSection .eventtop .eventdetail .detail-note .note-pic {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 250px;
-    flex: 0 0 250px; }
-  .eventSection .eventtop .eventdetail .detail-note .note-list {
-    font-size: 16px;
-    font-size: 1.6rem; }
-  .eventSection .eventtop .eventdetail .locationbox {
-    margin: 20px auto 0; }
-    .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
-      font-size: 20px;
-      font-size: 2rem;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 130px;
-      flex: 0 0 130px; }
-    .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
-      font-size: 20px;
-      font-size: 2rem; }
-    .eventSection .eventtop .eventdetail .locationbox .locationResult .note {
-      font-size: 16px;
-      font-size: 1.6rem;
-      margin: 10px 0 0; }
-    .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
-      font-size: 18px;
-      font-size: 1.8rem;
-      margin: 15px auto 0; }
-  .eventSection .eventbottom .eventdetail .detail-title .pic {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 120px;
-    flex: 0 0 120px; }
-  .eventSection .eventbottom .eventdetail .detail-title .text {
-    padding: 0 0 25px 30px; }
-    .eventSection .eventbottom .eventdetail .detail-title .text h1 {
-      font-size: 34px;
-      font-size: 3.4rem; }
-    .eventSection .eventbottom .eventdetail .detail-title .text h2 {
-      font-size: 22px;
-      font-size: 2.2rem; }
-  .eventSection .eventbottom .eventdetail .detail-note {
-    margin: -15px auto 0;
-    padding: 0 0 0 150px; }
-    .eventSection .eventbottom .eventdetail .detail-note .txt {
-      font-size: 18px;
-      font-size: 1.8rem; }
-    .eventSection .eventbottom .eventdetail .detail-note .note {
-      font-size: 16px;
-      font-size: 1.6rem; }
-  .eventSection .linkBtn {
-    padding: 15px 15px;
-    font-size: 22px;
-    font-size: 2.2rem;
-    background: url("../images/btn-bg.jpg") no-repeat top center;
-    background-size: 100% 100%;
-    text-align: center; } }
-
-@media screen and (max-width: 1000px) {
-  .eventSection {
-    padding: 100px 0; }
-    .eventSection .title {
-      font-size: 34px;
-      font-size: 3.4rem;
-      margin: 0 auto 10px; }
-      .eventSection .title span {
-        padding: 0 0 0 10px; }
-    .eventSection .title-text {
-      font-size: 18px;
-      font-size: 1.8rem;
-      margin: 0 auto 30px; }
-    .eventSection .eventtop {
-      max-width: 850px;
-      width: 90%;
-      margin: 0 auto; }
-      .eventSection .eventtop .featurebox .feature-title {
-        font-size: 30px;
-        font-size: 3rem;
-        margin: 0 auto 15px; }
-      .eventSection .eventtop .featurebox .feature-subtitle {
-        font-size: 22px;
-        font-size: 2.2rem;
-        margin: 0 auto 10px; }
-      .eventSection .eventtop .featurebox p {
-        font-size: 16px;
-        font-size: 1.6rem; }
-      .eventSection .eventtop .eventdetail .detail-title .pic {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 120px;
-        flex: 0 0 120px; }
-      .eventSection .eventtop .eventdetail .detail-title .text {
-        padding: 0 0 25px 30px; }
-        .eventSection .eventtop .eventdetail .detail-title .text h1 {
-          font-size: 32px;
-          font-size: 3.2rem; }
-        .eventSection .eventtop .eventdetail .detail-title .text h2 {
-          font-size: 18px;
-          font-size: 1.8rem;
-          margin: 10px 0 0; }
-      .eventSection .eventtop .eventdetail .detail-content {
-        padding: 0 0 0 150px;
-        margin: 0 auto 30px; }
-        .eventSection .eventtop .eventdetail .detail-content .step {
-          font-size: 18px;
-          font-size: 1.8rem; }
-      .eventSection .eventtop .eventdetail .detail-note .note-pic {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 250px;
-        flex: 0 0 250px; }
-      .eventSection .eventtop .eventdetail .detail-note .note-list {
-        font-size: 16px;
-        font-size: 1.6rem; }
-      .eventSection .eventtop .eventdetail .locationbox {
-        margin: 20px auto 0; }
-        .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
-          font-size: 18px;
-          font-size: 1.8rem;
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 130px;
-          flex: 0 0 130px; }
-        .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
-          font-size: 18px;
-          font-size: 1.8rem;
-          background-size: 22px; }
-        .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
-          font-size: 18px;
-          font-size: 1.8rem;
-          margin: 15px auto 0; }
-          .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name,
-          .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel,
-          .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time {
-            padding: 8px 10px; }
-    .eventSection .eventbottom .eventdetail .detail-title .pic {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 120px;
-      flex: 0 0 120px; }
-    .eventSection .eventbottom .eventdetail .detail-title .text {
-      padding: 0 0 25px 30px; }
-      .eventSection .eventbottom .eventdetail .detail-title .text h1 {
-        font-size: 32px;
-        font-size: 3.2rem; }
-      .eventSection .eventbottom .eventdetail .detail-title .text h2 {
-        font-size: 18px;
-        font-size: 1.8rem; }
-    .eventSection .eventbottom .eventdetail .detail-note {
-      margin: -15px auto 0;
-      padding: 0 0 0 150px; }
-      .eventSection .eventbottom .eventdetail .detail-note .txt {
-        font-size: 18px;
-        font-size: 1.8rem; }
-      .eventSection .eventbottom .eventdetail .detail-note .note {
-        font-size: 16px;
-        font-size: 1.6rem; }
-    .eventSection .linkBtn {
-      padding: 15px 15px 18px;
-      font-size: 22px;
-      font-size: 2.2rem;
-      background: url("../images/btn-bg.jpg") no-repeat top center;
-      background-size: 100% 100%; } }
-
-@media screen and (max-width: 767px) {
-  .eventSection {
-    background: url("../images/eventbg-mb.png") no-repeat top center;
-    background-size: 100%;
-    padding: 65px 0; }
-    .eventSection .title {
-      font-size: 30px;
-      font-size: 3rem;
-      margin: 0 auto 10px; }
-      .eventSection .title span {
-        display: block;
-        padding: 0; }
-    .eventSection .title-text {
-      font-size: 16px;
-      font-size: 1.6rem;
-      margin: 0 auto 30px; }
-      .eventSection .title-text span {
-        display: block; }
-      .eventSection .title-text br {
-        display: none; }
-    .eventSection .eventtop {
-      padding: 0 0 30px;
-      background: url("../images/evbg02-mb.jpg") no-repeat bottom center;
-      background-size: 100%; }
-      .eventSection .eventtop .pic .pic-pc {
-        display: none; }
-      .eventSection .eventtop .pic .pic-mb {
-        display: block; }
-      .eventSection .eventtop .featurebox .feature-title {
-        font-size: 23px;
-        font-size: 2.3rem;
-        margin: 0 auto 10px; }
-      .eventSection .eventtop .featurebox .feature-subtitle {
-        font-size: 16px;
-        font-size: 1.6rem;
-        margin: 0 auto 10px; }
-      .eventSection .eventtop .featurebox p {
-        font-size: 14px;
-        font-size: 1.4rem; }
-      .eventSection .eventtop .eventdetail {
-        padding: 0 1rem 0 0; }
-        .eventSection .eventtop .eventdetail .detail-title {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: start;
-          -ms-flex-align: start;
-          align-items: flex-start; }
-          .eventSection .eventtop .eventdetail .detail-title .pic {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 90px;
-            flex: 0 0 90px; }
-          .eventSection .eventtop .eventdetail .detail-title .text {
-            padding: 0 0 15px 10px; }
-            .eventSection .eventtop .eventdetail .detail-title .text h1 {
-              font-size: 24px;
-              font-size: 2.4rem;
-              line-height: 1.2; }
-              .eventSection .eventtop .eventdetail .detail-title .text h1 span {
-                display: block; }
-            .eventSection .eventtop .eventdetail .detail-title .text h2 {
-              font-size: 16px;
-              font-size: 1.6rem;
-              line-height: 1.2;
-              margin: 5px 0 0; }
-              .eventSection .eventtop .eventdetail .detail-title .text h2 span {
-                display: block; }
-        .eventSection .eventtop .eventdetail .detail-content {
-          padding: 0 0 0 20px;
-          margin: 0 auto 20px; }
-          .eventSection .eventtop .eventdetail .detail-content .arrow {
-            max-width: 10px; }
-          .eventSection .eventtop .eventdetail .detail-content .step {
-            font-size: 14px;
-            font-size: 1.4rem; }
-        .eventSection .eventtop .eventdetail .detail-note {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-          .eventSection .eventtop .eventdetail .detail-note .note-pic {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 70%;
-            flex: 0 0 70%;
-            width: 70%;
-            margin: 0 auto; }
-          .eventSection .eventtop .eventdetail .detail-note .note-list {
-            font-size: 13px;
-            font-size: 1.3rem;
-            padding: 0 0 0 26px; }
-        .eventSection .eventtop .eventdetail .locationbox {
-          padding: 0 0 0 1.5rem; }
-          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
-            font-size: 16px;
-            font-size: 1.6rem;
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 100px;
-            flex: 0 0 100px; }
-          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
-            background: url("../images/selectArrow.png") no-repeat right 10px center #000;
-            background-size: 20px;
-            padding: 8px;
-            font-size: 16px;
-            font-size: 1.6rem; }
-          .eventSection .eventtop .eventdetail .locationbox .locationResult .note {
-            font-size: 12px;
-            font-size: 1.2rem;
-            margin: 10px 0 0; }
-          .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
-            font-size: 16px;
-            font-size: 1.6rem;
-            margin: 15px auto 0; }
-            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name,
-            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel,
-            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              line-height: 1.5;
-              padding: 5px; }
-              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name .tit,
-              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel .tit,
-              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time .tit {
-                -webkit-box-flex: 0;
-                -ms-flex: 0 0 110px;
-                flex: 0 0 110px;
-                color: #dbc089; }
-    .eventSection .eventbottom .eventdetail {
-      margin: 30px auto 0;
-      padding: 0 1rem 0 1.5rem; }
-      .eventSection .eventbottom .eventdetail .detail-title {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start; }
-        .eventSection .eventbottom .eventdetail .detail-title .pic {
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 90px;
-          flex: 0 0 90px; }
-        .eventSection .eventbottom .eventdetail .detail-title .text {
-          padding: 0 0 15px 10px; }
-          .eventSection .eventbottom .eventdetail .detail-title .text h1 {
-            font-size: 24px;
-            font-size: 2.4rem;
-            line-height: 1.2; }
-            .eventSection .eventbottom .eventdetail .detail-title .text h1 span {
-              display: block; }
-          .eventSection .eventbottom .eventdetail .detail-title .text h2 {
-            font-size: 16px;
-            font-size: 1.6rem;
-            margin: 5px 0 0;
-            line-height: 1.2; }
-            .eventSection .eventbottom .eventdetail .detail-title .text h2 span {
-              display: block; }
-      .eventSection .eventbottom .eventdetail .detail-note {
-        margin: 0 auto 0;
-        padding: 0 1.5rem; }
-        .eventSection .eventbottom .eventdetail .detail-note .txt {
-          font-size: 16px;
-          font-size: 1.6rem; }
-        .eventSection .eventbottom .eventdetail .detail-note .note {
-          font-size: 12px;
-          font-size: 1.2rem; }
-    .eventSection .btnwrap {
-      max-width: 264px;
-      margin: 25px auto 0; }
-    .eventSection .linkBtn {
-      background: url("../images/btn-bg.jpg") no-repeat top center;
-      background-size: 100% 100%;
-      padding: 15px;
-      font-size: 19px;
-      font-size: 1.9rem; } }
-
-@media screen and (max-width: 375px) {
-  .eventSection {
-    background: url("../images/eventbg-mb.png") no-repeat top center;
-    background-size: 100%;
-    padding: 65px 0; }
-    .eventSection .title {
-      font-size: 30px;
-      font-size: 3rem;
-      margin: 0 auto 10px; }
-      .eventSection .title span {
-        display: block;
-        padding: 0; }
-    .eventSection .title-text {
-      font-size: 14px;
-      font-size: 1.4rem;
-      margin: 0 auto 30px; }
-      .eventSection .title-text span {
-        display: block; }
-      .eventSection .title-text br {
-        display: none; }
-    .eventSection .eventtop {
-      padding: 0 0 30px;
-      background: url("../images/evbg02-mb.jpg") no-repeat bottom center;
-      background-size: 100%; }
-      .eventSection .eventtop .pic .pic-pc {
-        display: none; }
-      .eventSection .eventtop .pic .pic-mb {
-        display: block; }
-      .eventSection .eventtop .featurebox .feature-title {
-        font-size: 23px;
-        font-size: 2.3rem;
-        margin: 0 auto 10px; }
-      .eventSection .eventtop .featurebox .feature-subtitle {
-        font-size: 16px;
-        font-size: 1.6rem;
-        margin: 0 auto 10px; }
-      .eventSection .eventtop .featurebox p {
-        font-size: 14px;
-        font-size: 1.4rem; }
-      .eventSection .eventtop .eventdetail {
-        padding: 0 1rem 0 0; }
-        .eventSection .eventtop .eventdetail .detail-title {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: start;
-          -ms-flex-align: start;
-          align-items: flex-start; }
-          .eventSection .eventtop .eventdetail .detail-title .pic {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 90px;
-            flex: 0 0 90px; }
-          .eventSection .eventtop .eventdetail .detail-title .text {
-            padding: 0 0 15px 10px; }
-            .eventSection .eventtop .eventdetail .detail-title .text h1 {
-              font-size: 24px;
-              font-size: 2.4rem;
-              line-height: 1.2; }
-              .eventSection .eventtop .eventdetail .detail-title .text h1 span {
-                display: block; }
-            .eventSection .eventtop .eventdetail .detail-title .text h2 {
-              font-size: 16px;
-              font-size: 1.6rem;
-              line-height: 1.2;
-              margin: 5px 0 0; }
-              .eventSection .eventtop .eventdetail .detail-title .text h2 span {
-                display: block; }
-        .eventSection .eventtop .eventdetail .detail-content {
-          padding: 0 0 0 15px;
-          margin: 0 auto 20px; }
-          .eventSection .eventtop .eventdetail .detail-content .arrow {
-            max-width: 7px; }
-          .eventSection .eventtop .eventdetail .detail-content .step {
-            font-size: 13px;
-            font-size: 1.3rem; }
-        .eventSection .eventtop .eventdetail .detail-note {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-          .eventSection .eventtop .eventdetail .detail-note .note-pic {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 70%;
-            flex: 0 0 70%;
-            width: 70%;
-            margin: 0 auto; }
-          .eventSection .eventtop .eventdetail .detail-note .note-list {
-            font-size: 13px;
-            font-size: 1.3rem;
-            padding: 0 0 0 26px; }
-        .eventSection .eventtop .eventdetail .locationbox {
-          padding: 0 0 0 1.5rem; }
-          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationLabel {
-            font-size: 16px;
-            font-size: 1.6rem;
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 100px;
-            flex: 0 0 100px; }
-          .eventSection .eventtop .eventdetail .locationbox .selectBox .locationSelect select {
-            background: url("../images/selectArrow.png") no-repeat right 10px center #000;
-            background-size: 20px;
-            padding: 8px;
-            font-size: 16px;
-            font-size: 1.6rem; }
-          .eventSection .eventtop .eventdetail .locationbox .locationResult .note {
-            font-size: 12px;
-            font-size: 1.2rem;
-            margin: 10px 0 0; }
-          .eventSection .eventtop .eventdetail .locationbox .locationResult .result {
-            font-size: 16px;
-            font-size: 1.6rem;
-            margin: 15px auto 0; }
-            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name,
-            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel,
-            .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              line-height: 1.5;
-              padding: 5px; }
-              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .name .tit,
-              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .tel .tit,
-              .eventSection .eventtop .eventdetail .locationbox .locationResult .result .time .tit {
-                -webkit-box-flex: 0;
-                -ms-flex: 0 0 110px;
-                flex: 0 0 110px;
-                color: #dbc089; }
-    .eventSection .eventbottom .eventdetail {
-      margin: 30px auto 0;
-      padding: 0 1rem 0 1.5rem; }
-      .eventSection .eventbottom .eventdetail .detail-title {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start; }
-        .eventSection .eventbottom .eventdetail .detail-title .pic {
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 90px;
-          flex: 0 0 90px; }
-        .eventSection .eventbottom .eventdetail .detail-title .text {
-          padding: 0 0 15px 10px; }
-          .eventSection .eventbottom .eventdetail .detail-title .text h1 {
-            font-size: 24px;
-            font-size: 2.4rem;
-            line-height: 1.2; }
-            .eventSection .eventbottom .eventdetail .detail-title .text h1 span {
-              display: block; }
-          .eventSection .eventbottom .eventdetail .detail-title .text h2 {
-            font-size: 16px;
-            font-size: 1.6rem;
-            margin: 5px 0 0;
-            line-height: 1.2; }
-            .eventSection .eventbottom .eventdetail .detail-title .text h2 span {
-              display: block; }
-      .eventSection .eventbottom .eventdetail .detail-note {
-        margin: 0 auto 0;
-        padding: 0 1.5rem; }
-        .eventSection .eventbottom .eventdetail .detail-note .txt {
-          font-size: 16px;
-          font-size: 1.6rem; }
-        .eventSection .eventbottom .eventdetail .detail-note .note {
-          font-size: 12px;
-          font-size: 1.2rem; } }
