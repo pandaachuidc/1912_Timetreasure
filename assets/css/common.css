@@ -39,6 +39,90 @@
   to {
     opacity: 1; } }
 
+@-webkit-keyframes btn-shine {
+  0% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%); }
+  70% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%); }
+  100% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%); } }
+
+@keyframes btn-shine {
+  0% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%); }
+  70% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%); }
+  100% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%); } }
+
+@-webkit-keyframes scrollMove {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px); } }
+
+@keyframes scrollMove {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px); } }
+
+@-webkit-keyframes line {
+  0% {
+    width: 0; }
+  100% {
+    width: 160px; } }
+
+@keyframes line {
+  0% {
+    width: 0; }
+  100% {
+    width: 160px; } }
+
+[data-aos='text-down'] {
+  opacity: 0;
+  -webkit-transform: translateY(-25px);
+  -ms-transform: translateY(-25px);
+  transform: translateY(-25px);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  [data-aos='text-down'].aos-animate {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
+[data-aos='text-up'] {
+  opacity: 0;
+  -webkit-transform: translateY(25px);
+  -ms-transform: translateY(25px);
+  transform: translateY(25px);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  [data-aos='text-up'].aos-animate {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
 @-webkit-keyframes loading {
   0% {
     background: url("../images/loading.png") no-repeat center;
@@ -123,37 +207,15 @@
 
 @-webkit-keyframes lineani {
   0% {
-    opacity: .8; }
+    opacity: 0.8; }
   100% {
     opacity: 1; } }
 
 @keyframes lineani {
   0% {
-    opacity: .8; }
+    opacity: 0.8; }
   100% {
     opacity: 1; } }
-
-@-webkit-keyframes btn-shine {
-  0% {
-    -webkit-transform: translateX(-150%);
-    transform: translateX(-150%); }
-  70% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%); }
-  100% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%); } }
-
-@keyframes btn-shine {
-  0% {
-    -webkit-transform: translateX(-150%);
-    transform: translateX(-150%); }
-  70% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%); }
-  100% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%); } }
 
 @font-face {}.video-container {
   position: relative;
@@ -366,14 +428,26 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
+.pc {
+  display: block; }
+
+.mb {
+  display: none; }
+
+@media screen and (max-width: 750px) {
+  .mb {
+    display: block; }
+  .pc {
+    display: none; } }
+
 /* Theme */
 .time-wrapper .time-kv .time-header .kvtop .kv-logo {
   position: absolute;
-  top: 55px;
+  top: 11px;
   left: 55px;
-  z-index: 1;
+  z-index: 2;
   width: 11%;
-  max-width: 100px;
+  max-width: 212px;
   opacity: 1; }
   .time-wrapper .time-kv .time-header .kvtop .kv-logo:hover {
     opacity: 0.8; }
@@ -825,6 +899,20 @@ button {
       font-family: "Noto Serif TC";
       font-weight: 800;
       letter-spacing: 0.1rem; }
+  .time-wrapper .time-kv .scrollIcon {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    -webkit-animation: scrollMove 1s ease-in infinite alternate;
+    animation: scrollMove 1s ease-in infinite alternate; }
 
 .time-wrapper .gotopBtn {
   max-width: 70px;
@@ -853,61 +941,77 @@ button {
       background: url("../images/gotop02.png") no-repeat center;
       background-size: 100%; }
 
+@media screen and (max-width: 750px) {
+  .time-wrapper .time-kv .bg-img {
+    width: 100%;
+    background: url(../images/pt1_kv_mb.jpg) no-repeat top center;
+    background-size: 100%; }
+    .time-wrapper .time-kv .bg-img:before {
+      content: "";
+      display: block;
+      background: url(../images/pt1_kv_mb_light.jpg) no-repeat top center;
+      background-size: 100%; }
+  .time-wrapper .time-kv .time-kv-txt {
+    position: absolute;
+    z-index: 2;
+    padding-left: 6%;
+    padding-top: 860px; } }
+
 .time-pt2-igdt {
   text-align: center; }
-  .time-pt2-igdt .intro {
+  .time-pt2-igdt .igdtWarpMb .intro {
     background: url(../images/pt2_bg_pc.jpg) no-repeat top center;
     background-size: 100%;
     width: 100%;
     position: relative; }
-    .time-pt2-igdt .intro .contentWrap {
+    .time-pt2-igdt .igdtWarpMb .intro .contentWrap {
       position: absolute;
       left: 0;
       top: 0;
       right: 0; }
-      .time-pt2-igdt .intro .contentWrap .content {
+      .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content {
         padding-bottom: 50px; }
-        .time-pt2-igdt .intro .contentWrap .content p {
+        .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content p {
           font-size: 3.5rem;
           font-family: 'Noto Serif TC';
           font-weight: 800;
-          letter-spacing: 0.3rem; }
-        .time-pt2-igdt .intro .contentWrap .content h1 {
+          letter-spacing: 0.4rem; }
+        .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content h1 {
           font-size: 6rem;
           font-family: 'Noto Serif TC';
           font-weight: 800;
-          letter-spacing: 0.3rem;
+          letter-spacing: 0.4rem;
           padding: 30px 0; }
-      .time-pt2-igdt .intro .contentWrap .des-sec p {
+      .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
         padding-top: 70px;
         font-size: 2.4rem;
         line-height: 4rem; }
-      .time-pt2-igdt .intro .contentWrap .des-sec .parallax-window {
+      .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .parallax-window {
         max-width: 1260px;
         margin: 0 auto;
         min-height: 353px;
         background: transparent; }
-  .time-pt2-igdt .ingredient {
+  .time-pt2-igdt .igdtWarpMb .ingredient {
     position: relative; }
-    .time-pt2-igdt .ingredient .content {
+    .time-pt2-igdt .igdtWarpMb .ingredient .content {
       position: absolute;
       z-index: 1;
       width: 100%;
       margin: 0 auto;
       padding-top: 50px;
       color: #fff5f3; }
-      .time-pt2-igdt .ingredient .content h1 {
+      .time-pt2-igdt .igdtWarpMb .ingredient .content h1 {
         font-size: 6rem;
         font-family: 'Noto Serif TC';
         font-weight: 800;
-        letter-spacing: 0.3rem; }
-      .time-pt2-igdt .ingredient .content p {
+        letter-spacing: 0.4rem; }
+      .time-pt2-igdt .igdtWarpMb .ingredient .content p {
         font-size: 3.5rem;
-        font-family: "Noto Serif TC";
+        font-family: 'Noto Serif TC';
         font-weight: 800;
         letter-spacing: 0.3rem;
         padding-top: 30px; }
-    .time-pt2-igdt .ingredient .ingredients {
+    .time-pt2-igdt .igdtWarpMb .ingredient .ingredients {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -916,13 +1020,13 @@ button {
       -ms-flex-direction: row;
       flex-direction: row;
       width: 100%; }
-      .time-pt2-igdt .ingredient .ingredients .igdtWrap {
+      .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap {
         position: relative;
-        font-family: "Microsoft JhengHei", "微軟正黑體";
+        font-family: 'Microsoft JhengHei', '微軟正黑體';
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1; }
-        .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText {
+        .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText {
           position: absolute;
           left: 0;
           right: 0;
@@ -930,7 +1034,7 @@ button {
           width: 80%;
           padding-top: 55%;
           opacity: 1; }
-          .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText .flare {
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText .flare {
             width: 305px;
             height: 118px;
             background: url(../images/flare.png) center;
@@ -945,7 +1049,7 @@ button {
             animation: flare_shine 0.12s infinite;
             z-index: 1;
             pointer-events: none; }
-          .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText p {
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p {
             cursor: pointer;
             display: block;
             position: relative;
@@ -958,11 +1062,11 @@ button {
             padding-top: 25px;
             padding-bottom: 25px;
             overflow: hidden; }
-            .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText p span {
+            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p span {
               font-size: 2.4rem;
               display: block; }
-            .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText p::before {
-              content: "";
+            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p::before {
+              content: '';
               background: url(../images/shine_light.png);
               background-position: center;
               background-size: cover;
@@ -974,10 +1078,10 @@ button {
               pointer-events: none;
               -webkit-animation: btn-shine 4s ease 1s infinite;
               animation: btn-shine 4s ease 1s infinite; }
-          .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtText img {
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText img {
             padding-top: 30px;
             width: 41px; }
-        .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtTextAfter {
+        .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtTextAfter {
           position: absolute;
           left: 0;
           right: 0;
@@ -985,32 +1089,170 @@ button {
           width: 80%;
           padding-top: 55%;
           opacity: 0;
-          -webkit-transform: translateY(50px);
-          -ms-transform: translateY(50px);
-          transform: translateY(50px); }
-          .time-pt2-igdt .ingredient .ingredients .igdtWrap .igdtTextAfter p {
+          -webkit-transform: translateY(55px);
+          -ms-transform: translateY(55px);
+          transform: translateY(55px); }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtTextAfter p {
             color: #fff;
             font-size: 2.4rem;
             line-height: 1.5;
             letter-spacing: 0.2rem;
             text-shadow: 0.2em 0.2em 0.3em #170808; }
-        .time-pt2-igdt .ingredient .ingredients .igdtWrap:hover .igdtText {
+        .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap:hover .igdtText {
           opacity: 0;
-          -webkit-transition: all 0.3s;
-          -o-transition: all 0.3s;
-          transition: all 0.3s; }
-        .time-pt2-igdt .ingredient .ingredients .igdtWrap:hover .igdtTextAfter {
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+        .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap:hover .igdtTextAfter {
           opacity: 1;
           -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
           transform: translateY(0);
-          -webkit-transition: all 0.3s;
-          -o-transition: all 0.3s;
-          transition: all 0.3s; }
-      .time-pt2-igdt .ingredient .ingredients .igdtTextAfter.on {
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+      .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtTextAfter.on {
         display: block; }
-      .time-pt2-igdt .ingredient .ingredients img {
+      .time-pt2-igdt .igdtWarpMb .ingredient .ingredients img {
         width: 100%; }
+
+@media screen and (max-width: 750px) {
+  .time-pt2-igdt {
+    position: relative;
+    background: url(../images/pt2_bg_mb.jpg) no-repeat top center;
+    background-size: 100%;
+    width: 100%; }
+    .time-pt2-igdt .igdtWarpMb {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0; }
+      .time-pt2-igdt .igdtWarpMb .intro {
+        background: none; }
+        .time-pt2-igdt .igdtWarpMb .intro .contentWrap {
+          position: unset; }
+          .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
+            padding-bottom: 120px;
+            text-align: left;
+            margin: 0 10%;
+            letter-spacing: 1rem; }
+          .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .parallax-window {
+            max-width: 750px;
+            min-height: 260px; }
+      .time-pt2-igdt .igdtWarpMb .ingredient {
+        position: relative; }
+        .time-pt2-igdt .igdtWarpMb .ingredient .content {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          margin: 0 auto;
+          padding-top: 50px;
+          color: #fff5f3; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .content h1 {
+            font-size: 6rem;
+            font-family: 'Noto Serif TC';
+            font-weight: 800;
+            letter-spacing: 0.4rem; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .content p {
+            font-size: 3.5rem;
+            font-family: 'Noto Serif TC';
+            font-weight: 800;
+            letter-spacing: 0.3rem;
+            padding-top: 30px; }
+        .time-pt2-igdt .igdtWarpMb .ingredient .ingredients {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          width: 100%; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText {
+            z-index: 1; }
+            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText .flare {
+              width: 305px;
+              height: 118px;
+              background: url(../images/flare.png) center;
+              background-size: 100%;
+              text-indent: -9999px;
+              position: absolute;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              bottom: -7px;
+              -webkit-animation: flare_shine 0.12s infinite;
+              animation: flare_shine 0.12s infinite;
+              z-index: 1;
+              pointer-events: none; }
+            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p {
+              cursor: pointer;
+              display: block;
+              position: relative;
+              line-height: 4.5rem;
+              text-align: center;
+              border: #e3c8c8 2px solid;
+              font-size: 4rem;
+              letter-spacing: 0.2rem;
+              color: #fff;
+              padding-top: 25px;
+              padding-bottom: 25px;
+              overflow: hidden; }
+              .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p span {
+                font-size: 2.4rem;
+                display: block; }
+              .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p::before {
+                content: '';
+                background: url(../images/shine_light.png);
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                width: 200%;
+                height: 200%;
+                margin-top: -30%;
+                display: block;
+                pointer-events: none;
+                -webkit-animation: btn-shine 4s ease 1s infinite;
+                animation: btn-shine 4s ease 1s infinite; }
+            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText img {
+              padding-top: 30px;
+              width: 41px; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtTextAfter {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 80%;
+            padding-top: 55%;
+            opacity: 0;
+            -webkit-transform: translateY(55px);
+            -ms-transform: translateY(55px);
+            transform: translateY(55px); }
+            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtTextAfter p {
+              color: #fff;
+              font-size: 2.4rem;
+              line-height: 1.5;
+              letter-spacing: 0.2rem;
+              text-shadow: 0.2em 0.2em 0.3em #170808; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .adjustMb {
+            padding-top: 20%; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap:hover .igdtText {
+            opacity: 0;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap:hover .igdtTextAfter {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtTextAfter.on {
+            display: block; }
+          .time-pt2-igdt .igdtWarpMb .ingredient .ingredients img {
+            width: 100%; } }
 
 .time-wrapper .time-pt3-product {
   background: url(../images/pt3_bg_pc.jpg) no-repeat top center;
@@ -1029,12 +1271,12 @@ button {
         font-size: 3.5rem;
         font-family: 'Noto Serif TC';
         font-weight: 800;
-        letter-spacing: 0.3rem; }
+        letter-spacing: 0.4rem; }
       .time-wrapper .time-pt3-product .productWrap .time-product-txt h1 {
         font-size: 6rem;
         font-family: 'Noto Serif TC';
         font-weight: 800;
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.4rem;
         padding: 30px 0; }
     .time-wrapper .time-pt3-product .productWrap .productSlider {
       width: 66%;
@@ -1143,6 +1385,133 @@ button {
 .owl-carousel .prev-slide, .owl-carousel .next-slide {
   z-index: 3; }
 
+@media screen and (max-width: 750px) {
+  .time-wrapper .time-pt3-product {
+    background: url(../images/pt3_bg_mb.jpg) no-repeat top center; }
+    .time-wrapper .time-pt3-product .productWrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0; }
+      .time-wrapper .time-pt3-product .productWrap .time-product-txt {
+        text-align: center;
+        padding-top: 185px; }
+        .time-wrapper .time-pt3-product .productWrap .time-product-txt p {
+          font-size: 3.5rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.4rem; }
+        .time-wrapper .time-pt3-product .productWrap .time-product-txt h1 {
+          font-size: 6rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.4rem;
+          padding: 30px 0; }
+      .time-wrapper .time-pt3-product .productWrap .productSlider {
+        width: 66%;
+        margin: 0 auto; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btns {
+          max-width: 946px;
+          height: 464px;
+          margin: 0 auto;
+          text-align: center;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns a {
+            text-decoration: none; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg00 {
+            background: url(../images/product_all_1.png) no-repeat top center;
+            background-size: 100%; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg01 {
+            background: url(../images/product_all_2.png) no-repeat top center;
+            background-size: 100%; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg02 {
+            background: url(../images/product_all_3.png) no-repeat top center;
+            background-size: 100%; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg03 {
+            background: url(../images/product_all_4.png) no-repeat top center;
+            background-size: 100%; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg04 {
+            background: url(../images/product_all_5.png) no-repeat top center;
+            background-size: 100%; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg05 {
+            background: url(../images/product_all_6.png) no-repeat top center;
+            background-size: 100%; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btns.bg06 {
+            background: url(../images/product_all_7.png) no-repeat top center;
+            background-size: 100%; }
+        .time-wrapper .time-pt3-product .productWrap .productSlider .btnWrap {
+          position: relative; }
+          .time-wrapper .time-pt3-product .productWrap .productSlider .btnWrap .btnsBlank {
+            position: absolute;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row; }
+      .time-wrapper .time-pt3-product .productWrap .owl-carousel {
+        width: 100%;
+        margin: 0 auto; }
+        .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -ms-flex-line-pack: center;
+          align-content: center;
+          width: 100%; }
+          .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-photo {
+            width: 45%; }
+            .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-photo img {
+              width: 85%;
+              margin: 0 auto;
+              margin-right: 0; }
+          .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: left;
+            -ms-flex-align: left;
+            align-items: left;
+            padding-top: 50px;
+            margin-right: 50px;
+            width: 55%; }
+            .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
+              font-size: 4rem;
+              font-family: "Noto Serif TC";
+              font-weight: 800;
+              letter-spacing: 0.3rem; }
+            .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
+              font-size: 2.8rem;
+              font-family: "Noto Serif TC";
+              font-weight: 800;
+              letter-spacing: 0.3rem;
+              padding: 25px 0; }
+            .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
+              font-size: 2.4rem;
+              line-height: 1.5;
+              padding-right: 50px; } }
+
 .time-wrapper .time-pt4-event .event1 {
   background: url(../images/pt4_bg_pc.jpg) no-repeat top center;
   background-size: 100%;
@@ -1161,12 +1530,12 @@ button {
         font-size: 3.5rem;
         font-family: 'Noto Serif TC';
         font-weight: 800;
-        letter-spacing: 0.3rem; }
+        letter-spacing: 0.4rem; }
       .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
         font-size: 6rem;
         font-family: 'Noto Serif TC';
         font-weight: 800;
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.4rem;
         padding: 30px 0; }
     .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
       margin: 60px 0; }
@@ -1238,12 +1607,12 @@ button {
 
 .eventH2 {
   font-size: 4.5rem;
-  font-family: "Noto Serif TC";
+  font-family: 'Noto Serif TC';
   font-weight: 800;
   letter-spacing: 0.4rem; }
 
 .eventH3::before, .eventH3::after {
-  content: "";
+  content: '';
   width: 160px;
   height: 1px;
   background-color: #73241a;
@@ -1251,11 +1620,16 @@ button {
   vertical-align: middle;
   margin: 0 30px;
   position: relative;
-  top: -8px; }
+  top: -8px;
+  -webkit-animation: line 4s ease;
+  animation: line 4s ease;
+  -webkit-transition-delay: 4s;
+  -o-transition-delay: 4s;
+  transition-delay: 4s; }
 
 .eventH3 span {
   font-size: 3rem;
-  font-family: "Noto Serif TC";
+  font-family: 'Noto Serif TC';
   font-weight: 800;
   letter-spacing: 0.4rem; }
 
@@ -1373,6 +1747,223 @@ button {
 .ytvideo .video picture .play_btn {
   display: block;
   margin: -32% auto; }
+
+@media screen and (max-width: 750px) {
+  .time-wrapper .time-pt4-event .event1 {
+    background: url(../images/pt4_bg_mb.jpg) no-repeat top center;
+    background-size: 100%;
+    position: relative; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 0 28.3%; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
+        text-align: center;
+        padding-top: 185px; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
+          font-size: 3.5rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.4rem; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
+          font-size: 6rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.4rem;
+          padding: 30px 0; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
+        margin: 60px 0; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
+          max-width: 830px; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 {
+        text-align: center; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
+          padding: 30px 0 55px 0; }
+  .time-wrapper .time-pt4-event .event2 {
+    background: url(../images/pt5_bg_pc.jpg) no-repeat top center;
+    background-size: 100%;
+    position: relative;
+    text-align: center; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .note {
+        font-size: 1.4rem;
+        color: #a2826e;
+        line-height: 1.5;
+        padding: 20px 28.3% 0; }
+        .time-wrapper .time-pt4-event .event2 .event2Wrap .note:nth-of-type(1) {
+          text-align: left; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
+        text-align: center;
+        padding-top: 100px; }
+        .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
+          padding: 30px 0 55px 0; }
+        .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
+          font-size: 4rem;
+          font-weight: bold; }
+        .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
+          text-align: center; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap {
+        position: relative; }
+        .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 80%;
+          margin: 0 auto; }
+          .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item {
+            position: relative;
+            width: 100%;
+            margin-top: -100px; }
+            .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
+              position: absolute;
+              top: -80px;
+              right: 450px;
+              width: 70%; }
+            .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
+              position: absolute;
+              top: -50px;
+              right: 50px;
+              width: 50%; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .shopBtn {
+        display: block;
+        padding: 40px 0; }
+  .time-wrapper .time-pt4-event .eventP {
+    padding: 40px 0; }
+  .eventH2 {
+    font-size: 4.5rem;
+    font-family: 'Noto Serif TC';
+    font-weight: 800;
+    letter-spacing: 0.4rem; }
+  .eventH3::before, .eventH3::after {
+    content: '';
+    width: 160px;
+    height: 1px;
+    background-color: #73241a;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 30px;
+    position: relative;
+    top: -8px;
+    -webkit-animation: line 4s ease;
+    animation: line 4s ease;
+    -webkit-transition-delay: 4s;
+    -o-transition-delay: 4s;
+    transition-delay: 4s; }
+  .eventH3 span {
+    font-size: 3rem;
+    font-family: 'Noto Serif TC';
+    font-weight: 800;
+    letter-spacing: 0.4rem; }
+  .eventH4 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    line-height: 1.5; }
+  .eventP {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+    text-align: left; }
+  /* light box */
+  .lightbox {
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: scroll;
+    position: fixed;
+    display: none;
+    z-index: 20;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0; }
+  .lightbox-container {
+    position: relative;
+    max-width: 960px;
+    margin: 10% auto;
+    display: block;
+    padding: 0 3%;
+    height: auto;
+    z-index: 0;
+    margin-top: 18%; }
+  .lightbox-content {
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7); }
+  .lightbox-close {
+    text-transform: uppercase;
+    background: transparent;
+    position: absolute;
+    font-weight: 300;
+    font-size: 12px;
+    display: block;
+    border: none;
+    color: white;
+    top: -22px;
+    right: 3%;
+    z-index: 3; }
+  .video-container {
+    padding-bottom: 56.25%;
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+    height: 0; }
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+  .lightbox-content {
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7); }
+  .lightbox-close {
+    text-transform: uppercase;
+    background: transparent;
+    position: absolute;
+    font-weight: 300;
+    font-size: 12px;
+    display: block;
+    border: none;
+    color: white;
+    top: -22px;
+    right: 3%;
+    z-index: 3; }
+  .video-container {
+    padding-bottom: 56.25%;
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+    height: 0; }
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+  /* light box */
+  .ytvideo {
+    margin: 0 auto;
+    width: 100%;
+    width: 100%;
+    text-align: center; }
+  .ytvideo .video picture .video {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+  .ytvideo .video picture .play_btn {
+    display: block;
+    margin: -32% auto; } }
 
 .eventSection {
   width: 100%;

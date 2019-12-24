@@ -227,9 +227,15 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.pc{display: block;}
+.mb{display: none;}
 // pad layout
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 750px) {
+.mb{
+  display: block;
+}
+.pc{display: none;}
+
 }
 // mobile
 @media screen and (max-width: 640px) {

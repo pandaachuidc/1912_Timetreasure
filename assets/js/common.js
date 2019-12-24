@@ -139,10 +139,16 @@ $(document).ready(function() {
   });
 
   AOS.init({
+    duration: 1200,
     useClassNames: true,
     initClassName: false,
     animatedClassName: "animated"
   });
 
+
+  
+
   
 });
+
+
