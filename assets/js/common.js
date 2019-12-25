@@ -7,6 +7,13 @@ $(document).ready(function() {
   //     .fadeIn();
   // });
 
+  if ($(window).width() <= 750) {
+    $(".igdtWrap").click(function() {
+      $(this).toggleClass("on");
+      
+    });
+  }
+
   // $(".igdtText").hover(
   //   function() {
   //     $(this).fadeOut();
@@ -23,6 +30,37 @@ $(document).ready(function() {
   //       .fadeOut();
   //   }
   // );
+
+  // mainMenu START
+  $(".navigation_trigger").on("click", function() {
+    $(".navigation_trigger").addClass("nav_in");
+    $(".nav_cover").addClass("nav_in");
+    $(".contents_nav").addClass("nav_in");
+    $(".nav_close").addClass("nav_in");
+    $(".nav_list").addClass("nav_in");
+    $(".menu").addClass("nav_in");
+    $("body").addClass("fixed");
+    return false;
+  });
+  $(".nav_close").on("click", function() {
+    $(".navigation_trigger").removeClass("nav_in");
+    $(".nav_cover").removeClass("nav_in");
+    $(".contents_nav").removeClass("nav_in");
+    $(".nav_close").removeClass("nav_in");
+    $(".nav_list").removeClass("nav_in");
+    $(".menu").removeClass("nav_in");
+    $("body").removeClass("fixed");
+    return false;
+  });
+  $(".nav_list a").on("click", function() {
+    $(".navigation_trigger").removeClass("nav_in");
+    $(".nav_cover").removeClass("nav_in");
+    $(".contents_nav").removeClass("nav_in");
+    $(".nav_close").removeClass("nav_in");
+    $(".nav_list").removeClass("nav_in");
+    $(".menu").removeClass("nav_in");
+    $("body").removeClass("fixed");
+  });
 
   $(".parallax-window").parallax({
     imageSrc: "assets/images/tree_pc.jpg"
@@ -59,9 +97,9 @@ $(document).ready(function() {
     owldata.to(num);
     return false;
   });
+  // mainMenu END
 
-  //   table
-
+  //   table START
   $(".locationSelect select").on("change", function() {
     $(".locationResult .result").removeClass("on");
     if ($(this).val() == "01") {
@@ -137,18 +175,14 @@ $(document).ready(function() {
     );
     return false;
   });
+  //   table END
 
+  //   animate START
   AOS.init({
     duration: 1200,
     useClassNames: true,
     initClassName: false,
     animatedClassName: "animated"
   });
-
-
-  
-
-  
+  //   animate END
 });
-
-

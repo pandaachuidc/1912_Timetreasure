@@ -5,10 +5,13 @@
   background: -webkit-linear-gradient(to right, #c4a18b, #e5bda4, #c4a18b);
   background: linear-gradient(to right, #c4a18b, #e5bda4, #c4a18b);
   // padding: 100px 0;
-  text-align:left ;
+  text-align: left;
   .locationbox {
     max-width: 100%;
     // margin: 25px auto 0;
+    -webkit-box-shadow: 0 0 10px 3px rgba(215, 185, 167, 0.3);
+    -moz-box-shadow: 0 0 10px 3px rgba(215, 185, 167, 0.3);
+    box-shadow: 0 0 10px 3px rgba(215, 185, 167, 0.3);
 
     .selectBox {
       display: flex;
@@ -30,7 +33,8 @@
         select {
           appearance: none;
           width: 100%;
-          background: url("../images/tableArrow.png") no-repeat right 45px center;
+          background: url("../images/tableArrow.png") no-repeat right 45px
+            center;
           background-size: 30px;
           padding: 10px;
           // color: #e1baa2;
@@ -39,8 +43,10 @@
           line-height: 1.5;
           color: #fff;
           border: none;
-          option{
+          option {
             background-color: #e5bda4;
+            font-size: 24px;
+            font-size: 2.4rem;
           }
         }
       }
@@ -77,4 +83,108 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 750px) {
+  .eventSection {
+    .locationbox {
+      .selectBox {
+        .locationLabel {
+          line-height: 2.2;
+          padding-left: 20px;
+        }
+        .locationSelect {
+          select {
+            line-height: 2.2;
+          }
+        }
+      }
+      .locationResult {
+        .result {
+          .name,
+          .tel,
+          .time {
+            line-height: 2.2;
+            .tit{
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 414px){
+  .eventSection {
+ 
+  .locationbox {
+   
+
+    .selectBox {
+      .locationLabel {
+        // font-size: 18px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #fff;
+        flex: 0 0 130px;
+        padding: 10px 0 10 20px;
+        // padding-left: 20px;
+      }
+      .locationSelect {
+        width: 100%;
+        padding-left: 20px;
+        select {
+          appearance: none;
+          width: 100%;
+          background: url("../images/tableArrow.png") no-repeat right 25px
+            center;
+          background-size: 25px;
+          padding: 10px;
+          padding-left: 0;
+          // color: #e1baa2;
+          font-size: 15px;
+          line-height: 1.5;
+          color: #fff;
+          border: none;
+          option {
+            background-color: #e5bda4;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .locationResult {
+      .result {
+        display: none;
+        color: #fff;
+        font-size: 15px;
+        // margin: 20px auto 0;
+        &.on {
+          display: block;
+        }
+        .name,
+        .tel,
+        .time {
+          display: flex;
+          line-height: 1.5;
+          padding: 10px;
+          border: 1px solid #fff;
+          .tit {
+            flex: 0 0 130px;
+            color: #fff;
+          }
+          .txt {
+            padding-left: 10px;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 }

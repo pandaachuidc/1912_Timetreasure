@@ -1,77 +1,95 @@
 @-webkit-keyframes img_shine {
-    0% {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes img_shine {
-    0% {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes font-shine {
-    0% {
-        background-position: 0% 0;
-    }
-    to {
-        background-position: -300% 0;
-    }
+  0% {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: -300% 0;
+  }
 }
 
 @-webkit-keyframes flare_shine {
-    0% {
-        opacity: 0.8;
-    }
-    to {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes flare_shine {
-    0% {
-        opacity: 0.8;
-    }
-    to {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes btn-shine {
-    0% {
-        -webkit-transform: translateX(-150%);
-        transform: translateX(-150%);
-    }
-    70% {
-        -webkit-transform: translateX(120%);
-        transform: translateX(120%);
-    }
-    100% {
-        -webkit-transform: translateX(120%);
-        transform: translateX(120%);
-    }
+  0% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+  70% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+  }
 }
 
 @keyframes scrollMove {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(15px);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
 }
 
 @keyframes line {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 160px;
-    }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+@keyframes lineMb {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes lineMb30 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
 }
 
 // [data-aos='line'] {
@@ -108,33 +126,81 @@
 //     }
 // }
 
-[data-aos='text-down'] {
-    opacity: 0;
-    transform: translateY(-25px);
+[data-aos="text-down"] {
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: all 0.3s;
+  &.aos-animate {
+    transform: translateY(0);
+    opacity: 1;
     transition: all 0.3s;
-    &.aos-animate {
-        transform: translateY(0);
-        opacity: 1;
-        transition: all 0.3s;
-    }
+  }
 }
 
-[data-aos='text-up'] {
-    opacity: 0;
-    transform: translateY(25px);
+[data-aos="text-up"] {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.3s;
+  &.aos-animate {
+    transform: translateY(0);
+    opacity: 1;
     transition: all 0.3s;
-    &.aos-animate {
-        transform: translateY(0);
-        opacity: 1;
-        transition: all 0.3s;
-    }
+  }
 }
+
+[data-aos="scale-photo"] {
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.5s;
+  &.aos-animate {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+
+[data-aos="move-left"] {
+  opacity: 0;
+  transform: translateX(25px);
+  transition: all 0.5s;
+  &.aos-animate {
+   transform: translateX(0);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+
+
+// [data-aos="zoom-in-photo"] {
+//   -webkit-transition: opacity 1s, -webkit-transform 5s;
+//   transition: opacity 1s, -webkit-transform 5s;
+//   -o-transition: transform 5s, opacity 1s;
+//   transition: transform 5s, opacity 1s;
+//   transition: transform 5s, opacity 1s, -webkit-transform 5s;
+//   &.aos-animate {
+//     transition: transform 5s, opacity 1s;
+//     transform: scale(1.05);
+//   }
+// }
+
+// [data-aos="line"] {
+//   &::before,
+//   ::after {
+//     opacity: 1;
+//   }
+// }
+// [data-aos="line"].aos-animate {
+//   &::before,
+//   ::after {
+//     opacity: 0;
+//   }
+// }
 
 // [data-aos='spacing'] {
 //     letter-spacing: 0rem;
 //     transition: all 0.3s;
 //     &.aos-animate {
-        
+
 //         letter-spacing: 0.4rem;
 //         transition: all 0.3s;
 //     }
@@ -163,66 +229,66 @@
 // }
 
 @keyframes loading {
-    0% {
-        background: url('../images/loading.png') no-repeat center;
-        background-size: 100%;
-    }
-    50% {
-        background: url('../images/loading-lt.png') no-repeat center;
-        background-size: 100%;
-    }
-    100% {
-        background: url('../images/loading.png') no-repeat center;
-        background-size: 100%;
-    }
+  0% {
+    background: url("../images/loading.png") no-repeat center;
+    background-size: 100%;
+  }
+  50% {
+    background: url("../images/loading-lt.png") no-repeat center;
+    background-size: 100%;
+  }
+  100% {
+    background: url("../images/loading.png") no-repeat center;
+    background-size: 100%;
+  }
 }
 
 @keyframes kvbg-pc {
-    0% {
-        background: url('../images/kv-cut1.jpg') no-repeat center;
-        background-size: 100%;
-    }
-    100% {
-        background: url('../images/kv-cut2.jpg') no-repeat center;
-        background-size: 100%;
-    }
+  0% {
+    background: url("../images/kv-cut1.jpg") no-repeat center;
+    background-size: 100%;
+  }
+  100% {
+    background: url("../images/kv-cut2.jpg") no-repeat center;
+    background-size: 100%;
+  }
 }
 
 @keyframes gsbgani {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes eyebg-pc {
-    0% {
-        background: url('../images/eyebg01-pc.png') no-repeat center;
-        background-size: 100%;
-    }
-    100% {
-        background: url('../images/eyebg02-pc.png') no-repeat center;
-        background-size: 100%;
-    }
+  0% {
+    background: url("../images/eyebg01-pc.png") no-repeat center;
+    background-size: 100%;
+  }
+  100% {
+    background: url("../images/eyebg02-pc.png") no-repeat center;
+    background-size: 100%;
+  }
 }
 @keyframes eyebg-mb {
-    0% {
-        background: url('../images/eyebg01-mb.png') no-repeat center;
-        background-size: 100%;
-    }
-    100% {
-        background: url('../images/eyebg02-mb.png') no-repeat center;
-        background-size: 100%;
-    }
+  0% {
+    background: url("../images/eyebg01-mb.png") no-repeat center;
+    background-size: 100%;
+  }
+  100% {
+    background: url("../images/eyebg02-mb.png") no-repeat center;
+    background-size: 100%;
+  }
 }
 
 @keyframes lineani {
-    0% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }

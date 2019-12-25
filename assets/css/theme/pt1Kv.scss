@@ -24,7 +24,7 @@
         animation: img_shine 1.5s linear infinite alternate;
       }
     }
-    
+
     .time-kv-txt {
       position: absolute;
       z-index: 2;
@@ -50,7 +50,7 @@
         letter-spacing: 0.1rem;
       }
     }
-    .scrollIcon{
+    .scrollIcon {
       position: absolute;
       z-index: 2;
       left: 0;
@@ -69,23 +69,29 @@
     text-align: center;
     a {
       display: block;
-      position: relative;
       text-decoration: none;
-      &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-        animation-duration: 0.2s;
-        animation-name: gsbgani;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        background: url("../images/gotop02.png") no-repeat center;
-        background-size: 100%;
-      }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  a {
+    &::before {
+      content: "";
+      background: url(../images/shine_light.png);
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      display: block;
+      pointer-events: none;
+      -webkit-animation: btn-shine 4s ease 1s infinite;
+      animation: btn-shine 4s ease 1s infinite;
     }
   }
 }
@@ -104,7 +110,7 @@
           background-size: 100%;
         }
       }
-      
+
       .time-kv-txt {
         position: absolute;
         z-index: 2;
@@ -113,7 +119,57 @@
       }
     }
     .gotopBtn {
-      
+      max-width: 100px;
+      margin: 0 auto 50px;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      // top: 0;
+      bottom: 120px;
+      a {
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 414px) {
+.time-wrapper {
+    .time-kv {
+      .bg-img {
+       
+      }
+
+      .time-kv-txt {
+        padding-left: 6%;
+        padding-top: 460px;
+        p {
+        font-size: 22px;
+        font-weight: 550;
+        padding-bottom: 20px;
+        letter-spacing: 0.1rem;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+        padding-bottom: 10px;
+      }
+      h1 {
+        font-size: 32px;
+        // font-size:$title ;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+      }
+      }
+    }
+    .gotopBtn {
+      max-width: 80px;
+      bottom: 120px;
+   
     }
   }
 }
