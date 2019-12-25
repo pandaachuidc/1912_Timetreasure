@@ -96,6 +96,28 @@ footer {
   }
 }
 
+@media screen and (max-width: 1600px){
+  .time-wrapper {
+    .time-kv {
+      .time-kv-txt {
+        padding-top: 300px;
+        p {
+
+        }
+        h2 {
+          font-size: 4rem;
+        }
+        h1 {
+          font-size: $title - .5;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1440px){}
+@media screen and (max-width: 1280px){}
+@media screen and (max-width: 1024px){}
+
 @media screen and (max-width: 750px) {
   .time-wrapper {
     .time-kv {

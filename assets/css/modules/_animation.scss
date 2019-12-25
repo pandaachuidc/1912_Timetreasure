@@ -34,12 +34,13 @@
 }
 @keyframes flare_shine {
   0% {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
   }
 }
+
 
 @keyframes btn-shine {
   0% {
@@ -89,6 +90,18 @@
   }
   100% {
     width: 30px;
+  }
+}
+
+@keyframes backgroundScale {
+  0% {
+    background-size: 95%;
+  }
+  50%{
+    background-size: 105%;
+  }
+  100% {
+    background-size: 95%;
   }
 }
 

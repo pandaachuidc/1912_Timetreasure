@@ -35,7 +35,7 @@
 
 @keyframes flare_shine {
   0% {
-    opacity: 0.8; }
+    opacity: 0.5; }
   to {
     opacity: 1; } }
 
@@ -112,6 +112,22 @@
     width: 0; }
   100% {
     width: 30px; } }
+
+@-webkit-keyframes backgroundScale {
+  0% {
+    background-size: 95%; }
+  50% {
+    background-size: 105%; }
+  100% {
+    background-size: 95%; } }
+
+@keyframes backgroundScale {
+  0% {
+    background-size: 95%; }
+  50% {
+    background-size: 105%; }
+  100% {
+    background-size: 95%; } }
 
 [data-aos="text-down"] {
   opacity: 0;
@@ -996,6 +1012,14 @@ footer {
     -webkit-animation: btn-shine 4s ease 1s infinite;
     animation: btn-shine 4s ease 1s infinite; }
 
+@media screen and (max-width: 1600px) {
+  .time-wrapper .time-kv .time-kv-txt {
+    padding-top: 300px; }
+    .time-wrapper .time-kv .time-kv-txt h2 {
+      font-size: 4rem; }
+    .time-wrapper .time-kv .time-kv-txt h1 {
+      font-size: 5.5rem; } }
+
 @media screen and (max-width: 750px) {
   .time-wrapper .time-kv .bg-img {
     width: 100%;
@@ -1074,11 +1098,15 @@ footer {
         padding-top: 70px;
         font-size: 2.4rem;
         line-height: 4rem; }
-      .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .parallax-window {
-        max-width: 1260px;
+      .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo {
+        width: 1260px;
+        height: 353px;
         margin: 0 auto;
-        min-height: 353px;
-        background: transparent; }
+        overflow: hidden;
+        background: url(../images/tree.jpg) no-repeat top center;
+        background-size: 95%;
+        -webkit-animation: backgroundScale 15s ease 1s;
+        animation: backgroundScale 15s ease 1s; }
   .time-pt2-igdt .igdtWarpMb .ingredient {
     position: relative; }
     .time-pt2-igdt .igdtWarpMb .ingredient .content {
@@ -1095,7 +1123,7 @@ footer {
         letter-spacing: 0.4rem; }
       .time-pt2-igdt .igdtWarpMb .ingredient .content p {
         font-size: 3.5rem;
-        font-family: "Noto Serif TC";
+        font-family: 'Noto Serif TC';
         font-weight: 800;
         letter-spacing: 0.3rem;
         padding-top: 30px; }
@@ -1110,7 +1138,7 @@ footer {
       width: 100%; }
       .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap {
         position: relative;
-        font-family: "Microsoft JhengHei", "微軟正黑體";
+        font-family: 'Microsoft JhengHei', '微軟正黑體';
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1; }
@@ -1124,7 +1152,10 @@ footer {
           opacity: 1;
           -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
-          transform: translateY(0); }
+          transform: translateY(0);
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
           .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText .flare {
             width: 305px;
             height: 118px;
@@ -1136,8 +1167,10 @@ footer {
             right: 0;
             margin: 0 auto;
             bottom: -7px;
-            -webkit-animation: flare_shine 0.12s infinite;
-            animation: flare_shine 0.12s infinite;
+            -webkit-animation: flare_shine 0.5s infinite;
+            animation: flare_shine 0.5s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
             z-index: 1;
             pointer-events: none; }
           .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p {
@@ -1151,24 +1184,10 @@ footer {
             letter-spacing: 0.2rem;
             color: #fff;
             padding-top: 25px;
-            padding-bottom: 25px;
-            overflow: hidden; }
+            padding-bottom: 25px; }
             .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p span {
               font-size: 2.4rem;
               display: block; }
-            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p::before {
-              content: "";
-              background: url(../images/shine_light.png);
-              background-position: center;
-              background-size: cover;
-              position: absolute;
-              width: 200%;
-              height: 200%;
-              margin-top: -30%;
-              display: block;
-              pointer-events: none;
-              -webkit-animation: btn-shine 4s ease 1s infinite;
-              animation: btn-shine 4s ease 1s infinite; }
           .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText img {
             padding-top: 30px;
             width: 41px; }
@@ -1182,7 +1201,10 @@ footer {
           opacity: 0;
           -webkit-transform: translateY(55px);
           -ms-transform: translateY(55px);
-          transform: translateY(55px); }
+          transform: translateY(55px);
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
           .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtTextAfter p {
             color: #fff;
             font-size: 2.4rem;
@@ -1209,6 +1231,27 @@ footer {
         display: block; }
       .time-pt2-igdt .igdtWarpMb .ingredient .ingredients img {
         width: 100%; }
+
+@media screen and (max-width: 1600px) {
+  .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content p {
+    font-size: 3rem; }
+  .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content h1 {
+    font-size: 5.5rem; }
+  .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
+    padding-top: 50px; }
+  .time-pt2-igdt .igdtWarpMb .ingredient .content {
+    padding-top: 60px; }
+    .time-pt2-igdt .igdtWarpMb .ingredient .content h1 {
+      font-size: 5.5rem; }
+    .time-pt2-igdt .igdtWarpMb .ingredient .content p {
+      font-size: 3rem; }
+  .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p {
+    border: #e3c8c8 1px solid;
+    font-size: 3.5rem; }
+    .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p span {
+      font-size: 1.9rem; }
+  .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtTextAfter p {
+    font-size: 1.9rem; } }
 
 @media screen and (max-width: 750px) {
   .time-pt2-igdt {
@@ -1249,7 +1292,7 @@ footer {
             letter-spacing: 0.4rem; }
           .time-pt2-igdt .igdtWarpMb .ingredient .content p {
             font-size: 3.5rem;
-            font-family: "Noto Serif TC";
+            font-family: 'Noto Serif TC';
             font-weight: 800;
             letter-spacing: 0.3rem;
             padding-top: 30px; }
@@ -1286,9 +1329,6 @@ footer {
             .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p span {
               font-size: 2.4rem;
               display: block; }
-            .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p::before {
-              content: "";
-              margin-top: -25%; }
             .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText img {
               padding-top: 30px;
               width: 41px; }
@@ -1412,7 +1452,7 @@ footer {
             font-size: 16px;
             display: block; }
           .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p::before {
-            content: "";
+            content: '';
             margin-top: -25%; }
         .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText img {
           padding-top: 25px;
@@ -1580,12 +1620,12 @@ footer {
           width: 55%; }
           .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
             font-size: 4rem;
-            font-family: "Noto Serif TC";
+            font-family: 'Noto Serif TC';
             font-weight: 800;
             letter-spacing: 0.3rem; }
           .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
             font-size: 2.8rem;
-            font-family: "Noto Serif TC";
+            font-family: 'Noto Serif TC';
             font-weight: 800;
             letter-spacing: 0.3rem;
             padding: 25px 0; }
@@ -1597,6 +1637,25 @@ footer {
 .owl-carousel .prev-slide,
 .owl-carousel .next-slide {
   z-index: 3; }
+
+@media screen and (max-width: 1600px) {
+  .time-wrapper .time-pt3-product .productWrap .time-product-txt {
+    padding-top: 170px; }
+    .time-wrapper .time-pt3-product .productWrap .time-product-txt p {
+      font-size: 3rem; }
+    .time-wrapper .time-pt3-product .productWrap .time-product-txt h1 {
+      font-size: 5.5rem; }
+  .time-wrapper .time-pt3-product .productWrap .productSlider .btns {
+    width: 70%; }
+  .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
+    font-size: 3.5rem; }
+  .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
+    font-size: 2.3rem; }
+  .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
+    font-size: 1.9rem;
+    padding-right: 80px; }
+  .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    top: 46% !important; } }
 
 @media screen and (max-width: 750px) {
   .time-wrapper .time-pt3-product {
@@ -1799,6 +1858,8 @@ footer {
       text-align: center; }
       .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
         padding: 30px 0 55px 0; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventP {
+        padding: 40px 0; }
 
 .time-wrapper .time-pt4-event .event2 {
   background: url(../images/pt5_bg_pc.jpg) no-repeat top center;
@@ -1827,7 +1888,8 @@ footer {
         font-size: 4rem;
         font-weight: bold; }
       .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
-        text-align: center; }
+        text-align: center;
+        padding: 20px 0; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap {
       position: relative; }
       .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
@@ -1883,9 +1945,6 @@ footer {
         pointer-events: none;
         -webkit-animation: btn-shine 4s ease 1s infinite;
         animation: btn-shine 4s ease 1s infinite; }
-
-.time-wrapper .time-pt4-event .eventP {
-  padding: 40px 0; }
 
 .eventH2 {
   font-size: 4.5rem;
@@ -2029,6 +2088,60 @@ footer {
 .ytvideo .video picture .play_btn {
   display: block;
   margin: -32% auto; }
+
+@media screen and (max-width: 1600px) {
+  .time-wrapper .time-pt4-event .event1 .event1Wrap {
+    padding: 0 28.3%; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
+      padding-top: 150px; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
+        font-size: 3rem; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
+        font-size: 5.5rem; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
+      padding: 30px 0 50px 0; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventP {
+      padding: 35px 0; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
+    padding-top: 100px; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
+      padding: 30px 0 15px 0; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
+      font-size: 4rem;
+      font-weight: bold; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
+      padding: 20px 0; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
+    width: 80%;
+    margin: 0 auto; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item {
+      width: 100%;
+      margin-top: -100px; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
+        top: 0;
+        right: 420px;
+        width: 60%; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
+        top: 6px;
+        right: 110px;
+        width: 45%; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .shopBtn2 {
+    cursor: pointer;
+    width: 500px;
+    margin: 40px auto;
+    line-height: 4.5rem;
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .shopBtn2 span {
+      font-size: 3.5rem; }
+  .eventH2 {
+    font-size: 4rem; }
+  .eventH3 span {
+    font-size: 2.5rem; }
+  .eventH4 {
+    font-size: 2.5rem; }
+  .eventP {
+    font-size: 1.9rem; } }
 
 @media screen and (max-width: 750px) {
   .time-wrapper .time-pt4-event .event1 {
@@ -2334,7 +2447,8 @@ footer {
   background: -webkit-linear-gradient(left, #c4a18b, #e5bda4, #c4a18b);
   background: -o-linear-gradient(left, #c4a18b, #e5bda4, #c4a18b);
   background: linear-gradient(to right, #c4a18b, #e5bda4, #c4a18b);
-  text-align: left; }
+  text-align: left;
+  font-family: "Microsoft JhengHei", "微軟正黑體"; }
   .eventSection .locationbox {
     max-width: 100%;
     -webkit-box-shadow: 0 0 10px 3px rgba(215, 185, 167, 0.3);
@@ -2347,19 +2461,21 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      border: 1px solid #fff; }
+      border: 1px solid #fff;
+      padding-left: 40px; }
       .eventSection .locationbox .selectBox .locationLabel {
         font-size: 24px;
         font-size: 2.4rem;
         line-height: 1.5;
         color: #fff;
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 237px;
-        flex: 0 0 237px;
+        -ms-flex: 0 0 300px;
+        flex: 0 0 300px;
         padding: 10px; }
       .eventSection .locationbox .selectBox .locationSelect {
         width: 100%;
-        padding-left: 20px; }
+        padding-left: 20px;
+        padding-right: 20px; }
         .eventSection .locationbox .selectBox .locationSelect select {
           -webkit-appearance: none;
           -moz-appearance: none;
@@ -2376,7 +2492,8 @@ footer {
           .eventSection .locationbox .selectBox .locationSelect select option {
             background-color: #e5bda4;
             font-size: 24px;
-            font-size: 2.4rem; }
+            font-size: 2.4rem;
+            font-family: "Microsoft JhengHei", "微軟正黑體"; }
     .eventSection .locationbox .locationResult .result {
       display: none;
       color: #fff;
@@ -2392,13 +2509,14 @@ footer {
         display: flex;
         line-height: 1.5;
         padding: 10px;
+        padding-left: 50px;
         border: 1px solid #fff; }
         .eventSection .locationbox .locationResult .result .name .tit,
         .eventSection .locationbox .locationResult .result .tel .tit,
         .eventSection .locationbox .locationResult .result .time .tit {
           -webkit-box-flex: 0;
-          -ms-flex: 0 0 237px;
-          flex: 0 0 237px;
+          -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
           color: #fff; }
         .eventSection .locationbox .locationResult .result .name .txt,
         .eventSection .locationbox .locationResult .result .tel .txt,
@@ -2406,7 +2524,8 @@ footer {
           padding-left: 20px; }
       .eventSection .locationbox .locationResult .result a {
         text-decoration: none;
-        color: #fff; }
+        color: #fff;
+        font-family: "Microsoft JhengHei", "微軟正黑體"; }
 
 @media screen and (max-width: 750px) {
   .eventSection .locationbox .selectBox .locationLabel {

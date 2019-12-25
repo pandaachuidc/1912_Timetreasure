@@ -38,6 +38,9 @@
             padding: 30px 0 55px 0;
             // margin-top: -5px;
           }
+          .eventP {
+            padding: 40px 0;
+          }
         }
       }
     }
@@ -78,6 +81,7 @@
           }
           .eventP {
             text-align: center;
+            padding: 20px 0;
           }
         }
         .event2-photo-wrap {
@@ -152,9 +156,7 @@
         }
       }
     }
-    .eventP {
-      padding: 40px 0;
-    }
+    
   }
 }
 
@@ -318,6 +320,116 @@
   display: block;
   margin: -32% auto;
 }
+
+@media screen and (max-width: 1600px){
+  .time-wrapper {
+    .time-pt4-event {
+      .event1 {
+        .event1Wrap {
+          padding: 0 28.3%;
+          .time-event1-txt {
+            padding-top: 150px;
+            p {
+              font-size: 3rem;
+            }
+            h1 {
+              font-size: 5.5rem;
+            }
+          }
+          
+          .time-event1-txt2 {
+            .eventH3 {
+              padding: 30px 0 50px 0;
+            }
+            .eventP {
+              padding: 35px 0;
+            }
+          }
+        }
+      }
+      .event2 {
+       
+        .event2Wrap {
+          .note {
+          
+          }
+  
+          .time-event2-txt {
+            padding-top: 100px;
+            .eventH3 {
+              padding: 30px 0 15px 0;
+            }
+            .eventH4 {
+              span {
+                font-size: 4rem;
+                font-weight: bold;
+              }
+            }
+            .eventP {
+              padding: 20px 0;
+            }
+          }
+          .event2-photo-wrap {
+            .event2-photo {
+              width: 80%;
+              margin: 0 auto;
+              .item {
+                width: 100%;
+                // margin-left: -80px;
+                margin-top: -100px;
+                .text-bubble {
+                  top: 0;
+                  right: 420px;
+                  width: 60%;
+                }
+                .event-model {
+                  top: 6px;
+                  right: 110px;
+                  width: 45%;
+                }
+              }
+            }
+          }
+         
+          .shopBtn2 {
+            span {
+              font-size: 4rem - 0.5rem;
+            }
+            cursor: pointer;
+            width: 500px;
+            margin: 40px auto;
+            line-height: 4.5rem;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            
+          }
+        }
+      }
+      
+    }
+  }
+  
+  .eventH2 {
+    font-size: 4.5rem - 0.5rem;
+  }
+  
+  .eventH3 {
+    
+    span {
+      font-size: 3rem - 0.5rem;
+    }
+  }
+  .eventH4 {
+    font-size: 3rem - 0.5rem;
+  }
+  .eventP {
+    font-size: 2.4rem - 0.5rem;
+  }
+}
+@media screen and (max-width: 1440px){}
+@media screen and (max-width: 1280px){}
+@media screen and (max-width: 1024px){}
+
 
 @media screen and (max-width: 750px) {
   .time-wrapper {
