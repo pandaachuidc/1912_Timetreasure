@@ -26,7 +26,7 @@
           position: absolute;
           top: 60px;
           right: 55px;
-          z-index: 2;
+          z-index: 200;
           width: 50px;
           height: 50px;
           .inner {
@@ -272,8 +272,8 @@
 }
 
 @media screen and (max-width: 1600px) {
-  .kvSection {
-    .kv {
+  .time-kv {
+    .time-header {
       .kvtop {
         .kv-nav {
           width: 40px;
@@ -334,8 +334,8 @@
   }
 }
 @media screen and (max-width: 1440px) {
-  .kvSection {
-    .kv {
+  .time-kv {
+    .time-header {
       .kvtop {
         .kv-logo {
           top: 45px;
@@ -367,19 +367,19 @@
   }
 }
 @media screen and (max-width: 1280px) {
-  .kvSection {
-    .kv {
+  .time-kv {
+    .time-header {
       .kvtop {
         .kv-logo {
           top: 35px;
-          left: 35px;
+          left: 55px;
         }
         .kv-nav {
           top: 40px;
           right: 35px;
         }
         .kv-contact {
-          top: 40px;
+          top: 54px;
           right: 110px;
         }
       }
@@ -391,8 +391,8 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  .kvSection {
-    .kv {
+  .time-kv {
+    .time-header {
       .kvtop {
         .kv-logo {
           top: 25px;
@@ -415,7 +415,7 @@
   }
 }
 // mobile layout
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .time-wrapper {
     .time-kv {
       .time-header {
@@ -469,7 +469,7 @@
 }
 // iphone XS Max, Plus
 @media screen and (max-width: 414px) {
-    .time-wrapper {
+  .time-wrapper {
     .time-kv {
       .time-header {
         .kvtop {

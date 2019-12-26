@@ -87,6 +87,84 @@
   }
 }
 
+@media screen and (max-width: 1600px) {
+    .eventSection {
+    .locationbox {
+      .selectBox {
+        .locationLabel {
+        font-size: 2.4rem - 0.5;
+        padding-left: 20px;
+          
+        }
+        .locationSelect {
+          select {
+            // line-height: 2.2;
+            font-size: 2.4rem - 0.5;
+            option {
+            font-size: 2.4rem - 0.5;
+          }
+          }
+        }
+      }
+      .locationResult {
+        .result {
+          font-size: 2.4rem - 0.5;
+          .name,
+          .tel,
+          .time {
+            // line-height: 2.2;
+            .tit{
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1280px) {
+    .eventSection {
+    .locationbox {
+      .selectBox {
+        .locationLabel {
+        font-size: 2.4rem - 0.5;
+        padding-left: 20px;
+        flex: 0 0 200px;
+          
+        }
+        .locationSelect {
+          select {
+            // line-height: 2.2;
+            font-size: 2.4rem - 0.5;
+            option {
+            font-size: 2.4rem - 0.5;
+          }
+          }
+        }
+      }
+      .locationResult {
+        .result {
+          font-size: 2.4rem - 0.5;
+          .name,
+          .tel,
+          .time {
+            // line-height: 2.2;
+            .tit{
+              padding-left: 10px;
+              flex: 0 0 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+}
+
 @media screen and (max-width: 750px) {
   .eventSection {
     .locationbox {
@@ -125,6 +203,7 @@
    
 
     .selectBox {
+      padding-left:0;
       .locationLabel {
         // font-size: 18px;
         font-size: 15px;
@@ -143,6 +222,81 @@
           background: url("../images/tableArrow.png") no-repeat right 25px
             center;
           background-size: 25px;
+          padding: 10px;
+          padding-left: 0;
+          // color: #e1baa2;
+          font-size: 15px;
+          line-height: 1.5;
+          color: #fff;
+          border: none;
+          option {
+            background-color: #e5bda4;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .locationResult {
+      .result {
+        display: none;
+        color: #fff;
+        font-size: 15px;
+        // margin: 20px auto 0;
+        &.on {
+          display: block;
+        }
+        .name,
+        .tel,
+        .time {
+          display: flex;
+          line-height: 1.5;
+          padding: 10px;
+          border: 1px solid #fff;
+          .tit {
+            flex: 0 0 130px;
+            color: #fff;
+          }
+          .txt {
+            padding-left: 10px;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 375px){
+  .eventSection {
+ 
+  .locationbox {
+   
+
+    .selectBox {
+      padding-left:0;
+      .locationLabel {
+        // font-size: 18px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #fff;
+        flex: 0 0 130px;
+        padding: 10px 0 10 20px;
+        // padding-left: 20px;
+      }
+      .locationSelect {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 0;
+        select {
+          appearance: none;
+          width: 100%;
+          background: url("../images/tableArrow.png") no-repeat right 20px
+            center;
+          background-size: 20px;
           padding: 10px;
           padding-left: 0;
           // color: #e1baa2;

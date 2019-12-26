@@ -91,6 +91,7 @@ body {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  color: #170000;
 }
 html {
   position: relative;
@@ -182,6 +183,7 @@ button {
     opacity 0.15s linear, transform 0.25s linear;
 }
 
+
 .shine-font {
   background: -webkit-linear-gradient(
     left,
@@ -205,6 +207,7 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
+
 .shine-font2 {
   background: -webkit-linear-gradient(
     left,
@@ -216,6 +219,25 @@ button {
     #fee4dc 58%,
     #fee4dc 67%,
     #fff5f3 100%
+  );
+  background-size: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  background-size: 300%;
+  -webkit-animation: font-shine 10s infinite;
+  animation: font-shine 10s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.shine-font3 {
+  background: -webkit-linear-gradient(
+ left,
+    #8c2b1f 0%,
+    #e17a6d 25%,
+    #8c2b1f 52%,
+    #e17a6d 75%,
+    #8c2b1f 100%
   );
   background-size: 100%;
   -webkit-transition: 1s;

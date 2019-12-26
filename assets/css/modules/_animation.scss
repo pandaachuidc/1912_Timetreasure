@@ -57,6 +57,21 @@
   }
 }
 
+@keyframes btn-shine2 {
+  0% {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+  }
+  70% {
+    -webkit-transform: translateY(120%);
+    transform: translateY(120%);
+  }
+  100% {
+    -webkit-transform: translateY(120%);
+    transform: translateY(120%);
+  }
+}
+
 @keyframes scrollMove {
   0% {
     transform: translateY(0);
@@ -95,13 +110,13 @@
 
 @keyframes backgroundScale {
   0% {
-    background-size: 95%;
+    background-size: 100%;
   }
   50%{
-    background-size: 105%;
+    background-size: 110%;
   }
   100% {
-    background-size: 95%;
+    background-size: 100%;
   }
 }
 
@@ -182,6 +197,16 @@
     transition: all 0.5s;
   }
 }
+
+[data-aos="backgroundScale"] {
+ transform: scale(1);
+  transition: all 10s;
+  &.aos-animate {
+   transform: scale(1.05);
+    transition: all 10s;
+  }
+}
+
 
 
 // [data-aos="zoom-in-photo"] {
