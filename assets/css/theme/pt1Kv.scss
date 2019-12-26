@@ -60,15 +60,7 @@
       animation: scrollMove 1s ease-in infinite alternate;
     }
   }
-  .gotopBtn {
-    max-width: 70px;
-    margin: 0 auto 50px;
-    text-align: center;
-    a {
-      display: block;
-      text-decoration: none;
-    }
-  }
+
 }
 
 .footer.pc {
@@ -154,6 +146,17 @@
       }
     }
   }
+}
+@media screen and (max-width: 1366px) {
+  .time-wrapper {
+  .time-kv {
+    .time-kv-txt {
+      padding-top: 275px;
+     
+    }
+   
+  }
+}
 }
 @media screen and (max-width: 1280px) {
     .time-wrapper {
