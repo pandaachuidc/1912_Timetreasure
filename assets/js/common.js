@@ -1,35 +1,45 @@
 $(document).ready(function() {
-  // $(".igdtText").click(function() {
-  //   $(this).fadeOut();
-  //   $(this)
-  //     .next(".igdtTextAfter")
-  //     .addClass("on")
-  //     .fadeIn();
-  // });
+  loading;
+  var countImages = $(".time-wrapper img").length;
+  $(".time-wrapper")
+    .imagesLoaded()
+    .done(function(instance) {
+      $("#progress-bar").css({
+        width: "100%"
+      });
+      TweenMax.to("#loading", 0.5, {
+        delay: 2,
+        display: "none",
+        autoAlpha: 0,
+        ease: Quart.easeOut,
+        onComplete: function() {
+          // onComplete do something
+          $(".time-kv ").addClass("on");
+          setTimeout(function() {
+            $(".kvSection .kvTitle ").addClass("on");
+            $(".kvSection .kv-en").addClass("on");
+          }, 500);
+        }
+      });
+    })
+    .progress(function(instance, image) {
+      if (image.isLoaded) {
+        $(image.img).addClass("loaded");
+        var countLoadedImages = $(".time-wrapper img.loaded").length;
+        var width = 100 * (countLoadedImages / countImages) + "%";
+        $("#progress-bar").css({ width: width });
+      }
+    });
+
+
+  // ingredient mobile aniamtion
 
   if ($(window).width() <= 750) {
     $(".igdtWrap").click(function() {
       $(this).toggleClass("on");
-      
     });
   }
-
-  // $(".igdtText").hover(
-  //   function() {
-  //     $(this).fadeOut();
-  //     $(this)
-  //       .next(".igdtTextAfter")
-  //       .addClass("on")
-  //       .fadeIn();
-  //   },
-  //   function() {
-  //     $(this).fadeIn();
-  //     $(this)
-  //       .next(".igdtTextAfter")
-  //       .removeClass("on")
-  //       .fadeOut();
-  //   }
-  // );
+  // ingredient mobile aniamtion
 
   // mainMenu START
   $(".navigation_trigger").on("click", function() {
@@ -61,11 +71,9 @@ $(document).ready(function() {
     $(".menu").removeClass("nav_in");
     $("body").removeClass("fixed");
   });
+  // mainMenu END
 
-  $(".parallax-window").parallax({
-    imageSrc: "assets/images/tree_pc.jpg"
-  });
-
+  //silder Start
   $(".owl-carousel")
     .on("initialized.owl.carousel changed.owl.carousel", function(e) {
       if (!e.namespace) {
@@ -97,7 +105,7 @@ $(document).ready(function() {
     owldata.to(num);
     return false;
   });
-  // mainMenu END
+  // start END
 
   //   table START
   $(".locationSelect select").on("change", function() {
@@ -185,4 +193,6 @@ $(document).ready(function() {
     animatedClassName: "animated"
   });
   //   animate END
+
+
 });

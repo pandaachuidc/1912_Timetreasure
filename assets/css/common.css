@@ -139,7 +139,7 @@
   0% {
     background-size: 100%; }
   50% {
-    background-size: 110%; }
+    background-size: 105%; }
   100% {
     background-size: 100%; } }
 
@@ -147,9 +147,23 @@
   0% {
     background-size: 100%; }
   50% {
-    background-size: 110%; }
+    background-size: 105%; }
   100% {
     background-size: 100%; } }
+
+@-webkit-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 [data-aos="text-down"] {
   opacity: 0;
@@ -516,6 +530,9 @@ button {
   transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, filter 0.15s linear, opacity 0.15s linear, transform 0.25s linear;
   transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear, padding 0.15s linear, filter 0.15s linear, opacity 0.15s linear, transform 0.25s linear, -webkit-filter 0.15s linear, -webkit-transform 0.25s linear; }
 
+.break {
+  display: none; }
+
 .shine-font {
   background: -webkit-linear-gradient(left, #8c2b1f 0%, #341210 24%, #8c2b1f 36%, #341210 46%, #8c2b1f 52%, #341210 58%, #341210 67%, #8c2b1f 100%);
   background-size: 100%;
@@ -541,7 +558,7 @@ button {
   -webkit-text-fill-color: transparent; }
 
 .shine-font3 {
-  background: -webkit-linear-gradient(left, #8c2b1f 0%, #e17a6d 25%, #8c2b1f 52%, #e17a6d 75%, #8c2b1f 100%);
+  background: -webkit-linear-gradient(left, #cd5243 0%, #f7c2bb 25%, #cd5243 52%, #f7c2bb 75%, #cd5243 100%);
   background-size: 100%;
   -webkit-transition: 1s;
   -o-transition: 1s;
@@ -565,6 +582,65 @@ button {
     display: none; } }
 
 /* Theme */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9000000; }
+
+#loading .load-center {
+  position: absolute;
+  top: 40.5%;
+  left: 50%;
+  margin-left: -56px;
+  margin-top: -93px;
+  width: 113px;
+  height: 186px;
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 25%;
+  height: 140px; }
+  #loading .load-center .line {
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    width: 60px;
+    height: 4px;
+    background: #cb1b45;
+    -webkit-animation: spin 1.5s infinite ease;
+    animation: spin 1.5s infinite ease; }
+    #loading .load-center .line:nth-of-type(2) {
+      -webkit-animation-delay: 0.15s;
+      animation-delay: 0.15s; }
+    #loading .load-center .line:nth-of-type(3) {
+      -webkit-animation-delay: 0.25s;
+      animation-delay: 0.25s; }
+    #loading .load-center .line:nth-of-type(4) {
+      -webkit-animation-delay: 0.35s;
+      animation-delay: 0.35s; }
+
+#loading .load-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: 20px;
+  width: 0%;
+  height: 1px;
+  background-color: #cb1b45;
+  -webkit-transition: all 1s 0.5s ease;
+  -o-transition: all 1s 0.5s ease;
+  transition: all 1s 0.5s ease; }
+
+@media screen and (max-width: 750px) {
+  #loading .load-center {
+    left: 48%; } }
+
 .time-wrapper .time-kv .time-header .kvtop .kv-logo {
   position: absolute;
   top: 11px;
@@ -1140,7 +1216,7 @@ button {
     position: absolute;
     z-index: 2;
     padding-left: 6%;
-    padding-top: 860px; }
+    padding-top: 870px; }
     .time-wrapper .time-kv .time-kv-txt p {
       font-size: 3.5rem;
       padding-bottom: 15px; }
@@ -1153,7 +1229,7 @@ button {
 @media screen and (max-width: 414px) {
   .time-wrapper .time-kv .time-kv-txt {
     padding-left: 6%;
-    padding-top: 460px; }
+    padding-top: 470px; }
     .time-wrapper .time-kv .time-kv-txt p {
       font-size: 22px;
       font-size: 2.2rem;
@@ -1175,7 +1251,7 @@ button {
 @media screen and (max-width: 375px) {
   .time-wrapper .time-kv .time-kv-txt {
     padding-left: 6%;
-    padding-top: 430px; }
+    padding-top: 435px; }
     .time-wrapper .time-kv .time-kv-txt p {
       font-size: 19px;
       font-size: 1.9rem;
@@ -1188,18 +1264,14 @@ button {
       font-size: 29px;
       font-size: 2.9rem; } }
 
-@media screen and (max-width: 375px) {
-  .time-wrapper .time-kv .time-kv-txt {
-    padding-left: 6%;
-    padding-top: 400px; } }
-
 .time-pt2-igdt {
   text-align: center; }
   .time-pt2-igdt .igdtWarpMb .intro {
     background: url(../images/pt2_bg_pc.jpg) no-repeat top center;
     background-size: 100%;
     width: 100%;
-    position: relative; }
+    position: relative;
+    margin-top: -1px; }
     .time-pt2-igdt .igdtWarpMb .intro .contentWrap {
       position: absolute;
       left: 0;
@@ -1226,13 +1298,22 @@ button {
         max-width: 1260px;
         height: 353px;
         margin: 0 auto;
-        overflow: hidden;
-        background: url(../images/tree.jpg) no-repeat top center;
-        background-size: 100%;
-        -webkit-animation: backgroundScale 15s ease 1s;
-        animation: backgroundScale 15s ease 1s; }
+        position: relative;
+        overflow: hidden; }
+        .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          right: 0;
+          background-image: url("../images/tree.jpg");
+          background-size: 100%;
+          -webkit-animation: backgroundScale 15s ease 1s;
+          animation: backgroundScale 15s ease 1s; }
   .time-pt2-igdt .igdtWarpMb .ingredient {
-    position: relative; }
+    position: relative;
+    margin-top: -1px; }
     .time-pt2-igdt .igdtWarpMb .ingredient .content {
       position: absolute;
       z-index: 1;
@@ -1385,7 +1466,7 @@ button {
     padding: 15px 0; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
     font-size: 1.9rem;
-    padding-top: 50px;
+    padding-top: 30px;
     line-height: 3rem; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo {
     width: 70%;
@@ -1414,7 +1495,7 @@ button {
       padding: 15px 0; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
     font-size: 1.4rem;
-    padding-top: 30px;
+    padding-top: 20px;
     line-height: 2.5rem; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo {
     width: 70%;
@@ -1455,6 +1536,8 @@ button {
         font-family: 'Noto Serif TC';
         font-weight: 800;
         letter-spacing: 0.4rem; }
+        .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content p:nth-of-type(1) {
+          padding-top: 50px; }
       .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content h1 {
         font-size: 6rem;
         font-family: 'Noto Serif TC';
@@ -1462,8 +1545,8 @@ button {
         letter-spacing: 0.4rem;
         padding: 30px 0; }
     .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
-      padding-bottom: 120px;
-      font-size: 2.4rem;
+      padding-top: 65px;
+      font-size: 2.6rem;
       line-height: 4rem;
       text-align: left;
       margin: 0 10%;
@@ -1578,18 +1661,20 @@ button {
     .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content p {
       font-size: 18px;
       font-size: 1.8rem; }
+      .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content p:nth-of-type(1) {
+        padding-top: 30px; }
     .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content h1 {
       font-size: 32px;
       font-size: 3.2rem;
       padding: 15px 0; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     padding-top: 30px;
-    line-height: 1.5;
-    letter-spacing: 1px; }
+    line-height: 1.4;
+    letter-spacing: .3rem; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo {
-    height: 170px; }
+    height: 130px; }
   .time-pt2-igdt .igdtWarpMb .ingredient .content h1 {
     font-size: 32px;
     font-size: 3.2rem; }
@@ -1619,12 +1704,14 @@ button {
     line-height: 1.5; } }
 
 @media screen and (max-width: 375px) {
+  .time-pt2-igdt .igdtWarpMb .intro .contentWrap .content p:nth-of-type(1) {
+    padding-top: 20px; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec p {
     font-size: 15px;
     font-size: 1.5rem;
-    padding-top: 10px; }
-  .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo {
-    height: 170px; }
+    padding-top: 25px;
+    line-height: 1.5;
+    letter-spacing: .4rem; }
   .time-pt2-igdt .igdtWarpMb .ingredient .content h1 {
     font-size: 32px;
     font-size: 3.2rem; }
@@ -1656,7 +1743,8 @@ button {
 .time-wrapper .time-pt3-product {
   background: url(../images/pt3_bg_pc.jpg) no-repeat top center;
   background-size: 100%;
-  position: relative; }
+  position: relative;
+  margin-top: -1px; }
   .time-wrapper .time-pt3-product .productWrap {
     position: absolute;
     left: 0;
@@ -1731,7 +1819,8 @@ button {
           flex-direction: row; }
     .time-wrapper .time-pt3-product .productWrap .owl-carousel {
       width: 100%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-top: -50px; }
       .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1766,13 +1855,12 @@ button {
           padding-top: 50px;
           margin-right: 50px;
           width: 55%; }
-          .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .break {
-            display: none; }
           .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
             font-size: 4rem;
             font-family: "Noto Serif TC";
             font-weight: 800;
-            letter-spacing: 0.3rem; }
+            letter-spacing: 0.3rem;
+            line-height: 1.3; }
           .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
             font-size: 2.8rem;
             font-family: "Noto Serif TC";
@@ -1815,7 +1903,13 @@ button {
       font-size: 2.5rem; }
     .time-wrapper .time-pt3-product .productWrap .time-product-txt h1 {
       font-size: 4rem;
-      padding: 20px 0; } }
+      padding: 20px 0; }
+  .time-wrapper .time-pt3-product .productWrap .owl-carousel {
+    margin-top: -30px; } }
+
+@media screen and (max-width: 1366px) {
+  .break {
+    display: block; } }
 
 @media screen and (max-width: 1024px) {
   .time-wrapper .time-pt3-product .productWrap .time-product-txt {
@@ -1827,14 +1921,16 @@ button {
       padding: 20px 0; }
   .time-wrapper .time-pt3-product .productWrap .productSlider .btns {
     width: 70%; }
-  .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
-    font-size: 2.5rem; }
-  .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
-    font-size: 1.8rem;
-    padding: 15px 0; }
-  .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
-    font-size: 1.4rem;
-    padding-right: 40px; } }
+  .time-wrapper .time-pt3-product .productWrap .owl-carousel {
+    margin-top: -10px; }
+    .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
+      font-size: 2.5rem; }
+    .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
+      font-size: 1.8rem;
+      padding: 15px 0; }
+    .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
+      font-size: 1.4rem;
+      padding-right: 40px; } }
 
 @media screen and (max-width: 750px) {
   .time-wrapper .time-pt3-product {
@@ -1842,8 +1938,8 @@ button {
     background-size: 100%; }
     .time-wrapper .time-pt3-product .productWrap .time-product-txt {
       text-align: center;
-      padding-top: 185px;
-      padding-bottom: 50px; }
+      padding-top: 130px;
+      padding-bottom: 60px; }
       .time-wrapper .time-pt3-product .productWrap .time-product-txt p {
         font-size: 3.5rem;
         font-family: 'Noto Serif TC';
@@ -1921,7 +2017,8 @@ button {
           .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
             font-size: 3.7rem; }
           .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
-            font-size: 2.8rem; }
+            font-size: 2.8rem;
+            padding: 20px 0; }
           .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
             padding-right: 0;
             font-size: 2.4rem; }
@@ -1934,7 +2031,7 @@ button {
 
 @media screen and (max-width: 414px) {
   .time-wrapper .time-pt3-product .productWrap .time-product-txt {
-    padding-top: 105px; }
+    padding-top: 80px; }
     .time-wrapper .time-pt3-product .productWrap .time-product-txt p {
       font-size: 24px;
       font-size: 2.4rem; }
@@ -2081,6 +2178,7 @@ button {
   font-size: 8rem;
   line-height: 4.5rem;
   text-align: center;
+  text-decoration: none;
   border: #55121d 2px solid;
   color: #55121d;
   padding-top: 25px;
@@ -2106,6 +2204,7 @@ button {
     animation: btn-shine 4s ease 1s infinite; }
 
 .time-wrapper .gotopBtn {
+  cursor: pointer;
   max-width: 70px;
   width: 100%;
   margin: 0 auto 50px;
@@ -2295,6 +2394,14 @@ button {
   .eventP {
     font-size: 1.9rem; } }
 
+@media screen and (max-width: 1440px) {
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item {
+    width: 100%; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
+      right: 320px; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
+      right: 50px; } }
+
 @media screen and (max-width: 1280px) {
   .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
     max-width: 450px; }
@@ -2308,10 +2415,6 @@ button {
     font-size: 3rem; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
     padding: 20px 0; }
-  .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
-    right: 420px; }
-  .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
-    right: 110px; }
   .time-wrapper .shopBtn2 {
     width: 70%; }
     .time-wrapper .shopBtn2 span {
@@ -2339,7 +2442,7 @@ button {
   .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
     top: 10px; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
-      right: 250px; }
+      right: 280px; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
       right: 80px; }
   .time-wrapper .shopBtn2 {
@@ -2366,7 +2469,7 @@ button {
       padding: 0 10%; }
       .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
         text-align: center;
-        padding-top: 185px; }
+        padding-top: 120px; }
         .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
           font-size: 3.5rem;
           font-family: 'Noto Serif TC';
@@ -2413,7 +2516,7 @@ button {
           font-size: 4rem;
           font-weight: bold; }
         .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
-          text-align: left;
+          text-align: center;
           padding: 20px 10%; }
       .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap {
         position: relative; }
@@ -2433,7 +2536,7 @@ button {
         text-align: center;
         width: 100%;
         margin: 0 auto;
-        padding-top: 90px; }
+        padding-top: 75px; }
       .time-wrapper .time-pt4-event .event2 .event2Wrap .event1-note,
       .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-note {
         padding-top: 50px; }
@@ -2484,13 +2587,15 @@ button {
 @media screen and (max-width: 414px) {
   .time-wrapper .time-pt4-event .event1 .event1Wrap {
     padding: 0 8%; }
-    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
-      font-size: 24px;
-      font-size: 2.4rem; }
-    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
-      font-size: 32px;
-      font-size: 3.2rem;
-      padding: 20px 0; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
+      padding-top: 80px; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
+        font-size: 24px;
+        font-size: 2.4rem; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
+        font-size: 32px;
+        font-size: 3.2rem;
+        padding: 20px 0; }
     .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
       margin: 50px 0; }
     .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
@@ -2499,24 +2604,27 @@ button {
       padding: 20px 0;
       font-size: 16px;
       font-size: 1.6rem; }
-  .time-wrapper .time-pt4-event .event2 .event2Wrap {
-    padding-bottom: 300px; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .note {
-      font-size: 11px;
-      font-size: 1.1rem;
-      padding: 20px 8% 0; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
-      margin-top: -120px; }
-      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
-        padding: 20px 0 35px 0; }
-      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
-        font-size: 3rem; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .three-points {
-      padding-top: 0; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .note {
+    font-size: 11px;
+    font-size: 1.1rem;
+    padding: 30px 8% 0;
+    letter-spacing: 0.1rem; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-note {
+    padding: 30px 0 0 0; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
+    margin-top: -120px; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
+      padding: 20px 0 20px 0; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
+      font-size: 3rem; }
+  .time-wrapper .time-pt4-event .event2 .event2Wrap .three-points {
+    width: 90%;
+    padding-top: 0; }
   .time-wrapper .time-pt4-event .eventP {
     padding: 25px 0; }
   .time-wrapper .gotopBtn {
-    max-width: 60px; }
+    max-width: 60px;
+    margin-bottom: -36px; }
   .eventH2 {
     font-size: 25px;
     font-size: 2.5rem;
@@ -2549,7 +2657,7 @@ button {
       font-size: 24px; }
     .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
       font-size: 32px;
-      padding: 10px 0; }
+      padding: 20px 0; }
     .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
       margin: 50px 0; }
       .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
@@ -2559,26 +2667,29 @@ button {
   .time-wrapper .time-pt4-event .event2 .event2Wrap .note {
     font-size: 11px; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .event-model-mb {
-    width: 95%;
+    width: 90%;
     padding-left: 3%; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
-    margin-top: -120px; }
+    margin-top: -50px; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
       padding: 20px 0 20px 0; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
+      padding: 20px 10% 0; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
     top: 0; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item {
       margin-top: -100px; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .three-points {
-    padding-top: 20px;
-    width: 100%; }
+    padding-top: 0;
+    width: 90%; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .shopBtn {
     display: block;
     padding: 40px 0; }
   .time-wrapper .time-pt4-event .eventP {
     padding: 25px 0; }
   .time-wrapper .gotopBtn {
-    bottom: 80px; }
+    bottom: 80px;
+    margin: 0px auto 0; }
   .eventH2 {
     font-size: 25px;
     font-weight: 800;
@@ -2606,17 +2717,13 @@ button {
   .time-wrapper .time-pt4-event .event1 .event1Wrap {
     padding: 0 8%; }
     .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
-      text-align: center;
-      padding-top: 30px; }
+      text-align: center; }
       .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
         font-size: 24px; }
       .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
-        font-size: 32px;
-        padding: 10px 0; }
-    .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
-      margin: 20px 0; }
-      .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
-        max-width: 630px; }
+        font-size: 32px; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
+      max-width: 630px; }
     .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 {
       text-align: center; }
       .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
@@ -2637,12 +2744,13 @@ button {
       margin-left: 0;
       margin-right: 0; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
-    margin-top: -120px;
     padding-top: 0; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
       padding: 20px 0 20px 0; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
       font-weight: bold; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
+      padding: 10px 8% 0; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap {
     position: relative; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
@@ -2816,8 +2924,8 @@ button {
     font-size: 1.9rem;
     padding-left: 20px;
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 200px;
-    flex: 0 0 200px; }
+    -ms-flex: 0 0 180px;
+    flex: 0 0 180px; }
   .eventSection .locationbox .selectBox .locationSelect select {
     font-size: 1.9rem; }
     .eventSection .locationbox .selectBox .locationSelect select option {
@@ -2829,13 +2937,44 @@ button {
     .eventSection .locationbox .locationResult .result .time .tit {
       padding-left: 10px;
       -webkit-box-flex: 0;
-      -ms-flex: 0 0 200px;
-      flex: 0 0 200px; } }
+      -ms-flex: 0 0 180px;
+      flex: 0 0 180px; } }
+
+@media screen and (max-width: 1024px) {
+  .eventSection .locationbox .selectBox {
+    padding-left: 10px; }
+    .eventSection .locationbox .selectBox .locationLabel {
+      font-size: 1.9rem;
+      padding-left: 10px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 145px;
+      flex: 0 0 145px; }
+    .eventSection .locationbox .selectBox .locationSelect {
+      padding-left: 10px; }
+      .eventSection .locationbox .selectBox .locationSelect select {
+        font-size: 1.9rem;
+        background: url(../images/tableArrow.png) no-repeat right 10px center;
+        background-size: 30px; }
+        .eventSection .locationbox .selectBox .locationSelect select option {
+          font-size: 1.9rem; }
+  .eventSection .locationbox .locationResult .result {
+    font-size: 1.9rem; }
+    .eventSection .locationbox .locationResult .result .name,
+    .eventSection .locationbox .locationResult .result .tel,
+    .eventSection .locationbox .locationResult .result .time {
+      padding-left: 10px; }
+      .eventSection .locationbox .locationResult .result .name .tit,
+      .eventSection .locationbox .locationResult .result .tel .tit,
+      .eventSection .locationbox .locationResult .result .time .tit {
+        padding-left: 10px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 145px;
+        flex: 0 0 145px; } }
 
 @media screen and (max-width: 750px) {
   .eventSection .locationbox .selectBox .locationLabel {
     line-height: 2.2;
-    padding-left: 20px; }
+    padding-left: 10px; }
   .eventSection .locationbox .selectBox .locationSelect select {
     line-height: 2.2; }
   .eventSection .locationbox .locationResult .result .name,
@@ -2855,8 +2994,8 @@ button {
       line-height: 1.5;
       color: #fff;
       -webkit-box-flex: 0;
-      -ms-flex: 0 0 130px;
-      flex: 0 0 130px;
+      -ms-flex: 0 0 110px;
+      flex: 0 0 110px;
       padding: 10px 0 10 20px; }
     .eventSection .locationbox .selectBox .locationSelect {
       width: 100%;
@@ -2896,9 +3035,10 @@ button {
       .eventSection .locationbox .locationResult .result .tel .tit,
       .eventSection .locationbox .locationResult .result .time .tit {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 130px;
-        flex: 0 0 130px;
-        color: #fff; }
+        -ms-flex: 0 0 110px;
+        flex: 0 0 110px;
+        color: #fff;
+        padding-left: 0; }
       .eventSection .locationbox .locationResult .result .name .txt,
       .eventSection .locationbox .locationResult .result .tel .txt,
       .eventSection .locationbox .locationResult .result .time .txt {
@@ -2915,12 +3055,12 @@ button {
       line-height: 1.5;
       color: #fff;
       -webkit-box-flex: 0;
-      -ms-flex: 0 0 130px;
-      flex: 0 0 130px;
+      -ms-flex: 0 0 110px;
+      flex: 0 0 110px;
       padding: 10px 0 10 20px; }
     .eventSection .locationbox .selectBox .locationSelect {
       width: 100%;
-      padding-left: 20px;
+      padding-left: 10px;
       padding-right: 0; }
       .eventSection .locationbox .selectBox .locationSelect select {
         -webkit-appearance: none;
@@ -2957,13 +3097,14 @@ button {
       .eventSection .locationbox .locationResult .result .tel .tit,
       .eventSection .locationbox .locationResult .result .time .tit {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 130px;
-        flex: 0 0 130px;
-        color: #fff; }
+        -ms-flex: 0 0 110px;
+        flex: 0 0 110px;
+        color: #fff;
+        padding-left: 0; }
       .eventSection .locationbox .locationResult .result .name .txt,
       .eventSection .locationbox .locationResult .result .tel .txt,
       .eventSection .locationbox .locationResult .result .time .txt {
-        padding-left: 10px; }
+        padding-left: 0; }
     .eventSection .locationbox .locationResult .result a {
       text-decoration: none;
       color: #fff; } }

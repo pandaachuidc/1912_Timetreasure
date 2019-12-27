@@ -183,6 +183,9 @@ button {
     opacity 0.15s linear, transform 0.25s linear;
 }
 
+.break {
+  display: none;
+}
 
 .shine-font {
   background: -webkit-linear-gradient(
@@ -207,7 +210,6 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-
 .shine-font2 {
   background: -webkit-linear-gradient(
     left,
@@ -230,14 +232,16 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+// #e17a6d 
+// #8c2b1f
 .shine-font3 {
   background: -webkit-linear-gradient(
- left,
-    #8c2b1f 0%,
-    #e17a6d 25%,
-    #8c2b1f 52%,
-    #e17a6d 75%,
-    #8c2b1f 100%
+    left,
+    #cd5243 0%,
+    #f7c2bb 25%,
+    #cd5243 52%,
+    #f7c2bb 75%,
+    #cd5243 100%
   );
   background-size: 100%;
   -webkit-transition: 1s;
@@ -249,15 +253,20 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.pc{display: block;}
-.mb{display: none;}
-// pad layout
-@media screen and (max-width: 750px) {
-.mb{
+.pc {
   display: block;
 }
-.pc{display: none;}
-
+.mb {
+  display: none;
+}
+// pad layout
+@media screen and (max-width: 750px) {
+  .mb {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
 }
 // mobile
 @media screen and (max-width: 640px) {
@@ -273,7 +282,7 @@ button {
 }
 
 /* Theme */
-// @import "theme/loading.scss";
+@import "theme/loading.scss";
 @import "theme/nav.scss";
 @import "theme/pt1Kv.scss";
 @import "theme/pt2Ingredient.scss";

@@ -63,6 +63,36 @@
 
 }
 
+// footer {
+//         position: fixed;
+//         z-index: 100;
+//         bottom: 0;
+//         left: 0;
+//         a {
+//             &::before {
+//                 content: '';
+//                 background: url(../images/shine_light.png);
+//                 background-position: center;
+//                 background-size: cover;
+//                 position: absolute;
+//                 width: 200%;
+//                 height: 200%;
+//                 // margin-top: -30%;
+//                 display: block;
+//                 pointer-events: none;
+//                 -webkit-animation: btn-shine 4s ease 1s infinite;
+//                 animation: btn-shine 4s ease 1s infinite;
+//             }
+//         }
+
+//         .mb {
+//             display: block;
+//         }
+//         .pc{
+//           display: none;
+//         }
+//     }
+
 .footer.pc {
   position: fixed;
   z-index: 100;
@@ -84,6 +114,8 @@
     }
   }
 }
+
+
 
 .footer.mb {
   position: fixed;
@@ -226,7 +258,7 @@
         position: absolute;
         z-index: 2;
         padding-left: 6%;
-        padding-top: 860px;
+        padding-top: 870px;
          p {
           font-size: $sup-title ;
           padding-bottom: 30px - 15;
@@ -252,7 +284,7 @@
 
       .time-kv-txt {
         padding-left: 6%;
-        padding-top: 460px;
+        padding-top: 470px;
         p {
           font-size: 22px;
           font-size: 2.2rem;
@@ -287,7 +319,7 @@
 
       .time-kv-txt {
         padding-left: 6%;
-        padding-top: 430px;
+        padding-top: 435px;
         p {
           font-size: 22px - 3;
           font-size: 1.9rem;
@@ -307,16 +339,3 @@
   }
 }
 
-@media screen and (max-width: 375px) {
-  .time-wrapper {
-    .time-kv {
-      
-
-      .time-kv-txt {
-        padding-left: 6%;
-        padding-top: 400px;
-        
-      }
-    }
-  }
-}

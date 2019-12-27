@@ -57,6 +57,7 @@
                 // bottom: 0;
                 // padding: 0 28.3%;
                 // overflow: hidden;
+                // overflow-x:hidden
                 .note {
                     font-size: 1.4rem;
                     color: #a2826e;
@@ -137,6 +138,7 @@
         font-size: 8rem;
         line-height: 4.5rem;
         text-align: center;
+        text-decoration:none;
         border: $red 2px solid;
         color: $red;
         padding-top: 25px;
@@ -160,6 +162,7 @@
         }
     }
     .gotopBtn {
+        cursor: pointer; 
         max-width: 70px;
         width: 100%;
         margin: 0 auto 50px;
@@ -551,6 +554,43 @@
         font-size: 2.4rem - 0.5rem;
     }
 }
+
+@media screen and (max-width: 1440px) {
+    .time-wrapper {
+        .time-pt4-event {
+            
+            .event2 {
+                .event2Wrap {
+
+                    
+                    .event2-photo-wrap {
+                        .event2-photo {
+                            .item {
+                                width: 100%;
+                                // margin-left: -80px;
+                                // margin-top: -100px;
+                                .text-bubble {
+                                    // top: 0;
+                                    right: 320px;
+                                    // width: 60%;
+                                }
+                                .event-model {
+                                    // top: 6px;
+                                    right: 50px;
+                                    // width: 45%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+  
+}
+
 @media screen and (max-width: 1280px) {
     .time-wrapper {
         .time-pt4-event {
@@ -583,41 +623,19 @@
                     }
 
                     .time-event2-txt {
-                        // padding-top: 100px;
                         .eventH3 {
                             padding: 30px 0 15px 0;
                         }
                         .eventH4 {
                             span {
                                 font-size: 4rem - 1;
-                                // font-weight: bold;
                             }
                         }
                         .eventP {
                             padding: 20px 0;
                         }
                     }
-                    .event2-photo-wrap {
-                        .event2-photo {
-                            // width: 80%;
-                            // margin: 0 auto;
-                            .item {
-                                // width: 100%;
-                                // margin-left: -80px;
-                                // margin-top: -100px;
-                                .text-bubble {
-                                    // top: 0;
-                                    right: 420px;
-                                    // width: 60%;
-                                }
-                                .event-model {
-                                    // top: 6px;
-                                    right: 110px;
-                                    // width: 45%;
-                                }
-                            }
-                        }
-                    }
+                   
                 }
             }
         }
@@ -626,11 +644,8 @@
                 font-size: 4rem - 1.5rem;
             }
             width: 70%;
-            // width: 350px;
         }
-        .gotopBtn {
-            // margin: 150px auto 50px;
-        }
+        
     }
 }
 @media screen and (max-width: 1024px) {
@@ -700,7 +715,7 @@
                                 // margin-top: -50px;
                                 .text-bubble {
                                     // top: 0;
-                                    right: 250px;
+                                    right: 280px;
                                     // width: 60%;
                                 }
                                 .event-model {
@@ -762,7 +777,7 @@
                     padding: 0 10%;
                     .time-event1-txt {
                         text-align: center;
-                        padding-top: 185px;
+                        padding-top: 120px;
                         p {
                             @include sub-titStyle;
                         }
@@ -829,7 +844,7 @@
                             }
                         }
                         .eventP {
-                            text-align: left;
+                            text-align: center;
                             padding: 20px 10%;
                         }
                     }
@@ -855,7 +870,7 @@
                         text-align: center;
                         width: 100%;
                         margin: 0 auto;
-                        padding-top: 90px;
+                        padding-top: 75px;
                     }
                     .event1-note,
                     .event2-note {
@@ -932,7 +947,7 @@
                 .event1Wrap {
                     padding: 0 8%;
                     .time-event1-txt {
-                        // padding-top: 105px;
+                        padding-top: 80px;
                         p {
                             font-size: 24px;
                             font-size: 2.4rem;
@@ -967,18 +982,22 @@
             }
             .event2 {
                 .event2Wrap {
-                  padding-bottom: 300px;
+                //   padding-bottom: 260px;
                     .note {
                         font-size: 11px;
                         font-size: 1.1rem;
-                        padding: 20px 8% 0;
+                        padding: 30px 8% 0;
+                        letter-spacing: 0.1rem;
+                    }
+                    .event2-note{
+                        padding: 30px 0 0 0;
                     }
                     .event-model-mb {
                     }
                     .time-event2-txt {
                         margin-top: -120px;
                         .eventH3 {
-                            padding: 20px 0 35px 0;
+                            padding: 20px 0 20px 0;
                         }
                         .eventH4 {
                             span {
@@ -995,7 +1014,7 @@
                         }
                     }
                     .three-points {
-                        // width: 100%;
+                        width: 90%;
                         padding-top: 0;
                     }
                 }
@@ -1006,6 +1025,7 @@
         }
         .gotopBtn {
             max-width: 60px;
+            margin-bottom: -36px;
         }
     }
 
@@ -1056,7 +1076,7 @@
                         }
                         h1 {
                             font-size: 32px;
-                            padding: 10px 0;
+                            padding: 20px 0;
                         }
                     }
                     .ytvideo {
@@ -1083,38 +1103,25 @@
             }
             .event2 {
                 .event2Wrap {
-                    // position: absolute;
-                    // left: 0;
-                    // right: 0;
-                    // top: 0;
-                    // bottom: 0;
-                    // padding: 0 28.3%;
 
                     .note {
                         font-size: 11px;
-                        // color: #a2826e;
-                        // letter-spacing: 0.1rem;
-                        // line-height: 1.5;
-                        // padding: 0 8% 0;
                     }
                     .event-model-mb {
-                        width: 95%;
+                        width: 90%;
                         padding-left: 3%;
                     }
                     .time-event2-txt {
-                        margin-top: -120px;
-                        // padding-top: 0;
+                        margin-top: -50px;  //bubble text position
                         .eventH3 {
                             padding: 20px 0 20px 0;
                         }
                         .eventH4 {
                             span {
-                                // font-size: 4rem - 1;
-                                // font-weight: bold;
                             }
                         }
                         .eventP {
-                            // text-align: center;
+                            padding: 20px 10% 0;
                         }
                     }
                     .event2-photo-wrap {
@@ -1126,8 +1133,8 @@
                         }
                     }
                     .three-points {
-                        padding-top: 20px;
-                        width: 100%;
+                        padding-top: 0;
+                        width: 90%;
                     }
                     .shopBtn {
                         display: block;
@@ -1141,6 +1148,7 @@
         }
         .gotopBtn {
             bottom: 80px;
+            margin: 0px auto 0;
         }
     }
 
@@ -1185,17 +1193,17 @@
                     padding: 0 8%;
                     .time-event1-txt {
                         text-align: center;
-                        padding-top: 30px;
+                        // padding-top: 30px;
                         p {
                             font-size: 24px;
                         }
                         h1 {
                             font-size: 32px;
-                            padding: 10px 0;
+                            // padding: 10px 0;
                         }
                     }
                     .ytvideo {
-                        margin: 20px 0;
+                        // margin: 20px 0;
                         .video {
                             picture {
                                 .video {
@@ -1238,7 +1246,7 @@
                         }
                     }
                     .time-event2-txt {
-                        margin-top: -120px;
+                        // margin-top: -120px;
                         padding-top: 0;
                         .eventH3 {
                             padding: 20px 0 20px 0;
@@ -1250,7 +1258,7 @@
                             }
                         }
                         .eventP {
-                            // text-align: center;
+                            padding: 10px 8% 0;
                         }
                     }
                     .event2-photo-wrap {

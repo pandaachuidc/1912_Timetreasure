@@ -15,6 +15,14 @@
   }
 }
 
+@-webkit-keyframes font-shine {
+  0% {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: -300% 0;
+  }
+}
 @keyframes font-shine {
   0% {
     background-position: 0% 0;
@@ -41,7 +49,20 @@
   }
 }
 
-
+@-webkit-keyframes btn-shine {
+  0% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+  70% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+  }
+}
 @keyframes btn-shine {
   0% {
     -webkit-transform: translateX(-150%);
@@ -72,12 +93,29 @@
   }
 }
 
+@-webkit-keyframes scrollMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
 @keyframes scrollMove {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(15px);
+  }
+}
+
+@-webkit-keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 160px;
   }
 }
 
@@ -90,6 +128,14 @@
   }
 }
 
+@-webkit-keyframes lineMb {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100px;
+  }
+}
 @keyframes lineMb {
   0% {
     width: 0;
@@ -99,6 +145,14 @@
   }
 }
 
+@-webkit-keyframes lineMb30 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
 @keyframes lineMb30 {
   0% {
     width: 0;
@@ -108,17 +162,72 @@
   }
 }
 
-@keyframes backgroundScale {
+@-webkit-keyframes backgroundScale {
   0% {
     background-size: 100%;
   }
-  50%{
-    background-size: 110%;
+  50% {
+    background-size: 105%;
   }
   100% {
     background-size: 100%;
   }
 }
+@keyframes backgroundScale {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 105%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+// @-moz-keyframes spin {
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// @-webkit-keyframes spin {
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+@keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+
+// @keyframes backgroundScale {
+//   0% {
+//     -moz-transform: scale(1,1);
+//     -webkit-transform: scale(1,1);
+//   }
+//   100% {
+//     -moz-transform: scale(1.3,1.3);
+//     -webkit-transform: scale(1.3,1.3);
+//   }
+// }
+
+// @keyframes backgroundScale {
+//   0% {
+//     -moz-transform: scale(1,1);
+//     -webkit-transform: scale(1,1);
+//   }
+//   100% {
+//     -moz-transform: scale(1.3,1.3);
+//     -webkit-transform: scale(1.3,1.3);
+//   }
+// }
 
 // [data-aos='line'] {
 //     opacity: 0;
@@ -192,22 +301,20 @@
   transform: translateX(25px);
   transition: all 0.5s;
   &.aos-animate {
-   transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
     transition: all 0.5s;
   }
 }
 
 [data-aos="backgroundScale"] {
- transform: scale(1);
+  transform: scale(1);
   transition: all 10s;
   &.aos-animate {
-   transform: scale(1.05);
+    transform: scale(1.05);
     transition: all 10s;
   }
 }
-
-
 
 // [data-aos="zoom-in-photo"] {
 //   -webkit-transition: opacity 1s, -webkit-transform 5s;
