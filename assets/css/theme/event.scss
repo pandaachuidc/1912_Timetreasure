@@ -2,12 +2,10 @@
   width: 100%;
   background: -webkit-linear-gradient(to right, #c4a18b, #e5bda4, #c4a18b);
   background: linear-gradient(to right, #c4a18b, #e5bda4, #c4a18b);
-  // padding: 100px 0;
   text-align: left;
   font-family: "Microsoft JhengHei", "微軟正黑體";
   .locationbox {
     max-width: 100%;
-    // margin: 25px auto 0;
     -webkit-box-shadow: 0 0 10px 3px rgba(215, 185, 167, 0.3);
     -moz-box-shadow: 0 0 10px 3px rgba(215, 185, 167, 0.3);
     box-shadow: 0 0 10px 3px rgba(215, 185, 167, 0.3);
@@ -16,26 +14,24 @@
       display: flex;
       align-items: center;
       border: 1px solid #fff;
-      padding-left: 40px;
+      padding: 10px;
       .locationLabel {
         font-size: 24px;
         font-size: 2.4rem;
         line-height: 1.5;
         color: #fff;
-        flex: 0 0 300px;
-        padding: 10px;
+        flex: 0 0 40%;
+        padding-left: 5%;
       }
       .locationSelect {
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        flex: 0 0 60%;
         select {
           appearance: none;
           width: 100%;
-          background: url("../images/tableArrow.png") no-repeat right 45px
+          background: url("../images/tableArrow.png") no-repeat right 10%
             center;
           background-size: 30px;
-          padding: 10px;
           font-family: "Microsoft JhengHei", "微軟正黑體";
           font-size: 24px;
           font-size: 2.4rem;
@@ -57,7 +53,6 @@
         color: #fff;
         font-size: 24px;
         font-size: 2.4rem;
-        // margin: 20px auto 0;
         &.on {
           display: block;
         }
@@ -67,14 +62,13 @@
           display: flex;
           line-height: 1.5;
           padding: 10px;
-          padding-left: 50px;
           border: 1px solid #fff;
           .tit {
-            flex: 0 0 300px;
+            flex: 0 0 40%;
             color: #fff;
+            padding-left: 5%;
           }
           .txt {
-            padding-left: 20px;
           }
         }
         a {
@@ -87,40 +81,40 @@
   }
 }
 
-@media screen and (max-width: 1600px) {
-  .eventSection {
-    .locationbox {
-      .selectBox {
-        .locationLabel {
-          font-size: 2.4rem - 0.5;
-          padding-left: 20px;
-        }
-        .locationSelect {
-          select {
-            // line-height: 2.2;
-            font-size: 2.4rem - 0.5;
-            option {
-              font-size: 2.4rem - 0.5;
-            }
-          }
-        }
-      }
-      .locationResult {
-        .result {
-          font-size: 2.4rem - 0.5;
-          .name,
-          .tel,
-          .time {
-            // line-height: 2.2;
-            .tit {
-              padding-left: 10px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// @media screen and (max-width: 1600px) {
+//   .eventSection {
+//     .locationbox {
+//       .selectBox {
+//         .locationLabel {
+//           font-size: 2.4rem - 0.5;
+//           padding-left: 20px;
+//         }
+//         .locationSelect {
+//           select {
+//             // line-height: 2.2;
+//             font-size: 2.4rem - 0.5;
+//             option {
+//               font-size: 2.4rem - 0.5;
+//             }
+//           }
+//         }
+//       }
+//       .locationResult {
+//         .result {
+//           font-size: 2.4rem - 0.5;
+//           .name,
+//           .tel,
+//           .time {
+//             // line-height: 2.2;
+//             .tit {
+//               padding-left: 10px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 @media screen and (max-width: 1440px) {
 }
 
@@ -130,8 +124,8 @@
       .selectBox {
         .locationLabel {
           font-size: 2.4rem - 0.5;
-          padding-left: 20px;
-          flex: 0 0 200px;
+          // padding-left: 20px;
+          // flex: 0 0 200px;
         }
         .locationSelect {
           select {
@@ -151,8 +145,8 @@
           .time {
             // line-height: 2.2;
             .tit {
-              padding-left: 10px;
-              flex: 0 0 200px;
+              // padding-left: 10px;
+              // flex: 0 0 200px;
             }
           }
         }
@@ -167,8 +161,8 @@
       .selectBox {
         .locationLabel {
           font-size: 2.4rem - 0.5;
-          padding-left: 20px;
-          flex: 0 0 180px;
+          // padding-left: 20px;
+          // flex: 0 0 180px;
         }
         .locationSelect {
           select {
@@ -188,8 +182,8 @@
           .time {
             // line-height: 2.2;
             .tit {
-              padding-left: 10px;
-              flex: 0 0 180px;
+              // padding-left: 10px;
+              // flex: 0 0 180px;
             }
           }
         }
@@ -202,19 +196,18 @@
   .eventSection {
     .locationbox {
       .selectBox {
-        padding-left: 10px;
+        // padding-left: 10px;
         .locationLabel {
           font-size: 2.4rem - 0.5;
-          padding-left: 10px;
-          flex: 0 0 145px;
+          // padding-left: 10px;
+          // flex: 0 0 145px;
         }
         .locationSelect {
-          padding-left: 10px;
+          // padding-left: 10px;
           select {
             // line-height: 2.2;
             font-size: 2.4rem - 0.5;
-            background: url(../images/tableArrow.png) no-repeat right 10px center;
-                background-size: 30px;
+           
             option {
               font-size: 2.4rem - 0.5;
             }
@@ -228,10 +221,10 @@
           .tel,
           .time {
             // line-height: 2.2;
-            padding-left: 10px;
+            // padding-left: 10px;
             .tit {
-              padding-left: 10px;
-              flex: 0 0 145px;
+              // padding-left: 10px;
+              // flex: 0 0 145px;
             }
           }
         }
@@ -246,7 +239,6 @@
       .selectBox {
         .locationLabel {
           line-height: 2.2;
-          padding-left: 10px;
         }
         .locationSelect {
           select {
@@ -261,7 +253,6 @@
           .time {
             line-height: 2.2;
             .tit {
-              padding-left: 10px;
             }
           }
         }
@@ -274,67 +265,44 @@
   .eventSection {
     .locationbox {
       .selectBox {
-        padding-left: 0;
         .locationLabel {
-          // font-size: 18px;
           font-size: 15px;
+          font-size: 1.5rem;
           line-height: 1.5;
-          color: #fff;
-          flex: 0 0 110px;
-          padding: 10px 0 10 20px;
-          // padding-left: 20px;
+          padding-left: 2.5%;
         }
         .locationSelect {
-          width: 100%;
-          padding-left: 20px;
           select {
-            appearance: none;
-            width: 100%;
-            background: url("../images/tableArrow.png") no-repeat right 25px
-              center;
-            background-size: 25px;
-            padding: 10px;
-            padding-left: 0;
-            // color: #e1baa2;
+            background: url("../images/tableArrow.png") no-repeat right 5%
+            center;
+          background-size: 20px;
             font-size: 15px;
+              font-size: 1.5rem;
             line-height: 1.5;
-            color: #fff;
-            border: none;
             option {
-              background-color: #e5bda4;
               font-size: 15px;
+              font-size: 1.5rem;
             }
           }
         }
       }
       .locationResult {
         .result {
-          display: none;
-          color: #fff;
           font-size: 15px;
-          // margin: 20px auto 0;
-          &.on {
-            display: block;
-          }
+          font-size: 1.5rem;
+        
           .name,
           .tel,
           .time {
-            display: flex;
             line-height: 1.5;
-            padding: 10px;
-            border: 1px solid #fff;
             .tit {
-              flex: 0 0 110px;
-              color: #fff;
-              padding-left: 0;
+              padding: 0;
+              padding-left: 2.5%;
             }
             .txt {
-              padding-left: 10px;
             }
           }
           a {
-            text-decoration: none;
-            color: #fff;
           }
         }
       }
@@ -346,68 +314,40 @@
   .eventSection {
     .locationbox {
       .selectBox {
-        padding-left: 0;
         .locationLabel {
-          // font-size: 18px;
-          font-size: 15px;
-          line-height: 1.5;
-          color: #fff;
-          flex: 0 0 110px;
-          padding: 10px 0 10 20px;
-          // padding-left: 20px;
+          padding-left: 0;
+          flex: 0 0 35%;
         }
         .locationSelect {
-          width: 100%;
-          padding-left: 10px;
-          padding-right: 0;
+          flex: 0 0 65%;
           select {
-            appearance: none;
-            width: 100%;
-            background: url("../images/tableArrow.png") no-repeat right 20px
-              center;
-            background-size: 20px;
-            padding: 10px;
-            padding-left: 0;
-            // color: #e1baa2;
-            font-size: 15px;
-            line-height: 1.5;
-            color: #fff;
-            border: none;
+            background: url("../images/tableArrow.png") no-repeat right 2.5%
+            center;
+          background-size: 20px;
+           
             option {
-              background-color: #e5bda4;
-              font-size: 15px;
+             
             }
           }
         }
       }
       .locationResult {
+        
         .result {
-          display: none;
-          color: #fff;
-          font-size: 15px;
-          // margin: 20px auto 0;
-          &.on {
-            display: block;
-          }
+         
+        
           .name,
           .tel,
           .time {
-            display: flex;
-            line-height: 1.5;
-            padding: 10px;
-            border: 1px solid #fff;
             .tit {
-              flex: 0 0 110px;
-              color: #fff;
+              flex: 0 0 35%;
               padding-left: 0;
             }
             .txt {
-              padding-left: 0;
+              flex: 0 0 65%;
             }
           }
           a {
-            text-decoration: none;
-            color: #fff;
           }
         }
       }

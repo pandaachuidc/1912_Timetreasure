@@ -137,35 +137,37 @@
 
 @-webkit-keyframes backgroundScale {
   0% {
-    background-size: 100%; }
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); }
   50% {
-    background-size: 105%; }
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
   100% {
-    background-size: 100%; } }
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); } }
 
 @keyframes backgroundScale {
   0% {
-    background-size: 100%; }
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); }
   50% {
-    background-size: 105%; }
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
   100% {
-    background-size: 100%; } }
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); } }
 
 @-webkit-keyframes spin {
   100% {
-    -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 @keyframes spin {
   100% {
-    -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
-[data-aos="text-down"] {
+[data-aos='text-down'] {
   opacity: 0;
   -webkit-transform: translateY(-25px);
   -ms-transform: translateY(-25px);
@@ -173,7 +175,7 @@
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
-  [data-aos="text-down"].aos-animate {
+  [data-aos='text-down'].aos-animate {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
@@ -182,7 +184,7 @@
     -o-transition: all 0.3s;
     transition: all 0.3s; }
 
-[data-aos="text-up"] {
+[data-aos='text-up'] {
   opacity: 0;
   -webkit-transform: translateY(25px);
   -ms-transform: translateY(25px);
@@ -190,7 +192,7 @@
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
-  [data-aos="text-up"].aos-animate {
+  [data-aos='text-up'].aos-animate {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
@@ -199,7 +201,7 @@
     -o-transition: all 0.3s;
     transition: all 0.3s; }
 
-[data-aos="scale-photo"] {
+[data-aos='scale-photo'] {
   opacity: 0;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -207,7 +209,7 @@
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
-  [data-aos="scale-photo"].aos-animate {
+  [data-aos='scale-photo'].aos-animate {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -216,7 +218,7 @@
     -o-transition: all 0.5s;
     transition: all 0.5s; }
 
-[data-aos="move-left"] {
+[data-aos='move-left'] {
   opacity: 0;
   -webkit-transform: translateX(25px);
   -ms-transform: translateX(25px);
@@ -224,7 +226,7 @@
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
-  [data-aos="move-left"].aos-animate {
+  [data-aos='move-left'].aos-animate {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -233,14 +235,14 @@
     -o-transition: all 0.5s;
     transition: all 0.5s; }
 
-[data-aos="backgroundScale"] {
+[data-aos='backgroundScale'] {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition: all 10s;
   -o-transition: all 10s;
   transition: all 10s; }
-  [data-aos="backgroundScale"].aos-animate {
+  [data-aos='backgroundScale'].aos-animate {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
@@ -611,19 +613,23 @@ button {
     top: 50%;
     margin-left: 10px;
     width: 60px;
-    height: 4px;
+    height: 3px;
     background: #cb1b45;
-    -webkit-animation: spin 1.5s infinite ease;
+    -webkit-animation: spin -1.5s infinite ease;
+    -o-animation: spin -1.5s infinite ease;
     animation: spin 1.5s infinite ease; }
     #loading .load-center .line:nth-of-type(2) {
-      -webkit-animation-delay: 0.15s;
-      animation-delay: 0.15s; }
+      -webkit-animation-delay: -0.1s;
+      -o-animation-delay: -0.1s;
+      animation-delay: -0.1s; }
     #loading .load-center .line:nth-of-type(3) {
-      -webkit-animation-delay: 0.25s;
-      animation-delay: 0.25s; }
+      -webkit-animation-delay: -0.2s;
+      -o-animation-delay: -0.2s;
+      animation-delay: -0.2s; }
     #loading .load-center .line:nth-of-type(4) {
-      -webkit-animation-delay: 0.35s;
-      animation-delay: 0.35s; }
+      -webkit-animation-delay: -0.3s;
+      -o-animation-delay: -0.3s;
+      animation-delay: -0.3s; }
 
 #loading .load-line {
   position: absolute;
@@ -1301,14 +1307,14 @@ button {
         position: relative;
         overflow: hidden; }
         .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo::before {
-          content: "";
+          content: '';
           position: absolute;
           height: 100%;
           width: 100%;
           left: 0;
           right: 0;
           background-image: url("../images/tree.jpg");
-          background-size: 100%;
+          background-size: cover;
           -webkit-animation: backgroundScale 15s ease 1s;
           animation: backgroundScale 15s ease 1s; }
   .time-pt2-igdt .igdtWarpMb .ingredient {
@@ -1328,7 +1334,7 @@ button {
         letter-spacing: 0.4rem; }
       .time-pt2-igdt .igdtWarpMb .ingredient .content p {
         font-size: 3.5rem;
-        font-family: "Noto Serif TC";
+        font-family: 'Noto Serif TC';
         font-weight: 800;
         letter-spacing: 0.3rem;
         padding-top: 30px; }
@@ -1343,7 +1349,7 @@ button {
       width: 100%; }
       .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap {
         position: relative;
-        font-family: "Microsoft JhengHei", "微軟正黑體";
+        font-family: 'Microsoft JhengHei', '微軟正黑體';
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1; }
@@ -1672,7 +1678,7 @@ button {
     font-size: 1.8rem;
     padding-top: 30px;
     line-height: 1.4;
-    letter-spacing: .3rem; }
+    letter-spacing: 0.3rem; }
   .time-pt2-igdt .igdtWarpMb .intro .contentWrap .des-sec .des-photo {
     height: 130px; }
   .time-pt2-igdt .igdtWarpMb .ingredient .content h1 {
@@ -1694,7 +1700,7 @@ button {
       font-size: 16px;
       font-size: 1.6rem; }
     .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p::before {
-      content: "";
+      content: '';
       margin-top: -25%; }
   .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText img {
     padding-top: 25px;
@@ -1711,7 +1717,7 @@ button {
     font-size: 1.5rem;
     padding-top: 25px;
     line-height: 1.5;
-    letter-spacing: .4rem; }
+    letter-spacing: 0.4rem; }
   .time-pt2-igdt .igdtWarpMb .ingredient .content h1 {
     font-size: 32px;
     font-size: 3.2rem; }
@@ -1731,7 +1737,7 @@ button {
       font-size: 16px;
       font-size: 1.6rem; }
     .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText p::before {
-      content: "";
+      content: '';
       margin-top: -25%; }
   .time-pt2-igdt .igdtWarpMb .ingredient .ingredients .igdtWrap .igdtText img {
     padding-top: 25px;
@@ -2817,28 +2823,28 @@ button {
       -ms-flex-align: center;
       align-items: center;
       border: 1px solid #fff;
-      padding-left: 40px; }
+      padding: 10px; }
       .eventSection .locationbox .selectBox .locationLabel {
         font-size: 24px;
         font-size: 2.4rem;
         line-height: 1.5;
         color: #fff;
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 300px;
-        flex: 0 0 300px;
-        padding: 10px; }
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        padding-left: 5%; }
       .eventSection .locationbox .selectBox .locationSelect {
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px; }
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%; }
         .eventSection .locationbox .selectBox .locationSelect select {
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
           width: 100%;
-          background: url("../images/tableArrow.png") no-repeat right 45px center;
+          background: url("../images/tableArrow.png") no-repeat right 10% center;
           background-size: 30px;
-          padding: 10px;
           font-family: "Microsoft JhengHei", "微軟正黑體";
           font-size: 24px;
           font-size: 2.4rem;
@@ -2865,246 +2871,111 @@ button {
         display: flex;
         line-height: 1.5;
         padding: 10px;
-        padding-left: 50px;
         border: 1px solid #fff; }
         .eventSection .locationbox .locationResult .result .name .tit,
         .eventSection .locationbox .locationResult .result .tel .tit,
         .eventSection .locationbox .locationResult .result .time .tit {
           -webkit-box-flex: 0;
-          -ms-flex: 0 0 300px;
-          flex: 0 0 300px;
-          color: #fff; }
-        .eventSection .locationbox .locationResult .result .name .txt,
-        .eventSection .locationbox .locationResult .result .tel .txt,
-        .eventSection .locationbox .locationResult .result .time .txt {
-          padding-left: 20px; }
+          -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+          color: #fff;
+          padding-left: 5%; }
       .eventSection .locationbox .locationResult .result a {
         text-decoration: none;
         color: #fff;
         font-family: "Microsoft JhengHei", "微軟正黑體"; }
 
-@media screen and (max-width: 1600px) {
-  .eventSection .locationbox .selectBox .locationLabel {
-    font-size: 1.9rem;
-    padding-left: 20px; }
-  .eventSection .locationbox .selectBox .locationSelect select {
-    font-size: 1.9rem; }
-    .eventSection .locationbox .selectBox .locationSelect select option {
-      font-size: 1.9rem; }
-  .eventSection .locationbox .locationResult .result {
-    font-size: 1.9rem; }
-    .eventSection .locationbox .locationResult .result .name .tit,
-    .eventSection .locationbox .locationResult .result .tel .tit,
-    .eventSection .locationbox .locationResult .result .time .tit {
-      padding-left: 10px; } }
-
 @media screen and (max-width: 1366px) {
   .eventSection .locationbox .selectBox .locationLabel {
-    font-size: 1.9rem;
-    padding-left: 20px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 200px;
-    flex: 0 0 200px; }
+    font-size: 1.9rem; }
   .eventSection .locationbox .selectBox .locationSelect select {
     font-size: 1.9rem; }
     .eventSection .locationbox .selectBox .locationSelect select option {
       font-size: 1.9rem; }
   .eventSection .locationbox .locationResult .result {
-    font-size: 1.9rem; }
-    .eventSection .locationbox .locationResult .result .name .tit,
-    .eventSection .locationbox .locationResult .result .tel .tit,
-    .eventSection .locationbox .locationResult .result .time .tit {
-      padding-left: 10px;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 200px;
-      flex: 0 0 200px; } }
+    font-size: 1.9rem; } }
 
 @media screen and (max-width: 1280px) {
   .eventSection .locationbox .selectBox .locationLabel {
-    font-size: 1.9rem;
-    padding-left: 20px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 180px;
-    flex: 0 0 180px; }
+    font-size: 1.9rem; }
   .eventSection .locationbox .selectBox .locationSelect select {
     font-size: 1.9rem; }
     .eventSection .locationbox .selectBox .locationSelect select option {
       font-size: 1.9rem; }
   .eventSection .locationbox .locationResult .result {
-    font-size: 1.9rem; }
-    .eventSection .locationbox .locationResult .result .name .tit,
-    .eventSection .locationbox .locationResult .result .tel .tit,
-    .eventSection .locationbox .locationResult .result .time .tit {
-      padding-left: 10px;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 180px;
-      flex: 0 0 180px; } }
+    font-size: 1.9rem; } }
 
 @media screen and (max-width: 1024px) {
-  .eventSection .locationbox .selectBox {
-    padding-left: 10px; }
-    .eventSection .locationbox .selectBox .locationLabel {
-      font-size: 1.9rem;
-      padding-left: 10px;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 145px;
-      flex: 0 0 145px; }
-    .eventSection .locationbox .selectBox .locationSelect {
-      padding-left: 10px; }
-      .eventSection .locationbox .selectBox .locationSelect select {
-        font-size: 1.9rem;
-        background: url(../images/tableArrow.png) no-repeat right 10px center;
-        background-size: 30px; }
-        .eventSection .locationbox .selectBox .locationSelect select option {
-          font-size: 1.9rem; }
-  .eventSection .locationbox .locationResult .result {
+  .eventSection .locationbox .selectBox .locationLabel {
     font-size: 1.9rem; }
-    .eventSection .locationbox .locationResult .result .name,
-    .eventSection .locationbox .locationResult .result .tel,
-    .eventSection .locationbox .locationResult .result .time {
-      padding-left: 10px; }
-      .eventSection .locationbox .locationResult .result .name .tit,
-      .eventSection .locationbox .locationResult .result .tel .tit,
-      .eventSection .locationbox .locationResult .result .time .tit {
-        padding-left: 10px;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 145px;
-        flex: 0 0 145px; } }
+  .eventSection .locationbox .selectBox .locationSelect select {
+    font-size: 1.9rem; }
+    .eventSection .locationbox .selectBox .locationSelect select option {
+      font-size: 1.9rem; }
+  .eventSection .locationbox .locationResult .result {
+    font-size: 1.9rem; } }
 
 @media screen and (max-width: 750px) {
   .eventSection .locationbox .selectBox .locationLabel {
-    line-height: 2.2;
-    padding-left: 10px; }
+    line-height: 2.2; }
   .eventSection .locationbox .selectBox .locationSelect select {
     line-height: 2.2; }
   .eventSection .locationbox .locationResult .result .name,
   .eventSection .locationbox .locationResult .result .tel,
   .eventSection .locationbox .locationResult .result .time {
-    line-height: 2.2; }
-    .eventSection .locationbox .locationResult .result .name .tit,
-    .eventSection .locationbox .locationResult .result .tel .tit,
-    .eventSection .locationbox .locationResult .result .time .tit {
-      padding-left: 10px; } }
+    line-height: 2.2; } }
 
 @media screen and (max-width: 414px) {
-  .eventSection .locationbox .selectBox {
-    padding-left: 0; }
-    .eventSection .locationbox .selectBox .locationLabel {
+  .eventSection .locationbox .selectBox .locationLabel {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-left: 2.5%; }
+  .eventSection .locationbox .selectBox .locationSelect select {
+    background: url("../images/tableArrow.png") no-repeat right 5% center;
+    background-size: 20px;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.5; }
+    .eventSection .locationbox .selectBox .locationSelect select option {
       font-size: 15px;
-      line-height: 1.5;
-      color: #fff;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 110px;
-      flex: 0 0 110px;
-      padding: 10px 0 10 20px; }
-    .eventSection .locationbox .selectBox .locationSelect {
-      width: 100%;
-      padding-left: 20px; }
-      .eventSection .locationbox .selectBox .locationSelect select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        width: 100%;
-        background: url("../images/tableArrow.png") no-repeat right 25px center;
-        background-size: 25px;
-        padding: 10px;
-        padding-left: 0;
-        font-size: 15px;
-        line-height: 1.5;
-        color: #fff;
-        border: none; }
-        .eventSection .locationbox .selectBox .locationSelect select option {
-          background-color: #e5bda4;
-          font-size: 15px; }
+      font-size: 1.5rem; }
   .eventSection .locationbox .locationResult .result {
-    display: none;
-    color: #fff;
-    font-size: 15px; }
-    .eventSection .locationbox .locationResult .result.on {
-      display: block; }
+    font-size: 15px;
+    font-size: 1.5rem; }
     .eventSection .locationbox .locationResult .result .name,
     .eventSection .locationbox .locationResult .result .tel,
     .eventSection .locationbox .locationResult .result .time {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      line-height: 1.5;
-      padding: 10px;
-      border: 1px solid #fff; }
+      line-height: 1.5; }
       .eventSection .locationbox .locationResult .result .name .tit,
       .eventSection .locationbox .locationResult .result .tel .tit,
       .eventSection .locationbox .locationResult .result .time .tit {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 110px;
-        flex: 0 0 110px;
-        color: #fff;
-        padding-left: 0; }
-      .eventSection .locationbox .locationResult .result .name .txt,
-      .eventSection .locationbox .locationResult .result .tel .txt,
-      .eventSection .locationbox .locationResult .result .time .txt {
-        padding-left: 10px; }
-    .eventSection .locationbox .locationResult .result a {
-      text-decoration: none;
-      color: #fff; } }
+        padding: 0;
+        padding-left: 2.5%; } }
 
 @media screen and (max-width: 375px) {
-  .eventSection .locationbox .selectBox {
+  .eventSection .locationbox .selectBox .locationLabel {
+    padding-left: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 35%;
+    flex: 0 0 35%; }
+  .eventSection .locationbox .selectBox .locationSelect {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 65%;
+    flex: 0 0 65%; }
+    .eventSection .locationbox .selectBox .locationSelect select {
+      background: url("../images/tableArrow.png") no-repeat right 2.5% center;
+      background-size: 20px; }
+  .eventSection .locationbox .locationResult .result .name .tit,
+  .eventSection .locationbox .locationResult .result .tel .tit,
+  .eventSection .locationbox .locationResult .result .time .tit {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 35%;
+    flex: 0 0 35%;
     padding-left: 0; }
-    .eventSection .locationbox .selectBox .locationLabel {
-      font-size: 15px;
-      line-height: 1.5;
-      color: #fff;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 110px;
-      flex: 0 0 110px;
-      padding: 10px 0 10 20px; }
-    .eventSection .locationbox .selectBox .locationSelect {
-      width: 100%;
-      padding-left: 10px;
-      padding-right: 0; }
-      .eventSection .locationbox .selectBox .locationSelect select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        width: 100%;
-        background: url("../images/tableArrow.png") no-repeat right 20px center;
-        background-size: 20px;
-        padding: 10px;
-        padding-left: 0;
-        font-size: 15px;
-        line-height: 1.5;
-        color: #fff;
-        border: none; }
-        .eventSection .locationbox .selectBox .locationSelect select option {
-          background-color: #e5bda4;
-          font-size: 15px; }
-  .eventSection .locationbox .locationResult .result {
-    display: none;
-    color: #fff;
-    font-size: 15px; }
-    .eventSection .locationbox .locationResult .result.on {
-      display: block; }
-    .eventSection .locationbox .locationResult .result .name,
-    .eventSection .locationbox .locationResult .result .tel,
-    .eventSection .locationbox .locationResult .result .time {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      line-height: 1.5;
-      padding: 10px;
-      border: 1px solid #fff; }
-      .eventSection .locationbox .locationResult .result .name .tit,
-      .eventSection .locationbox .locationResult .result .tel .tit,
-      .eventSection .locationbox .locationResult .result .time .tit {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 110px;
-        flex: 0 0 110px;
-        color: #fff;
-        padding-left: 0; }
-      .eventSection .locationbox .locationResult .result .name .txt,
-      .eventSection .locationbox .locationResult .result .tel .txt,
-      .eventSection .locationbox .locationResult .result .time .txt {
-        padding-left: 0; }
-    .eventSection .locationbox .locationResult .result a {
-      text-decoration: none;
-      color: #fff; } }
+  .eventSection .locationbox .locationResult .result .name .txt,
+  .eventSection .locationbox .locationResult .result .tel .txt,
+  .eventSection .locationbox .locationResult .result .time .txt {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 65%;
+    flex: 0 0 65%; } }
