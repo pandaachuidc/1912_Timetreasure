@@ -228,36 +228,37 @@ $(document).ready(function() {
             if (_preview != 'Intro') {
                 _preview = 'Intro';
                 TrackPage('/vp/Timetreasure/Intro', '赤松介紹');
-                TrackEvent('Timetreasure','Scroll','Intro');
+                TrackEvent('Timetreasure', 'Scroll', 'Intro');
             }
-        } else if (_top>t2 && _top<=t3 ) {
+        } else if (_top > t2 && _top <= t3) {
             if (_preview != '3points') {
                 _preview = '3points';
                 TrackPage('/vp/Timetreasure/3points', '三大抗老核心成份');
-                TrackEvent('Timetreasure','Scroll','3points');
+                TrackEvent('Timetreasure', 'Scroll', '3points');
             }
-        } else if (_top>t3 && _top<=t4 ) {
+        } else if (_top > t3 && _top <= t4) {
             if (_preview != 'Products') {
                 _preview = 'Products';
-                TrackPage('/vp/Timetreasure/Products','產品系列');
-                TrackEvent('Timetreasure','Scroll',' Products');
+                TrackPage('/vp/Timetreasure/Products', '產品系列');
+                TrackEvent('Timetreasure', 'Scroll', ' Products');
             }
-        } else if (_top>t4 && _top<=t5 ) {
+        } else if (_top > t4 && _top <= t5) {
             if (_preview != '60mSPA') {
                 _preview = '60mSPA';
-                TrackPage('/vp/Timetreasure/60mSPA','頂級琥珀開運奢寵療程');
-                TrackEvent('Timetreasure','Scroll','60mSPA');
+                TrackPage('/vp/Timetreasure/60mSPA', '頂級琥珀開運奢寵療程');
+                TrackEvent('Timetreasure', 'Scroll', '60mSPA');
             }
-        } else if (_top>t5 && _top<=t6 ) {
+        } else if (_top > t5 && _top <= t6) {
             if (_preview != '30MSPA') {
                 _preview = '30MSPA';
-                TrackPage('/vp/Timetreasure/30MSPA','貴婦好命光開運術');
-                TrackEvent('Timetreasure','Scroll','30MSPA');
+                TrackPage('/vp/Timetreasure/30MSPA', '貴婦好命光開運術');
+                TrackEvent('Timetreasure', 'Scroll', '30MSPA');
             } else if (_top > t6) {
-              if (_preview != 'Store') {
-                  _preview = 'Store';
-                  TrackEvent('Timetreasure','Scroll','Store');
-              }
+                if (_preview != 'Store') {
+                    _preview = 'Store';
+                    TrackEvent('Timetreasure', 'Scroll', 'Store');
+                }
+            }
         }
     }
     window.addEventListener('scroll', debounce(Tracking, 500));
