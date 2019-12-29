@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     // ingredient mobile aniamtion
 
-    if ($(window).width() <= 750) {
+    if ($(window).width() <= 767) {
         $('.igdtWrap').click(function() {
             $(this).toggleClass('on');
         });
@@ -96,6 +96,9 @@ $(document).ready(function() {
             loop: true,
             margin: 0,
             autoplay: true,
+            slideSpeed:5000,
+            paginationSpeed:5000,
+            stopOnHover:true,
             nav: true,
             navText: [
                 "<img src='assets/images/leftArrow.png'>",

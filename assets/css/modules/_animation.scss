@@ -286,66 +286,6 @@
         transition: all 10s;
     }
 }
-
-
-
-// [data-aos="zoom-in-photo"] {
-//   -webkit-transition: opacity 1s, -webkit-transform 5s;
-//   transition: opacity 1s, -webkit-transform 5s;
-//   -o-transition: transform 5s, opacity 1s;
-//   transition: transform 5s, opacity 1s;
-//   transition: transform 5s, opacity 1s, -webkit-transform 5s;
-//   &.aos-animate {
-//     transition: transform 5s, opacity 1s;
-//     transform: scale(1.05);
-//   }
-// }
-
-// [data-aos="line"] {
-//   &::before,
-//   ::after {
-//     opacity: 1;
-//   }
-// }
-// [data-aos="line"].aos-animate {
-//   &::before,
-//   ::after {
-//     opacity: 0;
-//   }
-// }
-
-// [data-aos='spacing'] {
-//     letter-spacing: 0rem;
-//     transition: all 0.3s;
-//     &.aos-animate {
-
-//         letter-spacing: 0.4rem;
-//         transition: all 0.3s;
-//     }
-// }
-
-// @keyframes spacing2 {
-//     0% {
-//         opacity:0;
-//         letter-spacing: 0rem;
-//     }
-//     100% {
-//         opacity:1;
-//         letter-spacing: 0.4rem;
-//     }
-// }
-
-// @keyframes spacing {
-//     0% {
-//         opacity: 0;
-//         // letter-spacing: 0;
-//     }
-//     100% {
-//         opacity: 1;
-//         // letter-spacing: 4rem;
-//     }
-// }
-
 @keyframes loading {
     0% {
         background: url('../images/loading.png') no-repeat center;
@@ -357,47 +297,6 @@
     }
     100% {
         background: url('../images/loading.png') no-repeat center;
-        background-size: 100%;
-    }
-}
-
-@keyframes kvbg-pc {
-    0% {
-        background: url('../images/kv-cut1.jpg') no-repeat center;
-        background-size: 100%;
-    }
-    100% {
-        background: url('../images/kv-cut2.jpg') no-repeat center;
-        background-size: 100%;
-    }
-}
-
-@keyframes gsbgani {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes eyebg-pc {
-    0% {
-        background: url('../images/eyebg01-pc.png') no-repeat center;
-        background-size: 100%;
-    }
-    100% {
-        background: url('../images/eyebg02-pc.png') no-repeat center;
-        background-size: 100%;
-    }
-}
-@keyframes eyebg-mb {
-    0% {
-        background: url('../images/eyebg01-mb.png') no-repeat center;
-        background-size: 100%;
-    }
-    100% {
-        background: url('../images/eyebg02-mb.png') no-repeat center;
         background-size: 100%;
     }
 }

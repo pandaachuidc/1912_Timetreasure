@@ -99,12 +99,13 @@
 
     <!-- wrapper -->
     <div id="loading">
-      <!-- <div class="load-center"></div> -->
       <div class="load-center">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line-wrap">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </div>
       <div id="progress-bar" class="load-line"></div>
     </div>
@@ -212,9 +213,6 @@
               </div>
               <div class="des-sec" >
                 <div class="des-photo"></div>
-                <!-- <div class="des-photo">
-                  <div class="photo"></div>
-              </div> -->
                 <p>
                   韓國慶尚北道蔚珍郡的金剛赤松，堪稱是「松中之最」，更被列為重點保護生態資產。<br class="pc" />雪花秀與韓國政府簽署協定，才得以栽種極少量的金剛赤松，且僅限用於臻雪丹御系列產品中。
                 </p>
@@ -475,13 +473,6 @@
               <h1>新春奢寵開運術</h1>
               <p>打造貴婦好命光</p>
             </div>
-            <!-- <section class="ytvideo" data-aos="text-up">
-              <a class="video" href="javascript:void(0);" onclick="revealVideo('#')">
-                <picture>
-                  <img class="video" src="assets/images/video.jpg" />
-                </picture>
-              </a>
-            </section> -->
             <div
               class="gs-video ytvideo"
               style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
@@ -861,8 +852,8 @@
                 *實際活動日期以各專櫃為準，若有變動恕不另行通知。
               </p>
             </div>
-            <div class="event-model-mb" data-aos="text-up" data-aos-delay="800">
-              <img class="mb" src="assets/images/event-model.png" alt="" />
+            <div class="event-model-mb mb" data-aos="text-up" data-aos-delay="800">
+              <img src="assets/images/event-model-mb.png" alt="" />
             </div>
 
             <div class="time-event2-txt" data-aos="text-up">
@@ -897,14 +888,14 @@
               <div class="event2-photo">
                 <div class="item">
                   <img
-                    class="text-bubble pc"
+                    class="text-bubble"
                     data-aos="scale-photo"
                     data-aos-delay="300"
                     src="assets/images/event2-text-bubble-pc.png"
                     alt=""
                   />
                   <img
-                    class="event-model pc"
+                    class="event-model"
                     data-aos="move-left"
                     data-aos-delay="400"
                     src="assets/images/event-model.png"
@@ -928,42 +919,41 @@
       >
         <span>立即查詢櫃點</span>
       </a>
-      <!-- <a class="shopBtn pc">
-              <img src="assets/images/shop_btn.png" alt="" />
-            </a>-->
+    
       <div class="gotopBtn">
         <a href=""><img src="assets/images/gotop.png"/></a>
       </div>
     </div>
 
     <footer>
-      <a
+      <div class="footer mb">
+        <a
         href="https://sulwhasoo-event.tw/store/info.php"
         target="_blank"
-        class="footer mb"
       >
         <img src="assets/images/shop-btn-mb.jpg" alt="櫃點查詢" />
       </a>
-      <a
+      </div>
+      
+      <div class="footer pc">
+        <a
         href="https://sulwhasoo-event.tw/store/info.php"
         target="_blank"
         class="footer pc"
       >
         <img src="assets/images/shop-btn-pc.jpg" alt="櫃點查詢" />
       </a>
+      </div>
+
     </footer>
 
     <script src="assets/lib/jquery-3.4.1.min.js"></script>
     <script src="assets/lib/imagesloaded.pkgd.min.js"></script>
     <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="assets/lib/aos/aos.js"></script>
-    <!-- <script src="assets/lib/jquery.isonscreen.min.js"></script> -->
-
-    <!-- <script src="assets/lib/jquery.scrolling-parallax.js"></script> -->
-    <script src="assets/lib/parallax.js"></script>
     <!--[if IE]><script src="assets/lib/html5.js"></script><![endif]-->
     <script src="assets/lib/modernizr.js"></script>
-    <script src="assets/lib/modal/js/bootstrap-modal.js"></script>
+    <!-- <script src="assets/lib/modal/js/bootstrap-modal.js"></script> -->
     <!-- <script src="assets/lib/swiper/swiper.min.js"></script> -->
     <script src="assets/lib/gsap/TweenMax.min.js"></script>
     <script src="assets/lib/scrollmagic/ScrollMagic.min.js"></script>
