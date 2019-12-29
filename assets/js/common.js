@@ -253,11 +253,11 @@ $(document).ready(function() {
                 _preview = '30MSPA';
                 TrackPage('/vp/Timetreasure/30MSPA', '貴婦好命光開運術');
                 TrackEvent('Timetreasure', 'Scroll', '30MSPA');
-            } else if (_top > t6) {
-                if (_preview != 'Store') {
-                    _preview = 'Store';
-                    TrackEvent('Timetreasure', 'Scroll', 'Store');
-                }
+            }
+        } else if (_top > t6) {
+            if (_preview != 'Store') {
+                _preview = 'Store';
+                TrackEvent('Timetreasure', 'Scroll', 'Store');
             }
         }
     }
