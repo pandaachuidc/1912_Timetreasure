@@ -56,6 +56,7 @@
       width: 12px;
       margin: 0 auto;
       padding-bottom: 120px;
+      -webkit-transition: all 1s;
       transition: all 1s;
       animation: scrollMove 1s ease-in infinite alternate;
     }
