@@ -226,7 +226,6 @@ $(document).ready(function() {
     var t3 = $(".productSlider").offset().top - range;
     var t4 = $(".time-event1-txt2").offset().top - range;
     var t5 = $(".time-event2-txt").offset().top - range;
-    // var t6 = $(".shopBtn2").offset().top - range;
 
     var _top = $(window).scrollTop() + $(window).height() / 2;
     if (_top >= t1 && _top <= t2) {
@@ -256,7 +255,7 @@ $(document).ready(function() {
     } else if (_top > t5) {
       if (_preview != "30mSPA") {
         _preview = "30mSPA";
-        TrackPage("/vp/Timetreasure/30MSPA", "貴婦好命光開運術");
+        TrackPage("/vp/Timetreasure/30mSPA", "貴婦好命光開運術");
         TrackEvent("Timetreasure", "Scroll", "30mSPA");
       }
     }
@@ -287,30 +286,18 @@ $(document).ready(function() {
     console.log(document_height);
 
     if (window_height + window_scrollTop == document_height) {
-      $(window).scroll(function() {
-        // Returns height of browser viewport
-        var window_height = $(window).height();
-
-        var window_scrollTop = $(window).scrollTop();
-
-        // Returns height of HTML document
-        var document_height = $(document).height();
-
-        console.log(window_height);
-        console.log(window_scrollTop);
-        console.log(document_height);
-
-        if (window_height + window_scrollTop == document_height) {
-          TrackEvent("Timetreasure", "Scroll", "Store");
-        }
-      });
+      TrackEvent("Timetreasure", "Scroll", "Store");
     }
   });
+
   $(".shop-btn-pc").on("click", function() {
     TrackEvent("Timetreasure", "Click", "Store_btn");
   });
   $(".shop-btn-mb").on("click", function() {
     TrackEvent("Timetreasure", "Click", "Store");
+  });
+  $(".shopBtn2").on("click", function() {
+    TrackEvent("Timetreasure", "Click", "Store_PC");
   });
 });
 
@@ -325,7 +312,7 @@ function onYouTubePlayerAPIReady() {
     width: "100%",
     height: "100%",
     // 這邊放video id
-    videoId: "CymVUwFkNj8",
+    videoId: "CzTy-GD1LIo",
     events: {
       onReady: onPlayerReady,
       onStateChange: onPlayerStateChange

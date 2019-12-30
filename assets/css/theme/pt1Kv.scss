@@ -26,10 +26,11 @@
       position: absolute;
       z-index: 2;
       padding-left: 23.6%;
-      padding-top: 19.5%;
+      padding-top: 14%;
+      text-align: center;
       p {
         font-size: $sup-title;
-        padding-bottom: 30px;
+        padding-top: 30px;
         letter-spacing: 0.1rem;
         // font-family: "Microsoft JhengHei", "微軟正黑體";
       }
@@ -170,10 +171,10 @@
       .time-wrapper {
     .time-kv {
       .time-kv-txt {
-        padding-top: 200px;
+        // padding-top: 200px;
         p {
           font-size: $sup-title - 1.5;
-          padding-bottom: 30px - 15;
+          padding-top: 30px - 15;
         }
         h2 {
           font-size: 4rem - 1.5;
@@ -211,10 +212,10 @@
         position: absolute;
         z-index: 2;
         padding-left: 6%;
-        padding-top: 118%;
+        padding-top: 117%;
          p {
           font-size: $sup-title ;
-          padding-bottom: 30px - 15;
+          padding-top: 30px;
         }
         h2 {
           font-size: 4rem ;
@@ -271,7 +272,8 @@
           font-size: 22px;
           font-size: 2.2rem;
           font-weight: 550;
-          padding-bottom: 20px;
+          // padding-bottom: 20px;
+          padding-top: 20px;
           letter-spacing: 0.1rem;
         }
         h2 {
@@ -305,7 +307,7 @@
         p {
           font-size: 22px - 3;
           font-size: 1.9rem;
-          padding-bottom: 10px;
+          padding-top: 15px;
         }
         h2 {
           font-size: 24px - 3;
