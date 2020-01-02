@@ -250,28 +250,6 @@
     -o-transition: all 10s;
     transition: all 10s; }
 
-@-webkit-keyframes loading {
-  0% {
-    background: url("../images/loading.png") no-repeat center;
-    background-size: 100%; }
-  50% {
-    background: url("../images/loading-lt.png") no-repeat center;
-    background-size: 100%; }
-  100% {
-    background: url("../images/loading.png") no-repeat center;
-    background-size: 100%; } }
-
-@keyframes loading {
-  0% {
-    background: url("../images/loading.png") no-repeat center;
-    background-size: 100%; }
-  50% {
-    background: url("../images/loading-lt.png") no-repeat center;
-    background-size: 100%; }
-  100% {
-    background: url("../images/loading.png") no-repeat center;
-    background-size: 100%; } }
-
 @-webkit-keyframes lineani {
   0% {
     opacity: 0.8; }
@@ -2414,7 +2392,7 @@ button {
   .time-wrapper .time-pt4-event .event2 .event2Wrap .event1-note {
     letter-spacing: 0.15rem; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .event-model-mb {
-    width: 95%; }
+    width: 100%; }
   .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
     padding-top: 0; }
     .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
