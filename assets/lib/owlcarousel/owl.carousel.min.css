@@ -101,11 +101,11 @@
     }
 }
 .owl-prev {
-    background-image: url(../images/icon_L.png);
+    background-image: url(../images/leftArrow.png);
     left: 0;
 }
 .owl-next {
-    background-image: url(../images/icon_R.png);
+    background-image: url(../images/rightArrow.png);
     right: 0;
 }
 .owl-prev span,
@@ -217,7 +217,7 @@
     top: 50%;
     margin-left: -40px;
     margin-top: -40px;
-    background: url(../../css/owl.video.play.png) no-repeat;
+    /* background: url(../../css/owl.video.play.png) no-repeat; */
     cursor: pointer;
     z-index: 1;
     -webkit-backface-visibility: hidden;
