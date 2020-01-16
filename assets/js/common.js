@@ -100,7 +100,7 @@ $(document).ready(function() {
       autoplay: true,
       slideSpeed: 5000,
       paginationSpeed: 5000,
-      stopOnHover: true,
+      autoplayHoverPause: true,
       nav: true,
       navText: [
         "<img src='assets/images/leftArrow.png'>",
@@ -334,3 +334,16 @@ function onPlayerStateChange(event) {
 function stopVideo() {
   player.stopVideo();
 }
+
+// on screen animation
+
+
+$(window).scroll(function() {
+  $(".animate").each(function() {
+    if ($(this).isOnScreen(0, 0.1) == true) {
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+});
