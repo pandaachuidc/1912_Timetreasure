@@ -1,15 +1,16 @@
 #honorstige {
+  text-align: center;
   .honorstige-sec1-wrap {
     width: 100%;
     position: relative;
     .bg-img {
       width: 100%;
-      background: url(../images/honorstige-sec1-bg-mb.jpg) no-repeat top center;
+      background: url(../images/honorstige-sec1-bg-pc.jpg) no-repeat top center;
       background-size: 100%;
       &:before {
         content: "";
         display: block;
-        background: url(../images/honorstige-sec1-bg-mb-light.jpg) no-repeat top
+        background: url(../images/honorstige-sec1-bg-pc-light.jpg) no-repeat top
           center;
         background-size: 100%;
         width: 100%;
@@ -25,45 +26,205 @@
     .wrap {
       position: absolute;
       z-index: 2;
-      top: 0;
+      top: 13.5%;
       left: 0;
       right: 0;
       bottom: 0;
       .sec1-tit {
+        h1 {
+          @include titleStyle;
+          padding: 30px 0;
+          line-height: 1.3em;
+        }
+        p {
+          @include sub-titStyle;
+        }
+
+        color: #fff5f3;
       }
       .sec2-content {
+        position: relative;
+        height: 100%;
+        width: 100%;
         .txt {
+          color: #fff5f3;
+          position: absolute;
           h2 {
+            font-size: 4rem;
+            font-family: "Noto Serif TC";
+            font-weight: 800;
+            letter-spacing: 0.3rem;
+            line-height: 1.3;
           }
           .price {
+            font-size: 2.8rem;
+            font-family: "Noto Serif TC";
+            font-weight: 800;
+            letter-spacing: 0.3rem;
+            padding: 0.8em 0;
           }
           .more-btn {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 146px;
+              height: 43px;
+              left: 0;
+              right: 0;
+              bottom: -50px;
+              margin: 0 auto;
+              background: url(../images/flare.png) no-repeat center;
+              background-size: 100%;
+              animation: flare_shine 0.5s infinite;
+              animation-direction: alternate;
+              z-index: 1;
+              pointer-events: none;
+            }
           }
+        }
+        .product1 {
+          top: 10%;
+          left: 31.2%;
+          // top: 300px;
+        }
+        .product2 {
+          top: 50%;
+          right: 28%;
         }
       }
     }
   }
   .honorstige-sec2-wrap {
-        width: 100%;
+    width: 100%;
     position: relative;
     .bg-img {
       width: 100%;
-      background: url(../images/honorstige-sec2-bg-mb.jpg) no-repeat top center;
+      background: url(../images/honorstige-sec2-bg-pc.jpg) no-repeat top center;
       background-size: 100%;
-      &:before {
-        content: "";
-        display: block;
-        background: url(../images/honorstige-sec2-bg-mb-light.jpg) no-repeat top
+    }
+    .wrap {
+      position: absolute;
+      z-index: 2;
+      top: 13.5%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      .honorstige-slider {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .item {
+          width: 33.33333%;
+          .txt {
+            position: relative;
+            img {
+              max-width: 100%;
+            }
+            p {
+              position: absolute;
+              color: #d4c9c6;
+              top: 50%;
+              right: 10%;
+            }
+          }
+        }
+      }
+      .honorstige-note {
+        color: #d4c9c6;
+        p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #honorstige {
+    .honorstige-sec1-wrap {
+      width: 100%;
+      position: relative;
+      text-align: center;
+      .bg-img {
+        width: 100%;
+        background: url(../images/honorstige-sec1-bg-mb.jpg) no-repeat top
           center;
         background-size: 100%;
-        width: 100%;
-        height: 100%;
+        &:before {
+          content: "";
+          display: block;
+          background: url(../images/honorstige-sec1-bg-mb-light.jpg) no-repeat
+            top center;
+          background-size: 100%;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          -webkit-animation: img_shine 3.5s linear infinite alternate;
+          animation: img_shine 3.5s linear infinite alternate;
+        }
+      }
+      .wrap {
         position: absolute;
-        z-index: 1;
-        top: 0;
+        z-index: 2;
+        top: 13.5%;
         left: 0;
-        -webkit-animation: img_shine 3.5s linear infinite alternate;
-        animation: img_shine 3.5s linear infinite alternate;
+        right: 0;
+        bottom: 0;
+        .sec1-tit {
+          h1 {
+            @include titleStyle;
+          }
+          p {
+            @include sub-titStyle;
+          }
+
+          color: #fff5f3;
+        }
+        .sec2-content {
+          .txt {
+            color: #fff5f3;
+            h2 {
+            }
+            .price {
+            }
+            .more-btn {
+            }
+          }
+          .product1 {
+          }
+          .product2 {
+          }
+        }
+      }
+    }
+    .honorstige-sec2-wrap {
+      width: 100%;
+      position: relative;
+      .bg-img {
+        width: 100%;
+        background: url(../images/honorstige-sec2-bg-mb.jpg) no-repeat top
+          center;
+        background-size: 100%;
+        &:before {
+          content: "";
+          display: block;
+          background: url(../images/honorstige-sec2-bg-mb-light.jpg) no-repeat
+            top center;
+          background-size: 100%;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          -webkit-animation: img_shine 3.5s linear infinite alternate;
+          animation: img_shine 3.5s linear infinite alternate;
+        }
       }
     }
   }
