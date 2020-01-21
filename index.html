@@ -33,8 +33,8 @@
       href="assets/css/html5reset-trim.css"
       type="text/css"
     />
-    <!-- <link rel="stylesheet" href="assets/lib/modal/css/bootstrap-modal.min.css">
-    <link rel="stylesheet" href="assets/lib/swiper/swiper.min.css" type="text/css"> -->
+    <link rel="stylesheet" href="assets/lib/modal/css/bootstrap-modal.min.css">
+    <!-- <link rel="stylesheet" href="assets/lib/swiper/swiper.min.css" type="text/css"> -->
     <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
     <link
       rel="stylesheet"
@@ -490,16 +490,68 @@
                 <div class="txt product1">
                   <h2 class="shine-font2">臻雪煥采琉 <br> 金活膚霜</h2>
                   <p class="price shine-font2">60ml / NT$23,800 </p>
-                  <a href="" class="more-btn"><img src="assets/images/honorstige-btn.png" alt=""></a>
+                  <a href="" class="more-btn"  data-toggle="modal" data-target="#honorstige-cream"><img src="assets/images/honorstige-btn.png" alt=""></a>
                 </div>
                 <div class="txt product2">
                   <h2 class="shine-font2">臻雪煥采 <br> 琉金活膚精萃</h2>
                   <p class="price shine-font2">40ml / NT$23,800 </p>
-                  <a href="" class="more-btn"><img src="assets/images/honorstige-btn.png" alt=""></a>
+                  <a href="" class="more-btn" data-toggle="modal" data-target="#honorstige-serum"><img src="assets/images/honorstige-btn.png" alt=""></a>
                 </div>
               </div>
             </div>
         </div>
+        <!-- modal START -->
+        <div class="modal" id="honorstige-cream" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <button type="button" class="close" data-dismiss="modal">
+                          <span aria-hidden="true">&times;</span>
+                          <span class="sr-only">Close</span>
+                      </button>
+                      <div class="honorstige-modal-wrap">
+                        <div class="tit shine-font2">
+                          <h1>奢華極致抗老系列產品</h1>
+                          <p>啟動青春巔峰活膚之源</p>
+                        </div>
+                        <div class="photo">
+                          <img src="assets/images/honorstige-popup1-pc.png" alt="">
+                        </div>
+                        <div class="content">
+                          <h1 class="shine-font2">臻雪煥采琉金活膚霜</h1>
+                          <p>頂級臻萃抗老成份，封存青春不老能量，潤澤奢養，煥活肌膚新生，讓時光停駐、肌膚就此秘齡。</p>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal" id="honorstige-serum" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <button type="button" class="close" data-dismiss="modal">
+                          <span aria-hidden="true">&times;</span>
+                          <span class="sr-only">Close</span>
+                      </button>
+                      <div class="honorstige-modal-wrap">
+                        <div class="tit shine-font2">
+                          <h1>奢華極致抗老系列產品</h1>
+                          <p>啟動青春巔峰活膚之源</p>
+                        </div>
+                        <div class="photo">
+                          <img src="assets/images/honorstige-popup2-pc.png" alt="">
+                        </div>
+                        <div class="content">
+                          <h1 class="shine-font2">臻雪煥采琉金活膚精萃</h1>
+                          <p>頂級臻萃抗老成份深入肌底，釋放雙重修護賦活能量，層層奢養，強化屏障，緊緻煥亮。</p>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- modal END -->
         <div class="honorstige-sec2-wrap">
           <div class="bg-img">
             <img
@@ -516,7 +568,7 @@
             />
           </div>
           <div class="wrap">
-             <div class="sec1-tit shine-font2">
+             <div class="sec2-tit shine-font2">
                 <h1>嚴選三大頂級珍稀藥材</h1>
                 <p>凝鑄天地日月精華之最 <br> 開啟內外極致有感的秘齡奇蹟！</p>
              </div>
@@ -531,14 +583,14 @@
                <div class="item">
                  <div class="txt">
                    <img class="pc" src="assets/images/honorstige-slider2-pc.png" alt="">
-                   <img class="mb" src="assets/images/honorstige-slider1-mb.jpg" alt="">
+                   <img class="mb" src="assets/images/honorstige-slider2-mb.jpg" alt="">
                    <p>百草之王 <span>人蔘</span> </p>
                  </div>
                </div>
                <div class="item">
                  <div class="txt">
                    <img class="pc" src="assets/images/honorstige-slider3-pc.png" alt="">
-                   <img class="mb" src="assets/images/honorstige-slider1-mb.jpg" alt="">
+                   <img class="mb" src="assets/images/honorstige-slider3-mb.jpg" alt="">
                    <p>百木之長 <span>赤松</span> </p>
                  </div>
                </div>
@@ -1025,7 +1077,7 @@
     <script src="assets/lib/aos/aos.js"></script>
     <!--[if IE]><script src="assets/lib/html5.js"></script><![endif]-->
     <script src="assets/lib/modernizr.js"></script>
-    <!-- <script src="assets/lib/modal/js/bootstrap-modal.js"></script> -->
+    <script src="assets/lib/modal/js/bootstrap-modal.js"></script>
     <script src="assets/lib/gsap/TweenMax.min.js"></script>
     <script src="assets/lib/moment.min.js"></script>
     <script src="assets/lib/jquery.isonscreen.min.js"></script> <!-- for on screen animation -->

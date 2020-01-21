@@ -2035,7 +2035,7 @@ button {
     #honorstige .honorstige-sec1-wrap .wrap {
       position: absolute;
       z-index: 2;
-      top: 13.5%;
+      top: 11.2%;
       left: 0;
       right: 0;
       bottom: 0; }
@@ -2107,10 +2107,24 @@ button {
     #honorstige .honorstige-sec2-wrap .wrap {
       position: absolute;
       z-index: 2;
-      top: 13.5%;
+      top: 0;
       left: 0;
       right: 0;
       bottom: 0; }
+      #honorstige .honorstige-sec2-wrap .wrap .sec2-tit h1 {
+        font-size: 4.5rem;
+        font-family: "Noto Serif TC";
+        font-weight: 800;
+        letter-spacing: 0.4rem;
+        padding: 2.85% 0 30px;
+        color: #fff5f3; }
+      #honorstige .honorstige-sec2-wrap .wrap .sec2-tit p {
+        font-family: "Microsoft JhengHei", "微軟正黑體";
+        font-size: 2.4rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.5;
+        font-weight: 800;
+        color: #fff; }
       #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider {
         width: 100%;
         display: -webkit-box;
@@ -2127,17 +2141,108 @@ button {
             #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt img {
               max-width: 100%; }
             #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p {
+              font-family: "Microsoft JhengHei", "微軟正黑體";
+              font-weight: 400;
               position: absolute;
               color: #d4c9c6;
-              top: 50%;
-              right: 10%; }
+              top: 40%;
+              right: 15%;
+              line-height: 1.5;
+              letter-spacing: 0.8rem;
+              font-size: 2.4rem;
+              text-align: left; }
+              #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p span {
+                display: block;
+                font-size: 4rem;
+                letter-spacing: 0.2rem; }
       #honorstige .honorstige-sec2-wrap .wrap .honorstige-note {
-        color: #d4c9c6; }
+        color: #d4c9c6;
+        padding-top: 72px; }
         #honorstige .honorstige-sec2-wrap .wrap .honorstige-note p {
           font-size: 1.4rem;
           line-height: 1.5; }
 
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%; }
+  .modal .modal-dialog {
+    width: 100%; }
+    .modal .modal-dialog .modal-content {
+      background-color: rgba(0, 0, 0, 0.9); }
+      .modal .modal-dialog .modal-content .modal-body {
+        position: relative;
+        max-width: 1120px;
+        margin: 0 auto; }
+        .modal .modal-dialog .modal-content .modal-body .close {
+          position: absolute;
+          top: -2px;
+          right: -2px;
+          background: url(../images/close.png) no-repeat center;
+          width: 50px;
+          height: 50px;
+          opacity: 1;
+          border: none;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
+          .modal .modal-dialog .modal-content .modal-body .close span {
+            opacity: 0; }
+          .modal .modal-dialog .modal-content .modal-body .close:hover {
+            opacity: 0.8;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s; }
+        .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
+          width: 100%;
+          padding: 80px 66px 50px; }
+          .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit {
+            color: #fff5f3; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
+              font-size: 6rem;
+              font-family: 'Noto Serif TC';
+              font-weight: 800;
+              letter-spacing: 0.4rem; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
+              font-size: 3.5rem;
+              font-family: 'Noto Serif TC';
+              font-weight: 800;
+              letter-spacing: 0.4rem;
+              padding: 1em 0;
+              letter-spacing: 0.4em; }
+          .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
+            width: 100%; }
+          .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content {
+            padding-left: 20%;
+            padding-right: 20%;
+            color: #fff5f3; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
+              font-size: 4rem;
+              font-family: "Noto Serif TC";
+              font-weight: 800;
+              letter-spacing: 0.4rem;
+              padding: 1em 0 1.5em;
+              position: relative; }
+              .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
+                content: "";
+                position: absolute;
+                width: 475px;
+                height: 87px;
+                left: 0;
+                right: 0;
+                bottom: 33px;
+                margin: 0 auto;
+                background: url(../images/honorstige-popup-tit-bg.png) no-repeat center;
+                background-size: 100%; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
+              font-family: "Microsoft JhengHei", "微軟正黑體";
+              text-align: left;
+              font-size: 3rem;
+              line-height: 1.5;
+              letter-spacing: 0.2em; }
+
 @media screen and (max-width: 767px) {
+  #honorstige .pc {
+    display: none !important; }
   #honorstige .honorstige-sec1-wrap {
     width: 100%;
     position: relative;

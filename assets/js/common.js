@@ -43,8 +43,12 @@ $(document).ready(function() {
     $(".igdtWrap").click(function() {
       $(this).toggleClass("on");
     });
-  }
+    // $(".honorstige-slider").addClass("owl-carousel");
+  } 
+ 
   // ingredient mobile aniamtion
+
+
 
   // mainMenu START
   $(".navigation_trigger").on("click", function() {
@@ -106,7 +110,7 @@ $(document).ready(function() {
         "<img src='assets/images/leftArrow.png'>",
         "<img src='assets/images/rightArrow.png'>"
       ]
-    });
+    }); 
   var owldata = $(".owl-carousel").data("owl.carousel");
   $(".btns a").on("click", function() {
     var num = $(this).index();
@@ -336,7 +340,6 @@ function stopVideo() {
 }
 
 // on screen animation
-
 
 $(window).scroll(function() {
   $(".animate").each(function() {
