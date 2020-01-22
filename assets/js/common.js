@@ -43,12 +43,10 @@ $(document).ready(function() {
     $(".igdtWrap").click(function() {
       $(this).toggleClass("on");
     });
-    // $(".honorstige-slider").addClass("owl-carousel");
-  } 
- 
+    $(".honorstige-slider").addClass("owl-carousel");
+  }
+
   // ingredient mobile aniamtion
-
-
 
   // mainMenu START
   $(".navigation_trigger").on("click", function() {
@@ -82,8 +80,8 @@ $(document).ready(function() {
   });
   // mainMenu END
 
-  //silder Start
-  $(".owl-carousel")
+  //slider Start
+  $(".product-owl-carousel")
     .on("initialized.owl.carousel changed.owl.carousel", function(e) {
       if (!e.namespace) {
         return;
@@ -110,14 +108,32 @@ $(document).ready(function() {
         "<img src='assets/images/leftArrow.png'>",
         "<img src='assets/images/rightArrow.png'>"
       ]
-    }); 
+    });
+
   var owldata = $(".owl-carousel").data("owl.carousel");
   $(".btns a").on("click", function() {
     var num = $(this).index();
     owldata.to(num);
     return false;
   });
-  // start END
+
+  // honorstige - slider
+
+  $(".honorstige-slider.owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 0,
+    autoplay: true,
+    slideSpeed: 5000,
+    paginationSpeed: 5000,
+    autoplayHoverPause: true,
+    nav: true,
+    navText: [
+      "<img src='assets/images/honorstige-left-arrow.png'>",
+      "<img src='assets/images/honorstige-right-arrow.png'>"
+    ]
+  });
+  // slider END
 
   //   table START
   $(".locationSelect select").on("change", function() {

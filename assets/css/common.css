@@ -1671,7 +1671,8 @@ button {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0; }
+    bottom: 0;
+    z-index: 2; }
     .time-wrapper .time-pt3-product .productWrap .time-product-txt {
       text-align: center;
       padding-top: 185px;
@@ -1952,7 +1953,8 @@ button {
 
 @media screen and (max-width: 414px) {
   .time-wrapper .time-pt3-product .productWrap .time-product-txt {
-    padding-top: 80px; }
+    padding-top: 80px;
+    padding-bottom: 30px; }
     .time-wrapper .time-pt3-product .productWrap .time-product-txt p {
       font-size: 24px;
       font-size: 2.4rem; }
@@ -1988,30 +1990,33 @@ button {
     .time-wrapper .time-pt3-product .productWrap .time-product-txt h1 {
       font-size: 32px;
       font-size: 3.2rem; }
-  .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap {
-    width: 100%; }
-    .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content {
-      width: 90%;
-      line-height: 1.5; }
-      .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .break {
-        display: block; }
-      .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
-        font-size: 25px;
-        font-size: 2.5rem; }
-      .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
-        font-size: 16px;
-        font-size: 1.6rem;
-        padding: 10px 0; }
-      .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
-        font-size: 15px;
-        font-size: 1.5rem;
-        line-height: 1.5;
-        padding-right: 0; }
+  .time-wrapper .time-pt3-product .productWrap .owl-carousel {
+    margin-top: -13px; }
+    .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap {
+      width: 100%; }
+      .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content {
+        width: 90%;
+        line-height: 1.5; }
+        .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .break {
+          display: block; }
+        .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content h2 {
+          font-size: 25px;
+          font-size: 2.5rem; }
+        .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .price {
+          font-size: 16px;
+          font-size: 1.6rem;
+          padding: 10px 0; }
+        .time-wrapper .time-pt3-product .productWrap .owl-carousel .item .product-detail-wrap .product-content .desc {
+          font-size: 15px;
+          font-size: 1.5rem;
+          line-height: 1.5;
+          padding-right: 0; }
   .time-wrapper .time-pt3-product .height {
     height: 150px; } }
 
 #honorstige {
-  text-align: center; }
+  text-align: center;
+  margin-top: -1px; }
   #honorstige .honorstige-sec1-wrap {
     width: 100%;
     position: relative; }
@@ -2073,7 +2078,10 @@ button {
             letter-spacing: 0.3rem;
             padding: 0.8em 0; }
           #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn {
-            position: relative; }
+            position: relative;
+            display: block;
+            border: none;
+            outline: none; }
             #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn::before {
               content: "";
               position: absolute;
@@ -2099,7 +2107,8 @@ button {
           right: 28%; }
   #honorstige .honorstige-sec2-wrap {
     width: 100%;
-    position: relative; }
+    position: relative;
+    margin-top: -1px; }
     #honorstige .honorstige-sec2-wrap .bg-img {
       width: 100%;
       background: url(../images/honorstige-sec2-bg-pc.jpg) no-repeat top center;
@@ -2123,7 +2132,7 @@ button {
         font-size: 2.4rem;
         letter-spacing: 0.2rem;
         line-height: 1.5;
-        font-weight: 800;
+        font-weight: 500;
         color: #fff; }
       #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider {
         width: 100%;
@@ -2163,12 +2172,14 @@ button {
           line-height: 1.5; }
 
 .modal {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   width: 100%; }
   .modal .modal-dialog {
-    width: 100%; }
+    width: 100%;
+    margin: 0; }
     .modal .modal-dialog .modal-content {
-      background-color: rgba(0, 0, 0, 0.9); }
+      background-color: rgba(0, 0, 0, 0);
+      padding-top: 40px; }
       .modal .modal-dialog .modal-content .modal-body {
         position: relative;
         max-width: 1120px;
@@ -2236,55 +2247,197 @@ button {
             .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
               font-family: "Microsoft JhengHei", "微軟正黑體";
               text-align: left;
-              font-size: 3rem;
+              font-size: 2.4rem;
               line-height: 1.5;
               letter-spacing: 0.2em; }
+
+@media screen and (max-width: 1440px) {
+  #honorstige {
+    text-align: center; }
+    #honorstige .honorstige-sec1-wrap .wrap {
+      top: 11.2%; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec1-tit h1 {
+        font-size: 4rem;
+        padding: 20px 0; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec1-tit p {
+        font-size: 2.5rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt h2 {
+        font-size: 3.5rem;
+        line-height: 1.3; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .price {
+        font-size: 2.3rem;
+        padding: 0.8em 0; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn {
+        width: 120px;
+        margin: 0 auto; }
+        #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn::before {
+          content: "";
+          width: 120px;
+          height: 43px;
+          bottom: -21px; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .product1 {
+        left: 28.2%; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .product2 {
+        right: 24%; }
+    #honorstige .honorstige-sec2-wrap .wrap .sec2-tit h1 {
+      font-size: 4rem;
+      padding: 2.85% 0 30px; }
+    #honorstige .honorstige-sec2-wrap .wrap .sec2-tit p {
+      font-size: 2.4rem; }
+    #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item {
+        width: 33.33333%; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt {
+          position: relative; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt img {
+            max-width: 100%; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p {
+            top: 40%;
+            right: 15%;
+            font-size: 2.4rem; }
+            #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p span {
+              font-size: 3.5rem; }
+  .modal .modal-dialog .modal-content .modal-body .close {
+    width: 35px;
+    height: 35px; }
+  .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
+    padding: 80px 66px 50px; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
+      font-size: 4rem; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
+      font-size: 2.5rem; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
+      width: 80%; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
+      font-size: 3.5rem;
+      padding: 1em 0 1.5em; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
+        content: "";
+        width: 475px;
+        height: 87px;
+        bottom: 27px;
+        width: 75%; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
+      font-size: 2.1rem; } }
+
+@media screen and (max-width: 1280px) {
+  #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt h2 {
+    font-size: 3rem; }
+  #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .price {
+    font-size: 1.8rem; } }
+
+@media screen and (max-width: 1024px) {
+  #honorstige {
+    text-align: center; }
+    #honorstige .honorstige-sec1-wrap .wrap {
+      top: 10%; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec1-tit h1 {
+        font-size: 3.5rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec1-tit p {
+        font-size: 2rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt h2 {
+        font-size: 2.5rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .price {
+        font-size: 1.3rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn {
+        width: 100px; }
+        #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn::before {
+          content: "";
+          width: 100px;
+          height: 43px;
+          bottom: -21px; }
+    #honorstige .honorstige-sec2-wrap .wrap .sec2-tit h1 {
+      font-size: 3.5rem; }
+    #honorstige .honorstige-sec2-wrap .wrap .sec2-tit p {
+      font-size: 1.9rem; }
+    #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p {
+      right: 10%;
+      font-size: 1.9rem; }
+      #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p span {
+        font-size: 2.5rem; }
+  .modal .modal-dialog .modal-content {
+    padding: 40px; }
+    .modal .modal-dialog .modal-content .modal-body .close {
+      width: 35px;
+      height: 35px; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
+      padding: 80px 66px 50px; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
+        font-size: 3.5rem; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
+        font-size: 2rem; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
+        width: 80%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
+        font-size: 3rem; }
+        .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
+          content: "";
+          width: 475px;
+          height: 87px;
+          bottom: 15px;
+          width: 75%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
+        font-size: 1.9rem; } }
 
 @media screen and (max-width: 767px) {
   #honorstige .pc {
     display: none !important; }
-  #honorstige .honorstige-sec1-wrap {
-    width: 100%;
-    position: relative;
-    text-align: center; }
-    #honorstige .honorstige-sec1-wrap .bg-img {
+  #honorstige .honorstige-sec1-wrap .bg-img {
+    background: url(../images/honorstige-sec1-bg-mb.jpg) no-repeat top center;
+    background-size: 100%; }
+    #honorstige .honorstige-sec1-wrap .bg-img:before {
+      content: "";
+      display: block;
+      background: url(../images/honorstige-sec1-bg-mb-light.jpg) no-repeat top center;
+      background-size: 100%;
       width: 100%;
-      background: url(../images/honorstige-sec1-bg-mb.jpg) no-repeat top center;
-      background-size: 100%; }
-      #honorstige .honorstige-sec1-wrap .bg-img:before {
-        content: "";
-        display: block;
-        background: url(../images/honorstige-sec1-bg-mb-light.jpg) no-repeat top center;
-        background-size: 100%;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        -webkit-animation: img_shine 3.5s linear infinite alternate;
-        animation: img_shine 3.5s linear infinite alternate; }
-    #honorstige .honorstige-sec1-wrap .wrap {
+      height: 100%;
       position: absolute;
-      z-index: 2;
-      top: 13.5%;
+      z-index: 1;
+      top: 0;
       left: 0;
-      right: 0;
-      bottom: 0; }
-      #honorstige .honorstige-sec1-wrap .wrap .sec1-tit {
-        color: #fff5f3; }
-        #honorstige .honorstige-sec1-wrap .wrap .sec1-tit h1 {
-          font-size: 6rem;
-          font-family: 'Noto Serif TC';
-          font-weight: 800;
-          letter-spacing: 0.4rem; }
-        #honorstige .honorstige-sec1-wrap .wrap .sec1-tit p {
-          font-size: 3.5rem;
-          font-family: 'Noto Serif TC';
-          font-weight: 800;
-          letter-spacing: 0.4rem; }
-      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt {
-        color: #fff5f3; }
+      -webkit-animation: img_shine 3.5s linear infinite alternate;
+      animation: img_shine 3.5s linear infinite alternate; }
+  #honorstige .honorstige-sec1-wrap .wrap {
+    top: 13.5%; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec1-tit {
+      color: #fff5f3; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec1-tit h1 {
+        font-size: 6rem;
+        font-family: 'Noto Serif TC';
+        font-weight: 800;
+        letter-spacing: 0.4rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec1-tit p {
+        font-size: 3.5rem;
+        font-family: 'Noto Serif TC';
+        font-weight: 800;
+        letter-spacing: 0.4rem; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt {
+      color: #fff5f3; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt h2 {
+        font-size: 3.5rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .price {
+        font-size: 2.3rem; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn {
+        width: 146px; }
+        #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn::before {
+          width: 146px;
+          height: 43px;
+          bottom: -21px; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .product1 {
+      top: 12%;
+      left: 8%; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .product2 {
+      top: 59%;
+      right: 8%; }
   #honorstige .honorstige-sec2-wrap {
     width: 100%;
     position: relative; }
@@ -2304,86 +2457,288 @@ button {
         top: 0;
         left: 0;
         -webkit-animation: img_shine 3.5s linear infinite alternate;
-        animation: img_shine 3.5s linear infinite alternate; } }
+        animation: img_shine 3.5s linear infinite alternate; }
+    #honorstige .honorstige-sec2-wrap .wrap {
+      top: 10.8%; }
+      #honorstige .honorstige-sec2-wrap .wrap .sec2-tit h1 {
+        font-size: 4.5rem;
+        padding: 2.85% 0 30px; }
+      #honorstige .honorstige-sec2-wrap .wrap .sec2-tit p {
+        font-size: 2.4rem; }
+      #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider {
+        display: block; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item {
+          width: 100%; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt img {
+            width: 100%; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p {
+            font-size: 2.4rem;
+            top: 40%;
+            right: 17.8%; }
+            #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p span {
+              font-size: 4rem; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .owl-nav .owl-prev {
+          margin-left: 3%;
+          height: 49px; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .owl-nav .owl-next {
+          margin-right: 3%;
+          height: 49px; }
+      #honorstige .honorstige-sec2-wrap .wrap .honorstige-note {
+        color: #d4c9c6;
+        padding-top: 72px;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: left; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-note p {
+          font-size: 1.4rem;
+          line-height: 1.5; }
+  .modal {
+    width: 100%; }
+    .modal .modal-dialog {
+      width: 100%;
+      margin: 0; }
+      .modal .modal-dialog .modal-content {
+        padding: 0;
+        padding-top: 40px; }
+        .modal .modal-dialog .modal-content .modal-body {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0; }
+          .modal .modal-dialog .modal-content .modal-body .close {
+            top: -2px;
+            right: 5%;
+            width: 50px;
+            height: 50px; }
+          .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
+            width: 100%;
+            padding: 0;
+            padding-top: 15%;
+            padding-bottom: 15%; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
+              font-size: 6rem;
+              font-family: 'Noto Serif TC';
+              font-weight: 800;
+              letter-spacing: 0.4rem; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
+              font-size: 3.5rem;
+              font-family: 'Noto Serif TC';
+              font-weight: 800;
+              letter-spacing: 0.4rem;
+              padding: 1em 0;
+              letter-spacing: 0.4em; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
+              width: 100%; }
+            .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content {
+              padding-left: 15%;
+              padding-right: 15%; }
+              .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
+                font-size: 4rem;
+                padding: 1em 0 1.5em; }
+                .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
+                  width: 475px;
+                  height: 87px;
+                  left: 0;
+                  right: 0;
+                  bottom: 33px;
+                  background: url(../images/honorstige-popup-tit-bg.png) no-repeat center;
+                  background-size: 100%; }
+              .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
+                font-size: 2.4rem;
+                line-height: 1.5;
+                letter-spacing: 0.2em; } }
 
-.time-wrapper .time-pt4-event .event1 {
-  background: url(../images/pt4_bg_pc.jpg) no-repeat top center;
-  background-size: 100%; }
-  .time-wrapper .time-pt4-event .event1 .event1Wrap {
-    padding: 0 28.3%; }
-    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
-      text-align: center;
-      padding-top: 185px; }
-      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
-        font-size: 3.5rem;
-        font-family: 'Noto Serif TC';
-        font-weight: 800;
-        letter-spacing: 0.4rem; }
-      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
-        font-size: 6rem;
-        font-family: 'Noto Serif TC';
-        font-weight: 800;
-        letter-spacing: 0.4rem;
-        padding: 30px 0; }
-    .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
-      margin: 60px 0; }
-      .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
-        max-width: 830px; }
-    .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 {
-      text-align: center; }
-      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
-        padding: 30px 0 55px 0; }
-      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventP {
-        padding: 40px 0; }
-
-.time-wrapper .time-pt4-event .event2 {
-  background: url(../images/pt5_bg_pc.jpg) no-repeat top center;
-  background-size: 100%;
-  text-align: center; }
-  .time-wrapper .time-pt4-event .event2 .event2Wrap .note {
-    font-size: 1.4rem;
-    color: #a2826e;
-    line-height: 1.5;
-    padding: 0 28.3%; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .note:nth-of-type(1) {
-      text-align: left; }
-  .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
-    text-align: center;
-    padding-top: 100px; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
-      padding: 30px 0 55px 0; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
-      font-size: 4rem;
-      font-weight: bold; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
-      text-align: center;
-      padding: 20px 0; }
-  .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap {
+@media screen and (max-width: 414px) {
+  #honorstige .honorstige-sec1-wrap .wrap {
+    top: 13.5%; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec1-tit h1 {
+      font-size: 3.2rem;
+      padding: 15px 0; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec1-tit p {
+      font-size: 2.4rem; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt h2 {
+      font-size: 2rem; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .price {
+      font-size: 1.3rem; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn {
+      width: 100px; }
+      #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn::before {
+        width: 100px;
+        height: 43px;
+        bottom: -21px; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .product1 {
+      top: 12%;
+      left: 8%; }
+    #honorstige .honorstige-sec1-wrap .wrap .sec2-content .product2 {
+      top: 59%;
+      right: 8%; }
+  #honorstige .honorstige-sec2-wrap {
+    width: 100%;
     position: relative; }
-    .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: -60px;
-      bottom: 0;
-      width: 80%;
-      margin: 0 auto; }
-      .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item {
-        position: relative;
-        width: 100%; }
-        .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
-          position: absolute;
-          top: -80px;
-          left: 3%;
-          width: 70%; }
-        .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
-          position: absolute;
-          top: -50px;
-          right: 3%;
-          width: 50%; }
-  .time-wrapper .time-pt4-event .event2 .event2Wrap .event1-note,
-  .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-note {
-    padding-top: 50px; }
+    #honorstige .honorstige-sec2-wrap .wrap {
+      top: 10.8%; }
+      #honorstige .honorstige-sec2-wrap .wrap .sec2-tit h1 {
+        font-size: 3rem;
+        padding: 2.85% 0 30px; }
+      #honorstige .honorstige-sec2-wrap .wrap .sec2-tit p {
+        font-size: 1.9rem; }
+      #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider {
+        display: block; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item {
+          width: 100%; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt img {
+            width: 100%; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p {
+            font-size: 1.9rem;
+            right: 15%; }
+            #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p span {
+              font-size: 2.5rem; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .owl-nav .owl-prev {
+          margin-left: 3%; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .owl-nav .owl-prev img {
+            width: 80%; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .owl-nav .owl-next {
+          margin-right: 3%; }
+          #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .owl-nav .owl-next img {
+            width: 80%; }
+      #honorstige .honorstige-sec2-wrap .wrap .honorstige-note {
+        padding-top: 0; }
+        #honorstige .honorstige-sec2-wrap .wrap .honorstige-note p {
+          font-size: 1.2rem; }
+  .modal .modal-dialog .modal-content .modal-body .close {
+    top: -2px;
+    right: 5%;
+    width: 30px;
+    height: 30px; }
+  .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
+    padding: 0;
+    padding-top: 15%;
+    padding-bottom: 15%; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
+      font-size: 3.2rem; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
+      font-size: 2.4rem; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
+      width: 100%; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content {
+      padding-left: 8%;
+      padding-right: 8%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
+        font-size: 3rem;
+        text-align: center; }
+        .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
+          width: 475px;
+          height: 87px;
+          bottom: 16px;
+          margin: 0 auto;
+          width: 98%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
+        font-size: 1.9rem; } }
+
+@media screen and (max-width: 375px) {
+  #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn::before {
+    bottom: -22px; }
+  #honorstige .honorstige-sec1-wrap .wrap .sec2-content .product1 {
+    top: 8%; }
+  .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
+    padding: 0;
+    padding-top: 15%;
+    padding-bottom: 15%; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
+      font-size: 2.8rem; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
+      font-size: 2rem; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content {
+      padding-left: 8%;
+      padding-right: 8%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
+        font-size: 2.5rem; }
+        .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
+          width: 475px;
+          height: 87px;
+          bottom: 6px;
+          width: 95%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
+        font-size: 1.9rem; } }
+
+.time-wrapper .time-pt4-event {
+  margin-top: -1px; }
+  .time-wrapper .time-pt4-event .event1 {
+    background: url(../images/pt4_bg_pc.jpg) no-repeat top center;
+    background-size: 100%; }
+    .time-wrapper .time-pt4-event .event1 .event1Wrap {
+      padding: 0 28.3%; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt {
+        text-align: center;
+        padding-top: 185px; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt p {
+          font-size: 3.5rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.4rem; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt h1 {
+          font-size: 6rem;
+          font-family: 'Noto Serif TC';
+          font-weight: 800;
+          letter-spacing: 0.4rem;
+          padding: 30px 0; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo {
+        margin: 60px 0; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .ytvideo .video picture .video {
+          max-width: 830px; }
+      .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 {
+        text-align: center; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventH3 {
+          padding: 30px 0 55px 0; }
+        .time-wrapper .time-pt4-event .event1 .event1Wrap .time-event1-txt2 .eventP {
+          padding: 40px 0; }
+  .time-wrapper .time-pt4-event .event2 {
+    background: url(../images/pt5_bg_pc.jpg) no-repeat top center;
+    background-size: 100%;
+    text-align: center; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .note {
+      font-size: 1.4rem;
+      color: #a2826e;
+      line-height: 1.5;
+      padding: 0 28.3%; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .note:nth-of-type(1) {
+        text-align: left; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt {
+      text-align: center;
+      padding-top: 100px; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH3 {
+        padding: 30px 0 55px 0; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventH4 span {
+        font-size: 4rem;
+        font-weight: bold; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .time-event2-txt .eventP {
+        text-align: center;
+        padding: 20px 0; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap {
+      position: relative; }
+      .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -60px;
+        bottom: 0;
+        width: 80%;
+        margin: 0 auto; }
+        .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item {
+          position: relative;
+          width: 100%; }
+          .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .text-bubble {
+            position: absolute;
+            top: -80px;
+            left: 3%;
+            width: 70%; }
+          .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-photo-wrap .event2-photo .item .event-model {
+            position: absolute;
+            top: -50px;
+            right: 3%;
+            width: 50%; }
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .event1-note,
+    .time-wrapper .time-pt4-event .event2 .event2Wrap .event2-note {
+      padding-top: 50px; }
 
 .time-wrapper .shopBtn2 {
   cursor: pointer;

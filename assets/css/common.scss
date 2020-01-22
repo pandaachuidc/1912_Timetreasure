@@ -230,7 +230,9 @@ button {
   -webkit-animation: font-shine 10s infinite;
   animation: font-shine 10s infinite;
   -webkit-background-clip: text;
+  //-webkit-text-fill-color: #fff; //for new section
   -webkit-text-fill-color: transparent;
+  
 }
 // #e17a6d 
 // #8c2b1f
