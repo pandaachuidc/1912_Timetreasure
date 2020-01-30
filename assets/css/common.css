@@ -2089,7 +2089,7 @@ button {
               height: 43px;
               left: 0;
               right: 0;
-              bottom: -50px;
+              bottom: -22px;
               margin: 0 auto;
               background: url(../images/flare.png) no-repeat center;
               background-size: 100%;
@@ -2128,11 +2128,9 @@ button {
         padding: 2.85% 0 30px;
         color: #fff5f3; }
       #honorstige .honorstige-sec2-wrap .wrap .sec2-tit p {
-        font-family: "Microsoft JhengHei", "微軟正黑體";
         font-size: 2.4rem;
         letter-spacing: 0.2rem;
         line-height: 1.5;
-        font-weight: 500;
         color: #fff; }
       #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider {
         width: 100%;
@@ -2189,6 +2187,7 @@ button {
           top: -2px;
           right: -2px;
           background: url(../images/close.png) no-repeat center;
+          background-size: 100%;
           width: 50px;
           height: 50px;
           opacity: 1;
@@ -2221,7 +2220,8 @@ button {
               padding: 1em 0;
               letter-spacing: 0.4em; }
           .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
-            width: 100%; }
+            width: 100%;
+            margin: 0 auto; }
           .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content {
             padding-left: 20%;
             padding-right: 20%;
@@ -2332,7 +2332,9 @@ button {
   #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt h2 {
     font-size: 3rem; }
   #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .price {
-    font-size: 1.8rem; } }
+    font-size: 1.8rem; }
+  #honorstige .honorstige-sec2-wrap .wrap .honorstige-note {
+    padding-top: 30px; } }
 
 @media screen and (max-width: 1024px) {
   #honorstige {
@@ -2363,6 +2365,8 @@ button {
       font-size: 1.9rem; }
       #honorstige .honorstige-sec2-wrap .wrap .honorstige-slider .item .txt p span {
         font-size: 2.5rem; }
+    #honorstige .honorstige-sec2-wrap .wrap .honorstige-note {
+      padding-top: 15px; }
   .modal .modal-dialog .modal-content {
     padding: 40px; }
     .modal .modal-dialog .modal-content .modal-body .close {
@@ -2604,35 +2608,37 @@ button {
         padding-top: 0; }
         #honorstige .honorstige-sec2-wrap .wrap .honorstige-note p {
           font-size: 1.2rem; }
-  .modal .modal-dialog .modal-content .modal-body .close {
-    top: -2px;
-    right: 5%;
-    width: 30px;
-    height: 30px; }
-  .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
-    padding: 0;
-    padding-top: 15%;
-    padding-bottom: 15%; }
-    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
-      font-size: 3.2rem; }
-    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
-      font-size: 2.4rem; }
-    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
-      width: 100%; }
-    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content {
-      padding-left: 8%;
-      padding-right: 8%; }
-      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
-        font-size: 3rem;
-        text-align: center; }
-        .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
-          width: 475px;
-          height: 87px;
-          bottom: 16px;
-          margin: 0 auto;
-          width: 98%; }
-      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
-        font-size: 1.9rem; } }
+  .modal .modal-dialog .modal-content {
+    padding-top: 20px; }
+    .modal .modal-dialog .modal-content .modal-body .close {
+      top: -2px;
+      right: 5%;
+      width: 25px;
+      height: 25px; }
+    .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap {
+      padding: 0;
+      padding-top: 10%;
+      padding-bottom: 15%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit h1 {
+        font-size: 3.2rem; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .tit p {
+        font-size: 2.4rem; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .photo img {
+        width: 100%; }
+      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content {
+        padding-left: 8%;
+        padding-right: 8%; }
+        .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1 {
+          font-size: 3rem;
+          text-align: center; }
+          .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content h1::after {
+            width: 475px;
+            height: 87px;
+            bottom: 16px;
+            margin: 0 auto;
+            width: 98%; }
+        .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
+          font-size: 1.5rem; } }
 
 @media screen and (max-width: 375px) {
   #honorstige .honorstige-sec1-wrap .wrap .sec2-content .txt .more-btn::before {
@@ -2656,9 +2662,7 @@ button {
           width: 475px;
           height: 87px;
           bottom: 6px;
-          width: 95%; }
-      .modal .modal-dialog .modal-content .modal-body .honorstige-modal-wrap .content p {
-        font-size: 1.9rem; } }
+          width: 95%; } }
 
 .time-wrapper .time-pt4-event {
   margin-top: -1px; }

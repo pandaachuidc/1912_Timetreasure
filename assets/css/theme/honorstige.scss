@@ -76,7 +76,7 @@
               height: 43px;
               left: 0;
               right: 0;
-              bottom: -50px;
+              bottom: -22px;
               margin: 0 auto;
               background: url(../images/flare.png) no-repeat center;
               background-size: 100%;
@@ -125,11 +125,10 @@
           color: #fff5f3;
         }
         p {
-          font-family: "Microsoft JhengHei", "微軟正黑體";
           font-size: 2.4rem;
           letter-spacing: 0.2rem;
           line-height: 1.5;
-          font-weight: 500;
+          // font-weight: 500;
           color: #fff;
         }
       }
@@ -194,6 +193,7 @@
           top: -2px;
           right: -2px;
           background: url(../images/close.png) no-repeat center;
+          background-size: 100%;
           width: 50px;
           height: 50px;
           opacity: 1;
@@ -214,6 +214,7 @@
         .honorstige-modal-wrap {
           width: 100%;
           padding: 80px 66px 50px;
+
           .tit {
             h1 {
               @include titleStyle;
@@ -228,6 +229,7 @@
           .photo {
             img {
               width: 100%;
+              margin: 0 auto;
             }
           }
           .content {
@@ -417,6 +419,13 @@
         }
       }
     }
+    .honorstige-sec2-wrap {
+      .wrap {
+        .honorstige-note {
+          padding-top: 30px;
+        }
+      }
+    }
   }
 }
 
@@ -481,8 +490,7 @@
           }
         }
         .honorstige-note {
-          p {
-          }
+          padding-top: 15px;
         }
       }
     }
@@ -851,16 +859,17 @@
   .modal {
     .modal-dialog {
       .modal-content {
+        padding-top: 20px;
         .modal-body {
           .close {
             top: -2px;
             right: 5%;
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
           }
           .honorstige-modal-wrap {
             padding: 0;
-            padding-top: 15%;
+            padding-top: 10%;
             padding-bottom: 15%;
             .tit {
               h1 {
@@ -890,7 +899,8 @@
                 }
               }
               p {
-                font-size: 2.4rem - 0.5;
+                // font-size: 2.4rem - 0.5;
+                font-size: 1.5rem;
               }
             }
           }
@@ -953,7 +963,7 @@
                 }
               }
               p {
-                font-size: 2.4rem - 0.5;
+                // font-size: 2.4rem - 0.5;
               }
             }
           }

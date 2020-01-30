@@ -244,8 +244,9 @@ $(document).ready(function() {
     var t1 = $(".intro").offset().top - range;
     var t2 = $(".ingredient").offset().top - range;
     var t3 = $(".productSlider").offset().top - range;
-    var t4 = $(".time-event1-txt2").offset().top - range;
-    var t5 = $(".time-event2-txt").offset().top - range;
+    var t4 = $("#honorstige").offset().top - range;
+    var t5 = $(".time-event1-txt2").offset().top - range;
+    var t6 = $(".time-event2-txt").offset().top - range;
 
     var _top = $(window).scrollTop() + $(window).height() / 2;
     if (_top >= t1 && _top <= t2) {
@@ -267,24 +268,24 @@ $(document).ready(function() {
         TrackEvent("Timetreasure", "Scroll", " Products");
       }
     } else if (_top > t4 && _top <= t5) {
+      if (_preview != "honorstige") {
+        _preview = "honorstige";
+        TrackPage("/vp/Timetreasure/honorstige", "臻雪煥采琉金活膚系列");
+        TrackEvent("Timetreasure", "Scroll", "honorstige");
+      }
+    } else if (_top > t5 && _top <= t6) {
       if (_preview != "60mSPA") {
         _preview = "60mSPA";
         TrackPage("/vp/Timetreasure/60mSPA", "頂級琥珀開運奢寵療程");
         TrackEvent("Timetreasure", "Scroll", "60mSPA");
       }
-    } else if (_top > t5) {
+    } else if (_top > t6) {
       if (_preview != "30mSPA") {
         _preview = "30mSPA";
         TrackPage("/vp/Timetreasure/30mSPA", "貴婦好命光開運術");
         TrackEvent("Timetreasure", "Scroll", "30mSPA");
       }
     }
-    // else if (_top > t6) {
-    //   if (_preview != "Store") {
-    //     _preview = "Store";
-    //     TrackEvent("Timetreasure", "Scroll", "Store");
-    //   }
-    // }
   }
   window.addEventListener("scroll", debounce(Tracking, 500));
   if (_preview == "") {
@@ -319,6 +320,13 @@ $(document).ready(function() {
   $(".shopBtn2").on("click", function() {
     TrackEvent("Timetreasure", "Click", "Store_PC");
   });
+  $(".more-btn-cream").on("click", function() {
+    TrackEvent("Timetreasure", "Click", "Honorstige_Cream");
+  });
+  $(".more-btn-serum").on("click", function() {
+    TrackEvent("Timetreasure", "Click", "Honorstige_Serum");
+  });
+  
 });
 
 // youtube api
